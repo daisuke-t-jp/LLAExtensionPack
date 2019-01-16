@@ -17,6 +17,7 @@
 		022FBAC221EEFD4F00C7BEAE /* URLSession+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBAC121EEFD4F00C7BEAE /* URLSession+LLA.swift */; };
 		028A6CBC21EDC1CD00997CDE /* LLAExtensionPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		028A6CC321EDC1EB00997CDE /* String+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A6CC221EDC1EB00997CDE /* String+LLA.swift */; };
+		7E55054D21EF5C400017EC6F /* URL+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55054C21EF5C400017EC6F /* URL+LLA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAExtensionPack.h; sourceTree = "<group>"; };
 		028A6CBB21EDC1CD00997CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028A6CC221EDC1EB00997CDE /* String+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+LLA.swift"; sourceTree = "<group>"; };
+		7E55054C21EF5C400017EC6F /* URL+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+LLA.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */,
 				028A6CC221EDC1EB00997CDE /* String+LLA.swift */,
 				022FBABD21EEE3E200C7BEAE /* Date+LLA.swift */,
+				7E55054C21EF5C400017EC6F /* URL+LLA.swift */,
 				022FBAB921EEE13800C7BEAE /* Bundle+LLA.swift */,
 				022FBAC121EEFD4F00C7BEAE /* URLSession+LLA.swift */,
 				028A6CBB21EDC1CD00997CDE /* Info.plist */,
@@ -231,6 +234,7 @@
 				028A6CC321EDC1EB00997CDE /* String+LLA.swift in Sources */,
 				022FBABE21EEE3E300C7BEAE /* Date+LLA.swift in Sources */,
 				022FBAC221EEFD4F00C7BEAE /* URLSession+LLA.swift in Sources */,
+				7E55054D21EF5C400017EC6F /* URL+LLA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
