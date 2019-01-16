@@ -1,0 +1,15 @@
+# Xcode
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/xcshareddata/
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# CocoaPods
+/Pods
+
+# Carthage
+/Carthage
+
+# others
+.DS_Store
