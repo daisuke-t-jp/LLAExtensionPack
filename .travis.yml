@@ -1,0 +1,18 @@
+language: objective-c
+osx_image: xcode10
+
+env:
+  global:
+    - PROJECT='LLAExtensionPack.xcodeproj'
+    - IOS_SCHEME='LLAExtensionPack'
+    - IOS_DESTINATION='platform=iOS Simulator,name=iPhone X'
+
+before_install:
+
+script:
+  - swift --version
+  - xcodebuild clean build test -project "$PROJECT" -scheme "$IOS_SCHEME" -sdk iphonesimulator -destination "$IOS_DESTINATION"
+
+branches:
+  only: 
+      - master
