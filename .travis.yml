@@ -11,7 +11,7 @@ before_install:
 
 script:
   - swift --version
-  - xcodebuild clean build test -project "$PROJECT" -scheme "$IOS_SCHEME" -sdk iphonesimulator -destination "$IOS_DESTINATION"
+  - xcodebuild test -project "$PROJECT" -scheme "$IOS_SCHEME" -sdk iphonesimulator -destination "$IOS_DESTINATION" -configuration Debug
 
 branches:
   only: 
