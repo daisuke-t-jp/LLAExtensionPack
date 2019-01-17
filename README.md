@@ -29,10 +29,12 @@ Swift Extension Pack With *"LLA"* Namespace.
 
 #### Swift code
 ```swift
+import LLAExtensionPack
+
+
 /**
  * String
  */
- 
 // Compare
 "string".LLA.isEqual("String", caseInsensitive: true) // true
 
