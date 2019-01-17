@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021EA29F21F010AE00AE086D /* LLAExtensionPackTestInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA29E21F010AE00AE086D /* LLAExtensionPackTestInt.swift */; };
+		021EA2AC21F020F300AE086D /* URL+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2A521F020F300AE086D /* URL+LLA.swift */; };
+		021EA2AD21F020F300AE086D /* Int+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2A621F020F300AE086D /* Int+LLA.swift */; };
+		021EA2AE21F020F300AE086D /* Locale+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2A721F020F300AE086D /* Locale+LLA.swift */; };
+		021EA2AF21F020F300AE086D /* String+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2A821F020F300AE086D /* String+LLA.swift */; };
+		021EA2B021F020F300AE086D /* Bundle+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2A921F020F300AE086D /* Bundle+LLA.swift */; };
+		021EA2B121F020F300AE086D /* URLSession+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2AA21F020F300AE086D /* URLSession+LLA.swift */; };
+		021EA2B221F020F300AE086D /* Date+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2AB21F020F300AE086D /* Date+LLA.swift */; };
+		021EA2BD21F04ACE00AE086D /* UIColor+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2BC21F04ACE00AE086D /* UIColor+LLA.swift */; };
+		021EA2BF21F053F700AE086D /* LLAExtensionPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2BE21F053F700AE086D /* LLAExtensionPack.swift */; };
+		021EA2C121F05EC400AE086D /* LLAExtensionPackTestUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2C021F05EC400AE086D /* LLAExtensionPackTestUIColor.swift */; };
+		021EA2C321F0689100AE086D /* UIView+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2C221F0689100AE086D /* UIView+LLA.swift */; };
+		021EA2C521F0735200AE086D /* LLAExtensionPackTestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2C421F0735200AE086D /* LLAExtensionPackTestUIView.swift */; };
 		022FBAAF21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBAAE21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift */; };
 		022FBAB121EEAE0700C7BEAE /* LLAExtensionPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028A6CB721EDC1CD00997CDE /* LLAExtensionPack.framework */; };
 		022FBAB821EEBCC600C7BEAE /* LLANamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */; };
-		022FBABA21EEE13800C7BEAE /* Bundle+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBAB921EEE13800C7BEAE /* Bundle+LLA.swift */; };
 		022FBABC21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBABB21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift */; };
-		022FBABE21EEE3E300C7BEAE /* Date+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBABD21EEE3E200C7BEAE /* Date+LLA.swift */; };
 		022FBAC021EEE57400C7BEAE /* LLAExtensionPackTestDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBABF21EEE57400C7BEAE /* LLAExtensionPackTestDate.swift */; };
-		022FBAC221EEFD4F00C7BEAE /* URLSession+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBAC121EEFD4F00C7BEAE /* URLSession+LLA.swift */; };
 		028A6CBC21EDC1CD00997CDE /* LLAExtensionPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		028A6CC321EDC1EB00997CDE /* String+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A6CC221EDC1EB00997CDE /* String+LLA.swift */; };
-		7E55054D21EF5C400017EC6F /* URL+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55054C21EF5C400017EC6F /* URL+LLA.swift */; };
 		7E55054F21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,20 +40,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021EA29E21F010AE00AE086D /* LLAExtensionPackTestInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestInt.swift; sourceTree = "<group>"; };
+		021EA2A521F020F300AE086D /* URL+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+LLA.swift"; sourceTree = "<group>"; };
+		021EA2A621F020F300AE086D /* Int+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+LLA.swift"; sourceTree = "<group>"; };
+		021EA2A721F020F300AE086D /* Locale+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+LLA.swift"; sourceTree = "<group>"; };
+		021EA2A821F020F300AE086D /* String+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+LLA.swift"; sourceTree = "<group>"; };
+		021EA2A921F020F300AE086D /* Bundle+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LLA.swift"; sourceTree = "<group>"; };
+		021EA2AA21F020F300AE086D /* URLSession+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+LLA.swift"; sourceTree = "<group>"; };
+		021EA2AB21F020F300AE086D /* Date+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+LLA.swift"; sourceTree = "<group>"; };
+		021EA2BC21F04ACE00AE086D /* UIColor+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+LLA.swift"; sourceTree = "<group>"; };
+		021EA2BE21F053F700AE086D /* LLAExtensionPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLAExtensionPack.swift; sourceTree = "<group>"; };
+		021EA2C021F05EC400AE086D /* LLAExtensionPackTestUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIColor.swift; sourceTree = "<group>"; };
+		021EA2C221F0689100AE086D /* UIView+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LLA.swift"; sourceTree = "<group>"; };
+		021EA2C421F0735200AE086D /* LLAExtensionPackTestUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIView.swift; sourceTree = "<group>"; };
 		022FBAAC21EEAE0700C7BEAE /* LLAExtensionPackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLAExtensionPackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		022FBAAE21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestString.swift; sourceTree = "<group>"; };
 		022FBAB021EEAE0700C7BEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLANamespace.swift; sourceTree = "<group>"; };
-		022FBAB921EEE13800C7BEAE /* Bundle+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LLA.swift"; sourceTree = "<group>"; };
 		022FBABB21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestBundle.swift; sourceTree = "<group>"; };
-		022FBABD21EEE3E200C7BEAE /* Date+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+LLA.swift"; sourceTree = "<group>"; };
 		022FBABF21EEE57400C7BEAE /* LLAExtensionPackTestDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestDate.swift; sourceTree = "<group>"; };
-		022FBAC121EEFD4F00C7BEAE /* URLSession+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+LLA.swift"; sourceTree = "<group>"; };
 		028A6CB721EDC1CD00997CDE /* LLAExtensionPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLAExtensionPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAExtensionPack.h; sourceTree = "<group>"; };
 		028A6CBB21EDC1CD00997CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		028A6CC221EDC1EB00997CDE /* String+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+LLA.swift"; sourceTree = "<group>"; };
-		7E55054C21EF5C400017EC6F /* URL+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+LLA.swift"; sourceTree = "<group>"; };
 		7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,13 +84,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021EA2A421F020F300AE086D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				021EA2A621F020F300AE086D /* Int+LLA.swift */,
+				021EA2A821F020F300AE086D /* String+LLA.swift */,
+				021EA2AB21F020F300AE086D /* Date+LLA.swift */,
+				021EA2A721F020F300AE086D /* Locale+LLA.swift */,
+				021EA2A921F020F300AE086D /* Bundle+LLA.swift */,
+				021EA2A521F020F300AE086D /* URL+LLA.swift */,
+				021EA2AA21F020F300AE086D /* URLSession+LLA.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		021EA2B321F0216100AE086D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				021EA2BC21F04ACE00AE086D /* UIColor+LLA.swift */,
+				021EA2C221F0689100AE086D /* UIView+LLA.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		022FBAAD21EEAE0700C7BEAE /* LLAExtensionPackTests */ = {
 			isa = PBXGroup;
 			children = (
+				021EA29E21F010AE00AE086D /* LLAExtensionPackTestInt.swift */,
 				022FBAAE21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift */,
 				022FBABF21EEE57400C7BEAE /* LLAExtensionPackTestDate.swift */,
-				7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */,
 				022FBABB21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift */,
+				7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */,
+				021EA2C021F05EC400AE086D /* LLAExtensionPackTestUIColor.swift */,
+				021EA2C421F0735200AE086D /* LLAExtensionPackTestUIView.swift */,
 				022FBAB021EEAE0700C7BEAE /* Info.plist */,
 			);
 			path = LLAExtensionPackTests;
@@ -103,12 +145,10 @@
 			children = (
 				028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */,
 				022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */,
-				028A6CC221EDC1EB00997CDE /* String+LLA.swift */,
-				022FBABD21EEE3E200C7BEAE /* Date+LLA.swift */,
-				7E55054C21EF5C400017EC6F /* URL+LLA.swift */,
-				022FBAB921EEE13800C7BEAE /* Bundle+LLA.swift */,
-				022FBAC121EEFD4F00C7BEAE /* URLSession+LLA.swift */,
+				021EA2BE21F053F700AE086D /* LLAExtensionPack.swift */,
 				028A6CBB21EDC1CD00997CDE /* Info.plist */,
+				021EA2A421F020F300AE086D /* Foundation */,
+				021EA2B321F0216100AE086D /* UIKit */,
 			);
 			path = LLAExtensionPack;
 			sourceTree = "<group>";
@@ -223,6 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E55054F21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift in Sources */,
+				021EA29F21F010AE00AE086D /* LLAExtensionPackTestInt.swift in Sources */,
+				021EA2C121F05EC400AE086D /* LLAExtensionPackTestUIColor.swift in Sources */,
+				021EA2C521F0735200AE086D /* LLAExtensionPackTestUIView.swift in Sources */,
 				022FBABC21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift in Sources */,
 				022FBAC021EEE57400C7BEAE /* LLAExtensionPackTestDate.swift in Sources */,
 				022FBAAF21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift in Sources */,
@@ -233,12 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021EA2AF21F020F300AE086D /* String+LLA.swift in Sources */,
+				021EA2B021F020F300AE086D /* Bundle+LLA.swift in Sources */,
+				021EA2AD21F020F300AE086D /* Int+LLA.swift in Sources */,
+				021EA2B221F020F300AE086D /* Date+LLA.swift in Sources */,
 				022FBAB821EEBCC600C7BEAE /* LLANamespace.swift in Sources */,
-				022FBABA21EEE13800C7BEAE /* Bundle+LLA.swift in Sources */,
-				028A6CC321EDC1EB00997CDE /* String+LLA.swift in Sources */,
-				022FBABE21EEE3E300C7BEAE /* Date+LLA.swift in Sources */,
-				022FBAC221EEFD4F00C7BEAE /* URLSession+LLA.swift in Sources */,
-				7E55054D21EF5C400017EC6F /* URL+LLA.swift in Sources */,
+				021EA2BD21F04ACE00AE086D /* UIColor+LLA.swift in Sources */,
+				021EA2BF21F053F700AE086D /* LLAExtensionPack.swift in Sources */,
+				021EA2AC21F020F300AE086D /* URL+LLA.swift in Sources */,
+				021EA2C321F0689100AE086D /* UIView+LLA.swift in Sources */,
+				021EA2B121F020F300AE086D /* URLSession+LLA.swift in Sources */,
+				021EA2AE21F020F300AE086D /* Locale+LLA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +393,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -402,6 +451,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

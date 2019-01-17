@@ -23,7 +23,6 @@ class LLAExtensionPackTestDate: XCTestCase {
     }
 
 	func testTime() {
-		XCTAssertTrue(Date().LLA.unixTime() > 0)
 	}
 
 	func testCompoents() {
@@ -31,8 +30,8 @@ class LLAExtensionPackTestDate: XCTestCase {
 		dateFormater.locale = Locale(identifier: "en_US")
 		dateFormater.dateFormat = "yyyy/MM/dd HH:mm:ss.SSS"
 		let date = dateFormater.date(from: "1999/2/1 12:30:50.123")!
-		let dateLeapYear = dateFormater.date(from: "2000/2/1 12:30:50.123")!
 
+		XCTAssertGreaterThan(date.LLA.unixTime(), 0)
 		XCTAssertEqual(date.LLA.year(), 1999)
 		XCTAssertEqual(date.LLA.month(), 2)
 		XCTAssertEqual(date.LLA.day(), 1)
@@ -40,11 +39,8 @@ class LLAExtensionPackTestDate: XCTestCase {
 		XCTAssertEqual(date.LLA.minute(), 30)
 		XCTAssertEqual(date.LLA.second(), 50)
 		XCTAssertEqual(date.LLA.millisecond(), 123)
-		XCTAssertTrue(date.LLA.microsecond()! >= 123000)
-		XCTAssertTrue(date.LLA.nanosecond()! >= 123000000)
-
-		XCTAssertEqual(date.LLA.daysOfMonth(), 28)
-		XCTAssertEqual(dateLeapYear.LLA.daysOfMonth(), 29)
+		XCTAssertGreaterThanOrEqual(date.LLA.microsecond()!, 123000)
+		XCTAssertGreaterThanOrEqual(date.LLA.nanosecond()!, 123000000)
 	}
 
 	func testInspect() {
@@ -64,6 +60,7 @@ class LLAExtensionPackTestDate: XCTestCase {
 		dateFormater.dateFormat = "yyyy/MM/dd HH:mm:ss.SSS"
 		let date = dateFormater.date(from: "1999/1/1 12:30:50.123")!
 		let date2 = dateFormater.date(from: "1999/12/31 12:30:50.123")!
+		let dateLeapYear = dateFormater.date(from: "2000/2/1 12:30:50.123")!
 
 		XCTAssertEqual(date.LLA.lastMonth()!.LLA.year(), 1998)
 		XCTAssertEqual(date.LLA.lastMonth()!.LLA.month(), 12)
@@ -96,6 +93,9 @@ class LLAExtensionPackTestDate: XCTestCase {
 		XCTAssertEqual(date2.LLA.firstDayOfMonth()!.LLA.day(), 1)
 		XCTAssertEqual(date.LLA.endDayOfMonth()!.LLA.month(), 1)
 		XCTAssertEqual(date.LLA.endDayOfMonth()!.LLA.day(), 31)
+
+		XCTAssertEqual(date.LLA.daysOfMonth(), 31)
+		XCTAssertEqual(dateLeapYear.LLA.daysOfMonth(), 29)
 	}
 
 }

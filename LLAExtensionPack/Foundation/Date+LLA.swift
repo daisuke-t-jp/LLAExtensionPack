@@ -11,17 +11,15 @@ import Foundation
 
 
 extension Date: LLANamespaceWrapper {}
+
+// MARK: Components
 public extension LLATypeWrapper where T == Date
 {
-	// MARK: time
 	public func unixTime() -> TimeInterval
 	{
 		return SELF.timeIntervalSince1970
 	}
 	
-	
-	
-	// MARK: components
 	public func year() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
@@ -95,18 +93,13 @@ public extension LLATypeWrapper where T == Date
 		
 		return comps.nanosecond
 	}
+}
 
-	public func daysOfMonth() -> Int
-	{
-		let cal = Calendar(identifier: .gregorian)
-		let range = cal.range(of: .day, in: .month, for: SELF)
-		
-		return range!.count
-	}
-	
 
-	
-	// MARK: inspect
+
+// MARK: Inspect
+public extension LLATypeWrapper where T == Date
+{
 	public func isLeapYear() -> Bool
 	{
 		guard let y = year() else
@@ -117,10 +110,13 @@ public extension LLATypeWrapper where T == Date
 		let res = ((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0))
 		return res
 	}
+}
 	
-	
-	
-	// MARK: transform
+
+
+// MARK: Transform
+public extension LLATypeWrapper where T == Date
+{
 	public func lastMonth() -> Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
@@ -183,5 +179,15 @@ public extension LLATypeWrapper where T == Date
 		
 		return cal.date(byAdding: comps, to: firstDayOfMonth()!)
 	}
-	
+
+	public func daysOfMonth() -> Int?
+	{
+		let cal = Calendar(identifier: .gregorian)
+		guard let range = cal.range(of: .day, in: .month, for: SELF) else
+		{
+			return nil
+		}
+		
+		return range.count
+	}
 }

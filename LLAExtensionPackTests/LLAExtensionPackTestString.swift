@@ -23,33 +23,49 @@ class LLAExtensionPackTestString: XCTestCase {
     }
 
     func testCompare() {
-
 		XCTAssertTrue("string".LLA.isEqual("string"))
 		XCTAssertFalse("string".LLA.isEqual("String"))
-		XCTAssertTrue("string".LLA.isEqual("string", caseInsensitive: true))
 		XCTAssertTrue("string".LLA.isEqual("String", caseInsensitive: true))
-
 	}
 
 	func testFind() {
-		
 		XCTAssertTrue("string".LLA.hasPrefix("str"))
 		XCTAssertFalse("string".LLA.hasPrefix("Str"))
-		XCTAssertTrue("string".LLA.hasPrefix("str", caseInsensitive: true))
 		XCTAssertTrue("string".LLA.hasPrefix("Str", caseInsensitive: true))
 
 		XCTAssertTrue("string".LLA.hasSuffix("ing"))
 		XCTAssertFalse("string".LLA.hasSuffix("Ing"))
-		XCTAssertTrue("string".LLA.hasSuffix("ing", caseInsensitive: true))
 		XCTAssertTrue("string".LLA.hasSuffix("Ing", caseInsensitive: true))
 
 		XCTAssertTrue("string".LLA.contains("tri"))
 		XCTAssertFalse("string".LLA.contains("Tri"))
-		XCTAssertTrue("string".LLA.contains("tri", caseInsensitive: true))
 		XCTAssertTrue("string".LLA.contains("Tri", caseInsensitive: true))
 
+		XCTAssertNotNil("string".LLA.range("str"))
+		XCTAssertNil("string".LLA.range("Str"))
+		XCTAssertNotNil("string".LLA.range("Str", caseInsensitive: true))
 	}
 
+	func testSubstring() {
+		let str = "string"
+		
+		XCTAssertEqual(str[str.LLA.startIndex(0)!...], "string")
+		XCTAssertEqual(str[str.LLA.startIndex(0)!..<str.LLA.startIndex(2)!], "st")
+		XCTAssertEqual(str[str.LLA.startIndex(0)!...str.LLA.startIndex(2)!], "str")
+		XCTAssertEqual(str[...str.LLA.startIndex(str.count - 1)!], "string")
+		XCTAssertEqual(str[..<str.LLA.startIndex(str.count)!], "string")
+
+		XCTAssertEqual(str[...str.LLA.endIndex(-1)!], "string")
+		XCTAssertEqual(str[str.LLA.endIndex(-3)!..<str.LLA.endIndex(-1)!], "in")
+		XCTAssertEqual(str[str.LLA.endIndex(-3)!...str.LLA.endIndex(-1)!], "ing")
+		XCTAssertEqual(str[str.LLA.endIndex(-6)!...], "string")
+
+		XCTAssertEqual(str.LLA.substring(1, end: 3), "tri")
+		XCTAssertEqual(str.LLA.substring(NSMakeRange(1, 3)), "tri")
+		XCTAssertEqual(str.LLA.substringFromIndex(1), "tring")
+		XCTAssertEqual(str.LLA.substringToIndex(3), "str")
+	}
+	
 	func testInspect() {
 		XCTAssertTrue("1".LLA.isNumeric())
 		XCTAssertTrue("123".LLA.isNumeric())
@@ -74,8 +90,13 @@ class LLAExtensionPackTestString: XCTestCase {
 	}
 	
 	func testEncode() {
-		XCTAssertEqual("abcABC1234/?-._~".LLA.urlEncoding, "abcABC1234/?-._~")
-		XCTAssertEqual(":#[]@!$&'()*+,;=".LLA.urlEncoding, "%3A%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D")
+		XCTAssertEqual("abcABC1234/?-._~".LLA.urlEncoding(), "abcABC1234/?-._~")
+		XCTAssertEqual(":#[]@!$&'()*+,;=".LLA.urlEncoding(), "%3A%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D")
+	}
+
+	func testHash() {
+		XCTAssertEqual("MD5".LLA.hashMD5()!.count, 32)
+		XCTAssertEqual("SHA1".LLA.hashSHA1()!.count, 40)
 	}
 
 }
