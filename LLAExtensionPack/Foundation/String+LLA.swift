@@ -224,3 +224,27 @@ public extension LLATypeWrapper where T == String
 	}
 	
 }
+
+
+
+// MARK: Transform
+public extension LLATypeWrapper where T == String
+{
+	fileprivate func transformFullwidthHalfwidth(_ reverse: Bool) -> String
+	{
+		let str = NSMutableString(string: SELF) as CFMutableString
+		CFStringTransform(str, nil, kCFStringTransformFullwidthHalfwidth, reverse);
+
+		return str as String;
+	}
+
+	public func halfWidth() -> String
+	{
+		return transformFullwidthHalfwidth(false)
+	}
+
+	public func fullWidth() -> String
+	{
+		return transformFullwidthHalfwidth(true)
+	}
+}
