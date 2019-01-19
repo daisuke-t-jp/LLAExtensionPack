@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021EA29F21F010AE00AE086D /* LLAExtensionPackTestInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA29E21F010AE00AE086D /* LLAExtensionPackTestInt.swift */; };
 		021EA2AC21F020F300AE086D /* URL+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2A521F020F300AE086D /* URL+LLA.swift */; };
 		021EA2AD21F020F300AE086D /* Int+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2A621F020F300AE086D /* Int+LLA.swift */; };
 		021EA2AE21F020F300AE086D /* Locale+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2A721F020F300AE086D /* Locale+LLA.swift */; };
@@ -17,23 +16,24 @@
 		021EA2B221F020F300AE086D /* Date+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2AB21F020F300AE086D /* Date+LLA.swift */; };
 		021EA2BD21F04ACE00AE086D /* UIColor+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2BC21F04ACE00AE086D /* UIColor+LLA.swift */; };
 		021EA2BF21F053F700AE086D /* LLAExtensionPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2BE21F053F700AE086D /* LLAExtensionPack.swift */; };
-		021EA2C121F05EC400AE086D /* LLAExtensionPackTestUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2C021F05EC400AE086D /* LLAExtensionPackTestUIColor.swift */; };
 		021EA2C321F0689100AE086D /* UIView+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2C221F0689100AE086D /* UIView+LLA.swift */; };
-		021EA2C521F0735200AE086D /* LLAExtensionPackTestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2C421F0735200AE086D /* LLAExtensionPackTestUIView.swift */; };
-		022FBAAF21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBAAE21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift */; };
 		022FBAB121EEAE0700C7BEAE /* LLAExtensionPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028A6CB721EDC1CD00997CDE /* LLAExtensionPack.framework */; };
 		022FBAB821EEBCC600C7BEAE /* LLANamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */; };
-		022FBABC21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBABB21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift */; };
-		022FBAC021EEE57400C7BEAE /* LLAExtensionPackTestDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBABF21EEE57400C7BEAE /* LLAExtensionPackTestDate.swift */; };
 		028A6CBC21EDC1CD00997CDE /* LLAExtensionPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02992DC821F189F900DA50FB /* CALayer+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DC721F189F900DA50FB /* CALayer+LLA.swift */; };
 		02992DD121F1A82A00DA50FB /* UIControl+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD021F1A82A00DA50FB /* UIControl+LLA.swift */; };
-		02992DD421F1B2B100DA50FB /* LLAExtensionPackTestUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD321F1B2B100DA50FB /* LLAExtensionPackTestUIControl.swift */; };
 		02992DD921F1C54900DA50FB /* UUID+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD821F1C54900DA50FB /* UUID+LLA.swift */; };
-		02992DDB21F1C5A300DA50FB /* LLAExtensionPackTestUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DDA21F1C5A200DA50FB /* LLAExtensionPackTestUUID.swift */; };
 		02992DDD21F1C76E00DA50FB /* UIDevice+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */; };
-		02992DDF21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DDE21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift */; };
-		7E55054F21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */; };
+		7E0099FE21F2D49D007BF243 /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */; };
+		7E0099FF21F2D49D007BF243 /* LLAExtensionPackTestInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F421F2D49D007BF243 /* LLAExtensionPackTestInt.swift */; };
+		7E009A0021F2D49D007BF243 /* LLAExtensionPackTestUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F521F2D49D007BF243 /* LLAExtensionPackTestUUID.swift */; };
+		7E009A0121F2D49D007BF243 /* LLAExtensionPackTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F621F2D49D007BF243 /* LLAExtensionPackTestBundle.swift */; };
+		7E009A0221F2D49D007BF243 /* LLAExtensionPackTestString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F721F2D49D007BF243 /* LLAExtensionPackTestString.swift */; };
+		7E009A0321F2D49D007BF243 /* LLAExtensionPackTestDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F821F2D49D007BF243 /* LLAExtensionPackTestDate.swift */; };
+		7E009A0421F2D49D007BF243 /* LLAExtensionPackTestUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099FA21F2D49D007BF243 /* LLAExtensionPackTestUIControl.swift */; };
+		7E009A0521F2D49D007BF243 /* LLAExtensionPackTestUIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099FB21F2D49D007BF243 /* LLAExtensionPackTestUIDevice.swift */; };
+		7E009A0621F2D49D007BF243 /* LLAExtensionPackTestUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099FC21F2D49D007BF243 /* LLAExtensionPackTestUIColor.swift */; };
+		7E009A0721F2D49D007BF243 /* LLAExtensionPackTestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099FD21F2D49D007BF243 /* LLAExtensionPackTestUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		021EA29E21F010AE00AE086D /* LLAExtensionPackTestInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestInt.swift; sourceTree = "<group>"; };
 		021EA2A521F020F300AE086D /* URL+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+LLA.swift"; sourceTree = "<group>"; };
 		021EA2A621F020F300AE086D /* Int+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+LLA.swift"; sourceTree = "<group>"; };
 		021EA2A721F020F300AE086D /* Locale+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+LLA.swift"; sourceTree = "<group>"; };
@@ -57,26 +56,27 @@
 		021EA2AB21F020F300AE086D /* Date+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+LLA.swift"; sourceTree = "<group>"; };
 		021EA2BC21F04ACE00AE086D /* UIColor+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+LLA.swift"; sourceTree = "<group>"; };
 		021EA2BE21F053F700AE086D /* LLAExtensionPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLAExtensionPack.swift; sourceTree = "<group>"; };
-		021EA2C021F05EC400AE086D /* LLAExtensionPackTestUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIColor.swift; sourceTree = "<group>"; };
 		021EA2C221F0689100AE086D /* UIView+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LLA.swift"; sourceTree = "<group>"; };
-		021EA2C421F0735200AE086D /* LLAExtensionPackTestUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIView.swift; sourceTree = "<group>"; };
 		022FBAAC21EEAE0700C7BEAE /* LLAExtensionPackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLAExtensionPackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		022FBAAE21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestString.swift; sourceTree = "<group>"; };
 		022FBAB021EEAE0700C7BEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLANamespace.swift; sourceTree = "<group>"; };
-		022FBABB21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestBundle.swift; sourceTree = "<group>"; };
-		022FBABF21EEE57400C7BEAE /* LLAExtensionPackTestDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestDate.swift; sourceTree = "<group>"; };
 		028A6CB721EDC1CD00997CDE /* LLAExtensionPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLAExtensionPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAExtensionPack.h; sourceTree = "<group>"; };
 		028A6CBB21EDC1CD00997CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02992DC721F189F900DA50FB /* CALayer+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+LLA.swift"; sourceTree = "<group>"; };
 		02992DD021F1A82A00DA50FB /* UIControl+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+LLA.swift"; sourceTree = "<group>"; };
-		02992DD321F1B2B100DA50FB /* LLAExtensionPackTestUIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIControl.swift; sourceTree = "<group>"; };
 		02992DD821F1C54900DA50FB /* UUID+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+LLA.swift"; sourceTree = "<group>"; };
-		02992DDA21F1C5A200DA50FB /* LLAExtensionPackTestUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUUID.swift; sourceTree = "<group>"; };
 		02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+LLA.swift"; sourceTree = "<group>"; };
-		02992DDE21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIDevice.swift; sourceTree = "<group>"; };
-		7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestURL.swift; sourceTree = "<group>"; };
+		7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestURL.swift; sourceTree = "<group>"; };
+		7E0099F421F2D49D007BF243 /* LLAExtensionPackTestInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestInt.swift; sourceTree = "<group>"; };
+		7E0099F521F2D49D007BF243 /* LLAExtensionPackTestUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUUID.swift; sourceTree = "<group>"; };
+		7E0099F621F2D49D007BF243 /* LLAExtensionPackTestBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestBundle.swift; sourceTree = "<group>"; };
+		7E0099F721F2D49D007BF243 /* LLAExtensionPackTestString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestString.swift; sourceTree = "<group>"; };
+		7E0099F821F2D49D007BF243 /* LLAExtensionPackTestDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestDate.swift; sourceTree = "<group>"; };
+		7E0099FA21F2D49D007BF243 /* LLAExtensionPackTestUIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIControl.swift; sourceTree = "<group>"; };
+		7E0099FB21F2D49D007BF243 /* LLAExtensionPackTestUIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIDevice.swift; sourceTree = "<group>"; };
+		7E0099FC21F2D49D007BF243 /* LLAExtensionPackTestUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIColor.swift; sourceTree = "<group>"; };
+		7E0099FD21F2D49D007BF243 /* LLAExtensionPackTestUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,17 +127,9 @@
 		022FBAAD21EEAE0700C7BEAE /* LLAExtensionPackTests */ = {
 			isa = PBXGroup;
 			children = (
-				021EA29E21F010AE00AE086D /* LLAExtensionPackTestInt.swift */,
-				022FBAAE21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift */,
-				022FBABF21EEE57400C7BEAE /* LLAExtensionPackTestDate.swift */,
-				022FBABB21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift */,
-				02992DDA21F1C5A200DA50FB /* LLAExtensionPackTestUUID.swift */,
-				7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */,
-				02992DDE21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift */,
-				021EA2C021F05EC400AE086D /* LLAExtensionPackTestUIColor.swift */,
-				021EA2C421F0735200AE086D /* LLAExtensionPackTestUIView.swift */,
-				02992DD321F1B2B100DA50FB /* LLAExtensionPackTestUIControl.swift */,
 				022FBAB021EEAE0700C7BEAE /* Info.plist */,
+				7E0099F221F2D49D007BF243 /* Foundation */,
+				7E0099F921F2D49D007BF243 /* UIKit */,
 			);
 			path = LLAExtensionPackTests;
 			sourceTree = "<group>";
@@ -180,6 +172,30 @@
 				02992DC721F189F900DA50FB /* CALayer+LLA.swift */,
 			);
 			path = QuartzCore;
+			sourceTree = "<group>";
+		};
+		7E0099F221F2D49D007BF243 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */,
+				7E0099F421F2D49D007BF243 /* LLAExtensionPackTestInt.swift */,
+				7E0099F521F2D49D007BF243 /* LLAExtensionPackTestUUID.swift */,
+				7E0099F621F2D49D007BF243 /* LLAExtensionPackTestBundle.swift */,
+				7E0099F721F2D49D007BF243 /* LLAExtensionPackTestString.swift */,
+				7E0099F821F2D49D007BF243 /* LLAExtensionPackTestDate.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		7E0099F921F2D49D007BF243 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7E0099FA21F2D49D007BF243 /* LLAExtensionPackTestUIControl.swift */,
+				7E0099FB21F2D49D007BF243 /* LLAExtensionPackTestUIDevice.swift */,
+				7E0099FC21F2D49D007BF243 /* LLAExtensionPackTestUIColor.swift */,
+				7E0099FD21F2D49D007BF243 /* LLAExtensionPackTestUIView.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,16 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E55054F21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift in Sources */,
-				021EA29F21F010AE00AE086D /* LLAExtensionPackTestInt.swift in Sources */,
-				02992DD421F1B2B100DA50FB /* LLAExtensionPackTestUIControl.swift in Sources */,
-				021EA2C121F05EC400AE086D /* LLAExtensionPackTestUIColor.swift in Sources */,
-				02992DDF21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift in Sources */,
-				021EA2C521F0735200AE086D /* LLAExtensionPackTestUIView.swift in Sources */,
-				022FBABC21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift in Sources */,
-				022FBAC021EEE57400C7BEAE /* LLAExtensionPackTestDate.swift in Sources */,
-				02992DDB21F1C5A300DA50FB /* LLAExtensionPackTestUUID.swift in Sources */,
-				022FBAAF21EEAE0700C7BEAE /* LLAExtensionPackTestString.swift in Sources */,
+				7E009A0721F2D49D007BF243 /* LLAExtensionPackTestUIView.swift in Sources */,
+				7E009A0521F2D49D007BF243 /* LLAExtensionPackTestUIDevice.swift in Sources */,
+				7E009A0221F2D49D007BF243 /* LLAExtensionPackTestString.swift in Sources */,
+				7E009A0621F2D49D007BF243 /* LLAExtensionPackTestUIColor.swift in Sources */,
+				7E009A0121F2D49D007BF243 /* LLAExtensionPackTestBundle.swift in Sources */,
+				7E0099FF21F2D49D007BF243 /* LLAExtensionPackTestInt.swift in Sources */,
+				7E009A0021F2D49D007BF243 /* LLAExtensionPackTestUUID.swift in Sources */,
+				7E009A0321F2D49D007BF243 /* LLAExtensionPackTestDate.swift in Sources */,
+				7E009A0421F2D49D007BF243 /* LLAExtensionPackTestUIControl.swift in Sources */,
+				7E0099FE21F2D49D007BF243 /* LLAExtensionPackTestURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
