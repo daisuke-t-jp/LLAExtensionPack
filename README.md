@@ -12,17 +12,24 @@ Swift Extension Pack With *"LLA"* Namespace.
 
 
 ### Extensions
-- Foundation
-  - Int
-  - String
-  - Date
-  - Locale
-  - Bundle
-  - URL
-  - URLSession
-- UIKit
-  - UIColor
-  - UIView
+#### Foundation
+- Int
+- String
+- Date
+- Locale
+- Bundle
+- UUID
+- URL
+- URLSession
+
+#### QuartzCore
+- CALayer
+
+#### UIKit
+- UIDevice
+- UIColor
+- UIView
+- UIControl
 
 
 ### Example
