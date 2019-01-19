@@ -27,6 +27,7 @@
 		022FBAC021EEE57400C7BEAE /* LLAExtensionPackTestDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBABF21EEE57400C7BEAE /* LLAExtensionPackTestDate.swift */; };
 		028A6CBC21EDC1CD00997CDE /* LLAExtensionPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02992DC821F189F900DA50FB /* CALayer+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DC721F189F900DA50FB /* CALayer+LLA.swift */; };
+		02992DD921F1C54900DA50FB /* UUID+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD821F1C54900DA50FB /* UUID+LLA.swift */; };
 		7E55054F21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAExtensionPack.h; sourceTree = "<group>"; };
 		028A6CBB21EDC1CD00997CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02992DC721F189F900DA50FB /* CALayer+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+LLA.swift"; sourceTree = "<group>"; };
+		02992DD821F1C54900DA50FB /* UUID+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+LLA.swift"; sourceTree = "<group>"; };
 		7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 				021EA2AB21F020F300AE086D /* Date+LLA.swift */,
 				021EA2A721F020F300AE086D /* Locale+LLA.swift */,
 				021EA2A921F020F300AE086D /* Bundle+LLA.swift */,
+				02992DD821F1C54900DA50FB /* UUID+LLA.swift */,
 				021EA2A521F020F300AE086D /* URL+LLA.swift */,
 				021EA2AA21F020F300AE086D /* URLSession+LLA.swift */,
 			);
@@ -294,6 +297,7 @@
 				022FBAB821EEBCC600C7BEAE /* LLANamespace.swift in Sources */,
 				02992DC821F189F900DA50FB /* CALayer+LLA.swift in Sources */,
 				021EA2BD21F04ACE00AE086D /* UIColor+LLA.swift in Sources */,
+				02992DD921F1C54900DA50FB /* UUID+LLA.swift in Sources */,
 				021EA2BF21F053F700AE086D /* LLAExtensionPack.swift in Sources */,
 				021EA2AC21F020F300AE086D /* URL+LLA.swift in Sources */,
 				021EA2C321F0689100AE086D /* UIView+LLA.swift in Sources */,
