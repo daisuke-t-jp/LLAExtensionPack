@@ -30,6 +30,7 @@
 		02992DD921F1C54900DA50FB /* UUID+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD821F1C54900DA50FB /* UUID+LLA.swift */; };
 		02992DDB21F1C5A300DA50FB /* LLAExtensionPackTestUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DDA21F1C5A200DA50FB /* LLAExtensionPackTestUUID.swift */; };
 		02992DDD21F1C76E00DA50FB /* UIDevice+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */; };
+		02992DDF21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DDE21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift */; };
 		7E55054F21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		02992DD821F1C54900DA50FB /* UUID+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+LLA.swift"; sourceTree = "<group>"; };
 		02992DDA21F1C5A200DA50FB /* LLAExtensionPackTestUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUUID.swift; sourceTree = "<group>"; };
 		02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+LLA.swift"; sourceTree = "<group>"; };
+		02992DDE21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIDevice.swift; sourceTree = "<group>"; };
 		7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				022FBABB21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift */,
 				02992DDA21F1C5A200DA50FB /* LLAExtensionPackTestUUID.swift */,
 				7E55054E21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift */,
+				02992DDE21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift */,
 				021EA2C021F05EC400AE086D /* LLAExtensionPackTestUIColor.swift */,
 				021EA2C421F0735200AE086D /* LLAExtensionPackTestUIView.swift */,
 				022FBAB021EEAE0700C7BEAE /* Info.plist */,
@@ -285,6 +288,7 @@
 				7E55054F21EF5E8A0017EC6F /* LLAExtensionPackTestURL.swift in Sources */,
 				021EA29F21F010AE00AE086D /* LLAExtensionPackTestInt.swift in Sources */,
 				021EA2C121F05EC400AE086D /* LLAExtensionPackTestUIColor.swift in Sources */,
+				02992DDF21F1C9B300DA50FB /* LLAExtensionPackTestUIDevice.swift in Sources */,
 				021EA2C521F0735200AE086D /* LLAExtensionPackTestUIView.swift in Sources */,
 				022FBABC21EEE25700C7BEAE /* LLAExtensionPackTestBundle.swift in Sources */,
 				022FBAC021EEE57400C7BEAE /* LLAExtensionPackTestDate.swift in Sources */,
