@@ -13,16 +13,26 @@ import Foundation
 extension Bundle: LLANamespaceWrapper {}
 public extension LLATypeWrapper where T == Bundle
 {
-	public func shortVersion() -> String
+	public func shortVersion() -> String?
 	{
 		guard let dict = SELF.infoDictionary else
 		{
-			return ""
+			return nil
 		}
 		
-		return dict["CFBundleShortVersionString"] as! String
+		return dict["CFBundleShortVersionString"] as? String
 	}
 
+	public func version() -> String?
+	{
+		guard let dict = SELF.infoDictionary else
+		{
+			return nil
+		}
+		
+		return dict["CFBundleVersion"] as? String
+	}
+	
 	public func identifier() -> String
 	{
 		return SELF.bundleIdentifier!
