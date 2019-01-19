@@ -201,3 +201,34 @@ public extension LLATypeWrapper where T == UIColor
 		return UIColor(hexRGB:0x607D8B)
 	}
 }
+
+
+
+// MARK: UIImage
+public extension LLATypeWrapper where T == UIColor
+{
+	public func UIImage() -> UIImage?
+	{
+		defer {
+			UIGraphicsEndImageContext();
+		}
+
+		let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+
+		UIGraphicsBeginImageContext(rect.size)
+		guard let context = UIGraphicsGetCurrentContext() else
+		{
+			return nil
+		}
+		
+		context.setFillColor(SELF.cgColor)
+		context.fill(rect)
+
+		guard let res = UIGraphicsGetImageFromCurrentImageContext() else
+		{
+			return nil
+		}
+
+		return res
+	}
+}
