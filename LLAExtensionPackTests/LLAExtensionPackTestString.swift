@@ -99,4 +99,9 @@ class LLAExtensionPackTestString: XCTestCase {
 		XCTAssertEqual("SHA1".LLA.hashSHA1()!.count, 40)
 	}
 
+	func testTransform() {
+		XCTAssertEqual("ＳＴＲＩＮＧ".LLA.halfWidth(), "STRING")
+		XCTAssertEqual("STRING".LLA.fullWidth(), "ＳＴＲＩＮＧ")
+	}
+	
 }
