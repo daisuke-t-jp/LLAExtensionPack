@@ -23,10 +23,8 @@ class LLAExtensionPackTestInt: XCTestCase {
     }
 
     func testDecimal() {
-
 		XCTAssertEqual(1234.LLA.decimalFormatString(Locale.LLA.LocaleIdentifier.en_US), "1,234")
 		XCTAssertEqual(1234.LLA.decimalFormatString(Locale.LLA.LocaleIdentifier.ja_JP), "1,234")
-
 	}
 
 	func testCurrency() {
