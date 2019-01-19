@@ -12,6 +12,15 @@ import UIKit
 
 extension UIView: LLANamespaceWrapper {}
 
+// MARK: Enum, Const
+public extension LLATypeWrapper where T == UIView
+{
+	fileprivate static let layerNameCorner = "lla_layer_corner"
+	fileprivate static let layerNameBorder = "lla_layer_border"
+}
+
+
+
 // MARK: Property
 public extension LLATypeWrapper where T == UIView
 {
@@ -61,7 +70,7 @@ public extension LLATypeWrapper where T == UIView
 // MARK: Layer
 public extension LLATypeWrapper where T == UIView
 {
-	public func setCircled(_ flag: Bool)
+	public func setCircled(_ flag: Bool) -> Void
 	{
 		if flag
 		{
@@ -71,50 +80,123 @@ public extension LLATypeWrapper where T == UIView
 
 		SELF.layer.cornerRadius = 0
 	}
+}
 
-	public func setCornerRadius(_ corners: UIRectCorner,
-								radius: CGFloat,
-								strokeWidth: CGFloat,
-								strokeColor: UIColor)
+
+
+// MARK: Layer(Corner)
+public extension LLATypeWrapper where T == UIView
+{
+	public func layerCorner() -> CAShapeLayer?
 	{
+		guard let layer = SELF.layer.mask as? CAShapeLayer else
+		{
+			return nil
+		}
+
+		if layer.name == UIView.LLA.layerNameCorner
+		{
+			return layer
+		}
+
+		return nil
+	}
+
+	public func setCorners(_ corners: UIRectCorner, radius: CGFloat) -> Void
+	{
+		removeCorners()
 
 		if corners.isEmpty
 		{
-			// no corners.
-			SELF.layer.mask = nil
-			SELF.layer.masksToBounds = false
-
 			return
 		}
-	
-		// prepare mask path.
-		let maskPath:UIBezierPath = UIBezierPath.init(roundedRect: SELF.bounds,
-													  byRoundingCorners: corners,
-													  cornerRadii: CGSize(width: radius, height: radius))
 
-		// prepare mask layer
-		let maskLayer:CAShapeLayer = CAShapeLayer.init()
-		maskLayer.path = maskPath.cgPath
-		maskLayer.frame = SELF.bounds
-		SELF.layer.mask = maskLayer
+
+		let cornerRadii = CGSize(width: radius, height: radius)
+		let path = UIBezierPath.init(roundedRect: SELF.bounds,
+									 byRoundingCorners: corners,
+									 cornerRadii: cornerRadii)
+
+		let layer = CAShapeLayer.init()
+		layer.path = path.cgPath
+		layer.frame = SELF.bounds
+		layer.name = UIView.LLA.layerNameCorner
+
+		SELF.layer.mask = layer
 		SELF.layer.masksToBounds = true
+	}
 	
+	public func removeCorners() -> Void
+	{
+		guard let layer = layerCorner() else
+		{
+			return
+		}
 
-		if strokeWidth <= 0
+		layer.mask = nil
+		layer.masksToBounds = false
+	}
+}
+
+
+
+// MARK: Layer(Border)
+public extension LLATypeWrapper where T == UIView
+{
+	public func layerBorder() -> CAShapeLayer?
+	{
+		guard let res = SELF.layer.LLA.sublayerWithName(UIView.LLA.layerNameBorder) as? CAShapeLayer else
+		{
+			return nil
+		}
+
+		return res
+	}
+
+	public func setBorder(_ width: CGFloat, color: UIColor) -> Void
+	{
+		removeBorder()
+
+		guard let cornerLayer = layerCorner() else
+		{
+			// corner layer none.
+			SELF.layer.borderWidth = width
+			SELF.layer.borderColor = color.cgColor
+			return
+		}
+
+		
+		// corner layer exist.
+		guard cornerLayer.path != nil else
 		{
 			return
 		}
 
 		
-		// add stroke.
-		let strokeLayer:CAShapeLayer = CAShapeLayer.init()
-		strokeLayer.path = maskPath.cgPath
-		strokeLayer.fillColor = UIColor.clear.cgColor
-		strokeLayer.strokeColor = strokeColor.cgColor
-		strokeLayer.lineWidth = strokeWidth
-		strokeLayer.frame = SELF.bounds
+		let layer = CAShapeLayer.init()
+		layer.path = cornerLayer.path
+		layer.fillColor = UIColor.clear.cgColor
+		layer.strokeColor = color.cgColor
+		layer.lineWidth = width
+		layer.frame = SELF.bounds
+		layer.name = UIView.LLA.layerNameBorder
 		
-		SELF.layer.addSublayer(strokeLayer)
+		SELF.layer.addSublayer(layer)
+	}
+
+	public func removeBorder() -> Void
+	{
+		guard let layer = layerBorder() else
+		{
+			// corner layer none.
+			SELF.layer.borderWidth = 0
+			SELF.layer.borderColor = UIColor.clear.cgColor
+			return
+		}
+
+		
+		// corner layer exist.
+		layer.removeFromSuperlayer()
 	}
 }
 
@@ -123,7 +205,7 @@ public extension LLATypeWrapper where T == UIView
 // MARK: Gestures
 public extension LLATypeWrapper where T == UIView
 {
-	public func setExclusiveTouchRecursive(_ flag: Bool)
+	public func setIsExclusiveTouchRecursive(_ flag: Bool)
 	{
 		for subview in SELF.subviews
 		{
@@ -136,19 +218,13 @@ public extension LLATypeWrapper where T == UIView
 			button.isExclusiveTouch = flag
 			
 			// function recursive call.
-			subview.LLA.setExclusiveTouchRecursive(flag)
+			subview.LLA.setIsExclusiveTouchRecursive(flag)
 		}
-
 	}
 
 	public func removeGestureRecognizers()
 	{
-		guard let array = SELF.gestureRecognizers else
-		{
-			return
-		}
-
-		for elm in array
+		for elm in SELF.gestureRecognizers ?? []
 		{
 			SELF.removeGestureRecognizer(elm)
 		}
@@ -172,6 +248,14 @@ public extension LLATypeWrapper where T == UIView
 			view.removeFromSuperview()
 
 			break
+		}
+	}
+	
+	public func removeAllSubviews()
+	{
+		for view in SELF.subviews
+		{
+			view.removeFromSuperview()
 		}
 	}
 }
