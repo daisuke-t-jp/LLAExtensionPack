@@ -24,6 +24,7 @@ class LLAExtensionPackTestUUID: XCTestCase {
 
     func test() {
 		XCTAssertNotNil(UUID.LLA.string())
+		XCTAssertNotNil(UUID().LLA.string())
 	}
 
 }
