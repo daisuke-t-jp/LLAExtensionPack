@@ -24,6 +24,8 @@
 		02992DD121F1A82A00DA50FB /* UIControl+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD021F1A82A00DA50FB /* UIControl+LLA.swift */; };
 		02992DD921F1C54900DA50FB /* UUID+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD821F1C54900DA50FB /* UUID+LLA.swift */; };
 		02992DDD21F1C76E00DA50FB /* UIDevice+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */; };
+		02C8CD9121F592B80078D731 /* CLLocationManager+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9021F592B80078D731 /* CLLocationManager+LLA.swift */; };
+		02C8CD9921F5A81E0078D731 /* CLBeacon+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9821F5A81D0078D731 /* CLBeacon+LLA.swift */; };
 		02C8CD9F21F5B2E90078D731 /* CGRect+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9E21F5B2E90078D731 /* CGRect+LLA.swift */; };
 		02C8CDA221F5B5560078D731 /* LLAExtensionPackTestCGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CDA121F5B5560078D731 /* LLAExtensionPackTestCGRect.swift */; };
 		7E0099FE21F2D49D007BF243 /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */; };
@@ -69,6 +71,8 @@
 		02992DD021F1A82A00DA50FB /* UIControl+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+LLA.swift"; sourceTree = "<group>"; };
 		02992DD821F1C54900DA50FB /* UUID+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+LLA.swift"; sourceTree = "<group>"; };
 		02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+LLA.swift"; sourceTree = "<group>"; };
+		02C8CD9021F592B80078D731 /* CLLocationManager+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+LLA.swift"; sourceTree = "<group>"; };
+		02C8CD9821F5A81D0078D731 /* CLBeacon+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLBeacon+LLA.swift"; sourceTree = "<group>"; };
 		02C8CD9E21F5B2E90078D731 /* CGRect+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+LLA.swift"; sourceTree = "<group>"; };
 		02C8CDA121F5B5560078D731 /* LLAExtensionPackTestCGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestCGRect.swift; sourceTree = "<group>"; };
 		7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestURL.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				7E0099F221F2D49D007BF243 /* Foundation */,
 				02C8CDA021F5B5560078D731 /* CoreGraphics */,
 				7E0099F921F2D49D007BF243 /* UIKit */,
+				02C8CD9221F598450078D731 /* CoreLocation */,
 			);
 			path = LLAExtensionPackTests;
 			sourceTree = "<group>";
@@ -145,7 +150,6 @@
 				028A6CB921EDC1CD00997CDE /* LLAExtensionPack */,
 				022FBAAD21EEAE0700C7BEAE /* LLAExtensionPackTests */,
 				028A6CB821EDC1CD00997CDE /* Products */,
-				02C8CD9521F5A1740078D731 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +173,7 @@
 				02C8CD9D21F5B2E90078D731 /* CoreGraphics */,
 				02992DC621F189F900DA50FB /* CoreAnimation */,
 				021EA2B321F0216100AE086D /* UIKit */,
+				02C8CD8F21F592B80078D731 /* CoreLocation */,
 			);
 			path = LLAExtensionPack;
 			sourceTree = "<group>";
@@ -179,6 +184,25 @@
 				02992DC721F189F900DA50FB /* CALayer+LLA.swift */,
 			);
 			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		02C8CD8F21F592B80078D731 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				02C8CD9021F592B80078D731 /* CLLocationManager+LLA.swift */,
+				02C8CD9821F5A81D0078D731 /* CLBeacon+LLA.swift */,
+			);
+			name = CoreLocation;
+			path = LLAExtensionPack/CoreLocation;
+			sourceTree = SOURCE_ROOT;
+		};
+		02C8CD9221F598450078D731 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				02C8CD9321F598450078D731 /* LLAExtensionPackTestCLLocationManager.swift */,
+				02C8CD9A21F5AADC0078D731 /* LLAExtensionPackTestCLBeacon.swift */,
+			);
+			path = CoreLocation;
 			sourceTree = "<group>";
 		};
 		02C8CD9D21F5B2E90078D731 /* CoreGraphics */ = {
@@ -352,6 +376,7 @@
 				021EA2B021F020F300AE086D /* Bundle+LLA.swift in Sources */,
 				021EA2AD21F020F300AE086D /* Int+LLA.swift in Sources */,
 				02C8CD9F21F5B2E90078D731 /* CGRect+LLA.swift in Sources */,
+				02C8CD9921F5A81E0078D731 /* CLBeacon+LLA.swift in Sources */,
 				02992DDD21F1C76E00DA50FB /* UIDevice+LLA.swift in Sources */,
 				021EA2B221F020F300AE086D /* Date+LLA.swift in Sources */,
 				022FBAB821EEBCC600C7BEAE /* LLANamespace.swift in Sources */,
@@ -362,6 +387,7 @@
 				021EA2BF21F053F700AE086D /* LLAExtensionPack.swift in Sources */,
 				021EA2AC21F020F300AE086D /* URL+LLA.swift in Sources */,
 				021EA2C321F0689100AE086D /* UIView+LLA.swift in Sources */,
+				02C8CD9121F592B80078D731 /* CLLocationManager+LLA.swift in Sources */,
 				021EA2B121F020F300AE086D /* URLSession+LLA.swift in Sources */,
 				021EA2AE21F020F300AE086D /* Locale+LLA.swift in Sources */,
 			);
