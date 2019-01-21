@@ -24,6 +24,7 @@
 		02992DD121F1A82A00DA50FB /* UIControl+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD021F1A82A00DA50FB /* UIControl+LLA.swift */; };
 		02992DD921F1C54900DA50FB /* UUID+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD821F1C54900DA50FB /* UUID+LLA.swift */; };
 		02992DDD21F1C76E00DA50FB /* UIDevice+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */; };
+		02C8CD9F21F5B2E90078D731 /* CGRect+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9E21F5B2E90078D731 /* CGRect+LLA.swift */; };
 		7E0099FE21F2D49D007BF243 /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */; };
 		7E0099FF21F2D49D007BF243 /* LLAExtensionPackTestInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F421F2D49D007BF243 /* LLAExtensionPackTestInt.swift */; };
 		7E009A0021F2D49D007BF243 /* LLAExtensionPackTestUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F521F2D49D007BF243 /* LLAExtensionPackTestUUID.swift */; };
@@ -67,6 +68,7 @@
 		02992DD021F1A82A00DA50FB /* UIControl+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+LLA.swift"; sourceTree = "<group>"; };
 		02992DD821F1C54900DA50FB /* UUID+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+LLA.swift"; sourceTree = "<group>"; };
 		02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+LLA.swift"; sourceTree = "<group>"; };
+		02C8CD9E21F5B2E90078D731 /* CGRect+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+LLA.swift"; sourceTree = "<group>"; };
 		7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestURL.swift; sourceTree = "<group>"; };
 		7E0099F421F2D49D007BF243 /* LLAExtensionPackTestInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestInt.swift; sourceTree = "<group>"; };
 		7E0099F521F2D49D007BF243 /* LLAExtensionPackTestUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUUID.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				022FBAB021EEAE0700C7BEAE /* Info.plist */,
 				7E0099F221F2D49D007BF243 /* Foundation */,
+				02C8CDA021F5B5560078D731 /* CoreGraphics */,
 				7E0099F921F2D49D007BF243 /* UIKit */,
 			);
 			path = LLAExtensionPackTests;
