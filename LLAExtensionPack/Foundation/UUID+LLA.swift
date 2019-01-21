@@ -18,4 +18,9 @@ public extension LLATypeWrapper where T == UUID
 	{
 		return UUID().uuidString
 	}
+
+	public func string() -> String
+	{
+		return SELF.uuidString
+	}
 }
