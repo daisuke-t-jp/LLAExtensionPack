@@ -33,4 +33,27 @@ public extension LLATypeWrapper where T == Int
 	{
 		return formatString(.currency, locale: locale)
 	}
+	
+	public func kiloFormatString(_ locale: LLATypeWrapper<Locale>.LocaleIdentifier) -> String?
+	{
+		if(SELF >= 1000){
+			// more than kilo.
+			let k = SELF / 1000
+			let v = (SELF - (k * 1000)) / 100
+
+			guard let str = k.LLA.decimalFormatString(locale) else {
+				return nil
+			}
+
+			if(v == 0) {
+				// only kilo.
+				return str
+			}
+
+			return "\(str).\(v)"
+		}
+
+		// less than kilo.
+		return SELF.LLA.decimalFormatString(locale)
+	}
 }
