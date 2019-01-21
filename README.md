@@ -5,7 +5,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-green.svg)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/daisuke-t-jp/LLAExtensionPack.svg?branch=master)](https://travis-ci.org/daisuke-t-jp/LLAExtensionPack)
 
-Swift Extension Pack With *"LLA"* Namespace.
+Swift Extension Pack With *"LLA"* Namespace 📦
 
 ### Carthage
 `github "daisuke-t-jp/LLAExtensionPack"`
@@ -22,14 +22,21 @@ Swift Extension Pack With *"LLA"* Namespace.
 - [URL](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/Foundation/URL%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/Foundation/LLAExtensionPackTestURL.swift "")
 - [URLSession](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/Foundation/URLSession%2BLLA.swift "")
 
-#### [QuartzCore](https://github.com/daisuke-t-jp/LLAExtensionPack/tree/master/LLAExtensionPack/QuartzCore "")
-- [CALayer](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/QuartzCore/CALayer%2BLLA.swift "")
+#### [CoreGraphics](https://github.com/daisuke-t-jp/LLAExtensionPack/tree/master/LLAExtensionPack/CoreGraphics "")
+- [CGRect](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/CoreGraphics/CGRect%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/CoreGraphics/LLAExtensionPackTestCGRect.swift "")
+
+#### [CoreAnimation](https://github.com/daisuke-t-jp/LLAExtensionPack/tree/master/LLAExtensionPack/CoreAnimation "")
+- [CALayer](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/CoreAnimation/CALayer%2BLLA.swift "")
 
 #### [UIKit](https://github.com/daisuke-t-jp/LLAExtensionPack/tree/master/LLAExtensionPack/UIKit "")
 - [UIDevice](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/UIKit/UIDevice%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/UIKit/LLAExtensionPackTestUIDevice.swift "")
 - [UIColor](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/UIKit/UIColor%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/UIKit/LLAExtensionPackTestUIColor.swift "")
 - [UIView](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/UIKit/UIView%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/UIKit/LLAExtensionPackTestUIView.swift "")
 - [UIControl](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/UIKit/UIControl%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/UIKit/LLAExtensionPackTestUIControl.swift "")
+
+#### [CoreLocation](https://github.com/daisuke-t-jp/LLAExtensionPack/tree/master/LLAExtensionPack/CoreLocation "")
+- [CLLocationManager](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/CoreLocation/CLLocationManager%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/CoreLocation/LLAExtensionPackTestCLLocationManager.swift "")
+- [CLBeacon](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/CoreLocation/CLBeacon%2BLLA.swift "")
 
 
 ### Example
@@ -52,6 +59,10 @@ import LLAExtensionPack
 // Substring
 "string"[str.LLA.startIndex(0)!...str.LLA.startIndex(2)!] // "str"
 "string".LLA.substring(NSMakeRange(1, 3)), "tri"
+
+// Subscript
+"string"[0...2] // "str"
+"string"[1...3], "tri"
 
 // Inspect
 "1".LLA.isNumeric() // true
