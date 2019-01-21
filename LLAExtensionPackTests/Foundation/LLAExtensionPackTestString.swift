@@ -66,6 +66,19 @@ class LLAExtensionPackTestString: XCTestCase {
 		XCTAssertEqual(str.LLA.substringToIndex(3), "str")
 	}
 	
+	func testSubscript() {
+		let str = "string"
+		
+		XCTAssertEqual(str[0..<2], "st")
+		XCTAssertEqual(str[0...2], "str")
+		
+		XCTAssertEqual(str[1..<3], "tr")
+		XCTAssertEqual(str[1...3], "tri")
+
+		XCTAssertEqual(str[1...], "tring")
+		XCTAssertEqual(str[...2], "str")
+	}
+
 	func testInspect() {
 		XCTAssertTrue("1".LLA.isNumeric())
 		XCTAssertTrue("123".LLA.isNumeric())
