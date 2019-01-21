@@ -74,7 +74,7 @@ import LLAExtensionPack
 
 // Subscript
 "string"[0...2] // "str"
-"string"[1...3], "tri"
+"string"[1...3] // "tri"
 
 // Inspect
 "1".LLA.isNumeric() // true
