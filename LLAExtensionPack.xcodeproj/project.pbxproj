@@ -166,19 +166,21 @@
 				021EA2BE21F053F700AE086D /* LLAExtensionPack.swift */,
 				028A6CBB21EDC1CD00997CDE /* Info.plist */,
 				021EA2A421F020F300AE086D /* Foundation */,
-				02992DC621F189F900DA50FB /* QuartzCore */,
 				02C8CD9D21F5B2E90078D731 /* CoreGraphics */,
+				02992DC621F189F900DA50FB /* CoreAnimation */,
 				021EA2B321F0216100AE086D /* UIKit */,
 			);
 			path = LLAExtensionPack;
 			sourceTree = "<group>";
 		};
-		02992DC621F189F900DA50FB /* QuartzCore */ = {
+		02992DC621F189F900DA50FB /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
 				02992DC721F189F900DA50FB /* CALayer+LLA.swift */,
 			);
-			path = QuartzCore;
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
 		02C8CD9D21F5B2E90078D731 /* CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
