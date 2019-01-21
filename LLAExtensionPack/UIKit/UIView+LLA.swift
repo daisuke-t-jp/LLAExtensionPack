@@ -21,52 +21,6 @@ public extension LLATypeWrapper where T == UIView
 
 
 
-// MARK: Property
-public extension LLATypeWrapper where T == UIView
-{
-	public func x() -> CGFloat
-	{
-		return SELF.frame.origin.x
-	}
-	
-	public func setX(_ x: CGFloat)
-	{
-		SELF.frame.origin.x = x
-	}
-
-	public func y() -> CGFloat
-	{
-		return SELF.frame.origin.y
-	}
-	
-	public func setY(_ y: CGFloat)
-	{
-		SELF.frame.origin.y = y
-	}
-
-	public func width() -> CGFloat
-	{
-		return SELF.frame.size.width
-	}
-	
-	public func setWidth(_ width: CGFloat)
-	{
-		SELF.frame.size.width = width
-	}
-
-	public func height() -> CGFloat
-	{
-		return SELF.frame.size.height
-	}
-	
-	public func setHeight(_ height: CGFloat)
-	{
-		SELF.frame.size.height = height
-	}
-}
-
-
-
 // MARK: Layer
 public extension LLATypeWrapper where T == UIView
 {
@@ -74,7 +28,7 @@ public extension LLATypeWrapper where T == UIView
 	{
 		if flag
 		{
-			SELF.layer.cornerRadius = width() * 0.5
+			SELF.layer.cornerRadius = SELF.frame.width() * 0.5
 			return
 		}
 

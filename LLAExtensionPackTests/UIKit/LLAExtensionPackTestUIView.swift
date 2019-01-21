@@ -25,21 +25,21 @@ class LLAExtensionPackTestUIView: XCTestCase {
 	func testProperty() {
 		let view = UIView(frame: CGRect(x: 10, y: 20, width: 30, height: 40))
 		
-		XCTAssertEqual(view.LLA.x(), 10)
-		XCTAssertEqual(view.LLA.y(), 20)
-		XCTAssertEqual(view.LLA.width(), 30)
-		XCTAssertEqual(view.LLA.height(), 40)
+		XCTAssertEqual(view.frame.x(), 10)
+		XCTAssertEqual(view.frame.y(), 20)
+		XCTAssertEqual(view.frame.width(), 30)
+		XCTAssertEqual(view.frame.height(), 40)
 		
 		
-		view.LLA.setX(100)
-		view.LLA.setY(200)
-		view.LLA.setWidth(300)
-		view.LLA.setHeight(400)
+		view.frame.setX(100)
+		view.frame.setY(200)
+		view.frame.setWidth(300)
+		view.frame.setHeight(400)
 		
-		XCTAssertEqual(view.LLA.x(), 100)
-		XCTAssertEqual(view.LLA.y(), 200)
-		XCTAssertEqual(view.LLA.width(), 300)
-		XCTAssertEqual(view.LLA.height(), 400)
+		XCTAssertEqual(view.frame.x(), 100)
+		XCTAssertEqual(view.frame.y(), 200)
+		XCTAssertEqual(view.frame.width(), 300)
+		XCTAssertEqual(view.frame.height(), 400)
 	}
 	
 	func testSubview() {
