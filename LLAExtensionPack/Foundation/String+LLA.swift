@@ -120,6 +120,39 @@ public extension LLATypeWrapper where T == String
 
 
 
+// MARK: Subscript
+public extension String
+{
+	subscript (bounds: CountableClosedRange<Int>) -> String {
+		let lhs = index(startIndex, offsetBy: bounds.lowerBound)
+		let rhs = index(startIndex, offsetBy: bounds.upperBound)
+		return String(self[lhs...rhs])
+	}
+	
+	subscript (bounds: CountableRange<Int>) -> String {
+		let lhs = index(startIndex, offsetBy: bounds.lowerBound)
+		let rhs = index(startIndex, offsetBy: bounds.upperBound)
+		return String(self[lhs..<rhs])
+	}
+	
+	subscript (bounds: PartialRangeUpTo<Int>) -> String {
+		let rhs = index(startIndex, offsetBy: bounds.upperBound)
+		return String(self[startIndex..<rhs])
+	}
+	
+	subscript (bounds: PartialRangeThrough<Int>) -> String {
+		let rhs = index(startIndex, offsetBy: bounds.upperBound)
+		return String(self[startIndex...rhs])
+	}
+	
+	subscript (bounds: CountablePartialRangeFrom<Int>) -> String {
+		let lhs = index(startIndex, offsetBy: bounds.lowerBound)
+		return String(self[lhs..<endIndex])
+	}
+}
+
+
+
 // MARK: Inspect
 public extension LLATypeWrapper where T == String
 {
