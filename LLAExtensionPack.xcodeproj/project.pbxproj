@@ -25,7 +25,9 @@
 		02992DD921F1C54900DA50FB /* UUID+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD821F1C54900DA50FB /* UUID+LLA.swift */; };
 		02992DDD21F1C76E00DA50FB /* UIDevice+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */; };
 		02C8CD9121F592B80078D731 /* CLLocationManager+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9021F592B80078D731 /* CLLocationManager+LLA.swift */; };
+		02C8CD9421F598450078D731 /* LLAExtensionPackTestCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9321F598450078D731 /* LLAExtensionPackTestCLLocationManager.swift */; };
 		02C8CD9921F5A81E0078D731 /* CLBeacon+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9821F5A81D0078D731 /* CLBeacon+LLA.swift */; };
+		02C8CD9B21F5AADC0078D731 /* LLAExtensionPackTestCLBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9A21F5AADC0078D731 /* LLAExtensionPackTestCLBeacon.swift */; };
 		02C8CD9F21F5B2E90078D731 /* CGRect+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9E21F5B2E90078D731 /* CGRect+LLA.swift */; };
 		02C8CDA221F5B5560078D731 /* LLAExtensionPackTestCGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CDA121F5B5560078D731 /* LLAExtensionPackTestCGRect.swift */; };
 		7E0099FE21F2D49D007BF243 /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */; };
@@ -72,7 +74,9 @@
 		02992DD821F1C54900DA50FB /* UUID+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+LLA.swift"; sourceTree = "<group>"; };
 		02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+LLA.swift"; sourceTree = "<group>"; };
 		02C8CD9021F592B80078D731 /* CLLocationManager+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+LLA.swift"; sourceTree = "<group>"; };
+		02C8CD9321F598450078D731 /* LLAExtensionPackTestCLLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestCLLocationManager.swift; sourceTree = "<group>"; };
 		02C8CD9821F5A81D0078D731 /* CLBeacon+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLBeacon+LLA.swift"; sourceTree = "<group>"; };
+		02C8CD9A21F5AADC0078D731 /* LLAExtensionPackTestCLBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestCLBeacon.swift; sourceTree = "<group>"; };
 		02C8CD9E21F5B2E90078D731 /* CGRect+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+LLA.swift"; sourceTree = "<group>"; };
 		02C8CDA121F5B5560078D731 /* LLAExtensionPackTestCGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestCGRect.swift; sourceTree = "<group>"; };
 		7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestURL.swift; sourceTree = "<group>"; };
@@ -356,9 +360,11 @@
 			files = (
 				7E009A0721F2D49D007BF243 /* LLAExtensionPackTestUIView.swift in Sources */,
 				7E009A0521F2D49D007BF243 /* LLAExtensionPackTestUIDevice.swift in Sources */,
+				02C8CD9421F598450078D731 /* LLAExtensionPackTestCLLocationManager.swift in Sources */,
 				7E009A0221F2D49D007BF243 /* LLAExtensionPackTestString.swift in Sources */,
 				02C8CDA221F5B5560078D731 /* LLAExtensionPackTestCGRect.swift in Sources */,
 				7E009A0621F2D49D007BF243 /* LLAExtensionPackTestUIColor.swift in Sources */,
+				02C8CD9B21F5AADC0078D731 /* LLAExtensionPackTestCLBeacon.swift in Sources */,
 				7E009A0121F2D49D007BF243 /* LLAExtensionPackTestBundle.swift in Sources */,
 				7E0099FF21F2D49D007BF243 /* LLAExtensionPackTestInt.swift in Sources */,
 				7E009A0021F2D49D007BF243 /* LLAExtensionPackTestUUID.swift in Sources */,
