@@ -31,6 +31,7 @@
 		02C8CD9F21F5B2E90078D731 /* CGRect+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9E21F5B2E90078D731 /* CGRect+LLA.swift */; };
 		02C8CDA221F5B5560078D731 /* LLAExtensionPackTestCGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CDA121F5B5560078D731 /* LLAExtensionPackTestCGRect.swift */; };
 		02E6AB5121F54C1100B2E3C0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 02E6AB4F21F54C1100B2E3C0 /* README.md */; };
+		02E6AB5221F54C1100B2E3C0 /* LLAExtensionPack.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 02E6AB5021F54C1100B2E3C0 /* LLAExtensionPack.podspec */; };
 		7E0099FE21F2D49D007BF243 /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */; };
 		7E0099FF21F2D49D007BF243 /* LLAExtensionPackTestInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F421F2D49D007BF243 /* LLAExtensionPackTestInt.swift */; };
 		7E009A0021F2D49D007BF243 /* LLAExtensionPackTestUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F521F2D49D007BF243 /* LLAExtensionPackTestUUID.swift */; };
@@ -81,6 +82,7 @@
 		02C8CD9E21F5B2E90078D731 /* CGRect+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+LLA.swift"; sourceTree = "<group>"; };
 		02C8CDA121F5B5560078D731 /* LLAExtensionPackTestCGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestCGRect.swift; sourceTree = "<group>"; };
 		02E6AB4F21F54C1100B2E3C0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		02E6AB5021F54C1100B2E3C0 /* LLAExtensionPack.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LLAExtensionPack.podspec; sourceTree = SOURCE_ROOT; };
 		7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestURL.swift; sourceTree = "<group>"; };
 		7E0099F421F2D49D007BF243 /* LLAExtensionPackTestInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestInt.swift; sourceTree = "<group>"; };
 		7E0099F521F2D49D007BF243 /* LLAExtensionPackTestUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUUID.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				021EA2BE21F053F700AE086D /* LLAExtensionPack.swift */,
 				028A6CBB21EDC1CD00997CDE /* Info.plist */,
 				02E6AB4F21F54C1100B2E3C0 /* README.md */,
+				02E6AB5021F54C1100B2E3C0 /* LLAExtensionPack.podspec */,
 				021EA2A421F020F300AE086D /* Foundation */,
 				02C8CD9D21F5B2E90078D731 /* CoreGraphics */,
 				02992DC621F189F900DA50FB /* CoreAnimation */,
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02E6AB5121F54C1100B2E3C0 /* README.md in Resources */,
+				02E6AB5221F54C1100B2E3C0 /* LLAExtensionPack.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
