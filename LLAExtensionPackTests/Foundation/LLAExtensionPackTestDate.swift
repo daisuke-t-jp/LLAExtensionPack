@@ -22,9 +22,6 @@ class LLAExtensionPackTestDate: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-	func testTime() {
-	}
-
 	func testCompoents() {
 		let dateFormater = DateFormatter()
 		dateFormater.locale = Locale(identifier: "en_US")
