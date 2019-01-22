@@ -282,3 +282,32 @@ public extension LLATypeWrapper where T == UIView
 	}
 
 }
+
+
+
+// MARK: - UIImage
+public extension LLATypeWrapper where T == UIView
+{
+	public func image() -> UIImage?
+	{
+		defer {
+			UIGraphicsEndImageContext();
+		}
+
+
+		UIGraphicsBeginImageContextWithOptions(SELF.bounds.size, false, 0)
+		guard let context = UIGraphicsGetCurrentContext() else
+		{
+			return nil
+		}
+		
+		SELF.layer.render(in: context)
+		
+		guard let res = UIGraphicsGetImageFromCurrentImageContext() else
+		{
+			return nil
+		}
+		
+		return res
+	}
+}
