@@ -11,5 +11,5 @@ s.ios.deployment_target = "10.0"
 s.platform       = :ios, "10.0"
 s.swift_version  = "4.2"
 s.source       = { :git => "https://github.com/daisuke-t-jp/LLAExtensionPack.git", :tag => "1.0.4" }
-s.source_files  = "LLAExtensionPack"
+s.source_files  = 'LLAExtensionPack/*.{h,swift}', 'LLAExtensionPack/CoreAnimation/*.swift', 'LLAExtensionPack/CoreGraphics/*.swift', 'LLAExtensionPack/CoreLocation/*.swift', 'LLAExtensionPack/Foundation/*.swift', 'LLAExtensionPack/UIKit/*.swift'
 end
