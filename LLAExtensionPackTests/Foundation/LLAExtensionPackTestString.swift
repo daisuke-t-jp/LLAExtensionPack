@@ -113,8 +113,16 @@ class LLAExtensionPackTestString: XCTestCase {
 	}
 
 	func testTransform() {
+		XCTAssertEqual("ＳＴＲＩＮＧ".LLA.fullWidth(), "ＳＴＲＩＮＧ")
 		XCTAssertEqual("ＳＴＲＩＮＧ".LLA.halfWidth(), "STRING")
+
 		XCTAssertEqual("STRING".LLA.fullWidth(), "ＳＴＲＩＮＧ")
-	}
-	
+		XCTAssertEqual("STRING".LLA.halfWidth(), "STRING")
+
+		XCTAssertEqual("ことえり".LLA.hiragana(), "ことえり")
+		XCTAssertEqual("ことえり".LLA.katakana(), "コトエリ")
+
+		XCTAssertEqual("コトエリ".LLA.hiragana(), "ことえり")
+		XCTAssertEqual("コトエリ".LLA.katakana(), "コトエリ")
+	}	
 }
