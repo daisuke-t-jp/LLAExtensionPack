@@ -2,7 +2,7 @@
 //  UIImage+LLA.swift
 //  LLAExtensionPack
 //
-//  Created by Daisuke T on 2018/01/22.
+//  Created by Daisuke T on 2019/01/22.
 //  Copyright © 2018 Daisuke T. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  CGRect+LLA.swift
 //  LLAExtensionPack
 //
-//  Created by Daisuke T on 2018/01/21.
+//  Created by Daisuke T on 2019/01/21.
 //  Copyright © 2018 Daisuke T. All rights reserved.
 //
 
