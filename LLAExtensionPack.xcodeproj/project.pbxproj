@@ -20,6 +20,7 @@
 		022FBAB121EEAE0700C7BEAE /* LLAExtensionPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028A6CB721EDC1CD00997CDE /* LLAExtensionPack.framework */; };
 		022FBAB821EEBCC600C7BEAE /* LLANamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */; };
 		0242CCDE21F6D20F003D7D1A /* BinaryInteger+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDD21F6D20F003D7D1A /* BinaryInteger+LLA.swift */; };
+		0242CCE021F6D6F3003D7D1A /* FloatingPoint+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDF21F6D6F3003D7D1A /* FloatingPoint+LLA.swift */; };
 		0242CCE321F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift */; };
 		028A6CBC21EDC1CD00997CDE /* LLAExtensionPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02992DC821F189F900DA50FB /* CALayer+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DC721F189F900DA50FB /* CALayer+LLA.swift */; };
@@ -71,6 +72,7 @@
 		022FBAB021EEAE0700C7BEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLANamespace.swift; sourceTree = "<group>"; };
 		0242CCDD21F6D20F003D7D1A /* BinaryInteger+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BinaryInteger+LLA.swift"; sourceTree = "<group>"; };
+		0242CCDF21F6D6F3003D7D1A /* FloatingPoint+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+LLA.swift"; sourceTree = "<group>"; };
 		0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestBynaryInteger.swift; sourceTree = "<group>"; };
 		028A6CB721EDC1CD00997CDE /* LLAExtensionPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLAExtensionPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAExtensionPack.h; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				0242CCDD21F6D20F003D7D1A /* BinaryInteger+LLA.swift */,
+				0242CCDF21F6D6F3003D7D1A /* FloatingPoint+LLA.swift */,
 				021EA2A621F020F300AE086D /* Int+LLA.swift */,
 				021EA2A821F020F300AE086D /* String+LLA.swift */,
 				021EA2AB21F020F300AE086D /* Date+LLA.swift */,
@@ -411,6 +414,7 @@
 				021EA2C321F0689100AE086D /* UIView+LLA.swift in Sources */,
 				02C8CD9121F592B80078D731 /* CLLocationManager+LLA.swift in Sources */,
 				021EA2B121F020F300AE086D /* URLSession+LLA.swift in Sources */,
+				0242CCE021F6D6F3003D7D1A /* FloatingPoint+LLA.swift in Sources */,
 				021EA2AE21F020F300AE086D /* Locale+LLA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
