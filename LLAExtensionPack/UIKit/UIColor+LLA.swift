@@ -208,15 +208,16 @@ public extension LLATypeWrapper where T == UIColor
 // MARK: - UIImage
 public extension LLATypeWrapper where T == UIColor
 {
-	public func UIImage() -> UIImage?
+	public func image(_ size: CGSize) -> UIImage?
 	{
 		defer {
 			UIGraphicsEndImageContext();
 		}
 
-		let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
 
-		UIGraphicsBeginImageContext(rect.size)
+		let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+
+		UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
 		guard let context = UIGraphicsGetCurrentContext() else
 		{
 			return nil

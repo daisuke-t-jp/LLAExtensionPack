@@ -108,9 +108,9 @@ class LLAExtensionPackTestUIColor: XCTestCase {
 
 	}
 	
-	func testUIImage() {
-		let color = UIColor.init(hexRGBA: 0xFF0000FF)
+	func testImage() {
+		let image = UIColor.init(hexRGBA: 0xFF0000FF).LLA.image(CGSize.init(width: 128, height: 96))
 
-		XCTAssertNotNil(color.LLA.UIImage())
+		XCTAssertNotNil(image)
 	}
 }
