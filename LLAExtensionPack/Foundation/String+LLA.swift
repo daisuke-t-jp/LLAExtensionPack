@@ -264,7 +264,7 @@ public extension LLATypeWrapper where T == String
 // MARK: - Transform (FullwidthHalfwidth)
 public extension LLATypeWrapper where T == String
 {
-	fileprivate func transformFullwidthHalfwidth(_ reverse: Bool) -> String
+	private func transformFullwidthHalfwidth(_ reverse: Bool) -> String
 	{
 		let str = NSMutableString(string: SELF) as CFMutableString
 		CFStringTransform(str, nil, kCFStringTransformFullwidthHalfwidth, reverse);
@@ -272,13 +272,37 @@ public extension LLATypeWrapper where T == String
 		return str as String;
 	}
 
+	public func fullWidth() -> String
+	{
+		return transformFullwidthHalfwidth(true)
+	}
+
 	public func halfWidth() -> String
 	{
 		return transformFullwidthHalfwidth(false)
 	}
+}
 
-	public func fullWidth() -> String
+
+
+// MARK: - Transform (HiraganaKatakana)
+public extension LLATypeWrapper where T == String
+{
+	private func transformHiraganaKatakana(_ reverse: Bool) -> String
 	{
-		return transformFullwidthHalfwidth(true)
+		let str = NSMutableString(string: SELF) as CFMutableString
+		CFStringTransform(str, nil, kCFStringTransformHiraganaKatakana, reverse);
+		
+		return str as String;
+	}
+	
+	public func hiragana() -> String
+	{
+		return transformHiraganaKatakana(true)
+	}
+	
+	public func katakana() -> String
+	{
+		return transformHiraganaKatakana(false)
 	}
 }
