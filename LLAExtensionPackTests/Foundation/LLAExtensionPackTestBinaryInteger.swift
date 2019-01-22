@@ -1,5 +1,5 @@
 //
-//  LLAExtensionPackTestBynaryInteger.swift
+//  LLAExtensionPackTestBinaryInteger.swift
 //  LLAExtensionPackTests
 //
 //  Created by Daisuke T on 2018/01/22.
@@ -12,7 +12,7 @@ import XCTest
 
 
 
-class LLAExtensionPackTestBynaryInteger: XCTestCase {
+class LLAExtensionPackTestBinaryInteger: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

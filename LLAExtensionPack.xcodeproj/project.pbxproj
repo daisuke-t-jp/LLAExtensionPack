@@ -22,7 +22,7 @@
 		0242CCDC21F6BE61003D7D1A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDB21F6BE61003D7D1A /* UIImage.swift */; };
 		0242CCDE21F6D20F003D7D1A /* BinaryInteger+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDD21F6D20F003D7D1A /* BinaryInteger+LLA.swift */; };
 		0242CCE021F6D6F3003D7D1A /* FloatingPoint+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDF21F6D6F3003D7D1A /* FloatingPoint+LLA.swift */; };
-		0242CCE321F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift */; };
+		0242CCE321F6D7B8003D7D1A /* LLAExtensionPackTestBinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBinaryInteger.swift */; };
 		0242CCE421F6D7B8003D7D1A /* LLAExtensionPackTestFloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCE221F6D7B8003D7D1A /* LLAExtensionPackTestFloatingPoint.swift */; };
 		0242CCE621F6EF17003D7D1A /* LLAExtensionPackTestUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCE521F6EF17003D7D1A /* LLAExtensionPackTestUIImage.swift */; };
 		028A6CBC21EDC1CD00997CDE /* LLAExtensionPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,7 +77,7 @@
 		0242CCDB21F6BE61003D7D1A /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		0242CCDD21F6D20F003D7D1A /* BinaryInteger+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BinaryInteger+LLA.swift"; sourceTree = "<group>"; };
 		0242CCDF21F6D6F3003D7D1A /* FloatingPoint+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+LLA.swift"; sourceTree = "<group>"; };
-		0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestBynaryInteger.swift; sourceTree = "<group>"; };
+		0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBinaryInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestBinaryInteger.swift; sourceTree = "<group>"; };
 		0242CCE221F6D7B8003D7D1A /* LLAExtensionPackTestFloatingPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestFloatingPoint.swift; sourceTree = "<group>"; };
 		0242CCE521F6EF17003D7D1A /* LLAExtensionPackTestUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIImage.swift; sourceTree = "<group>"; };
 		028A6CB721EDC1CD00997CDE /* LLAExtensionPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLAExtensionPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,7 +249,7 @@
 		7E0099F221F2D49D007BF243 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift */,
+				0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBinaryInteger.swift */,
 				0242CCE221F6D7B8003D7D1A /* LLAExtensionPackTestFloatingPoint.swift */,
 				7E0099F421F2D49D007BF243 /* LLAExtensionPackTestInt.swift */,
 				7E0099F521F2D49D007BF243 /* LLAExtensionPackTestUUID.swift */,
@@ -389,7 +389,7 @@
 				7E009A0521F2D49D007BF243 /* LLAExtensionPackTestUIDevice.swift in Sources */,
 				02C8CD9421F598450078D731 /* LLAExtensionPackTestCLLocationManager.swift in Sources */,
 				7E009A0221F2D49D007BF243 /* LLAExtensionPackTestString.swift in Sources */,
-				0242CCE321F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift in Sources */,
+				0242CCE321F6D7B8003D7D1A /* LLAExtensionPackTestBinaryInteger.swift in Sources */,
 				0242CCE621F6EF17003D7D1A /* LLAExtensionPackTestUIImage.swift in Sources */,
 				02C8CDA221F5B5560078D731 /* LLAExtensionPackTestCGRect.swift in Sources */,
 				7E009A0621F2D49D007BF243 /* LLAExtensionPackTestUIColor.swift in Sources */,
