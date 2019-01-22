@@ -24,6 +24,7 @@
 		0242CCE021F6D6F3003D7D1A /* FloatingPoint+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDF21F6D6F3003D7D1A /* FloatingPoint+LLA.swift */; };
 		0242CCE321F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift */; };
 		0242CCE421F6D7B8003D7D1A /* LLAExtensionPackTestFloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCE221F6D7B8003D7D1A /* LLAExtensionPackTestFloatingPoint.swift */; };
+		0242CCE621F6EF17003D7D1A /* LLAExtensionPackTestUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCE521F6EF17003D7D1A /* LLAExtensionPackTestUIImage.swift */; };
 		028A6CBC21EDC1CD00997CDE /* LLAExtensionPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02992DC821F189F900DA50FB /* CALayer+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DC721F189F900DA50FB /* CALayer+LLA.swift */; };
 		02992DD121F1A82A00DA50FB /* UIControl+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02992DD021F1A82A00DA50FB /* UIControl+LLA.swift */; };
@@ -78,6 +79,7 @@
 		0242CCDF21F6D6F3003D7D1A /* FloatingPoint+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+LLA.swift"; sourceTree = "<group>"; };
 		0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestBynaryInteger.swift; sourceTree = "<group>"; };
 		0242CCE221F6D7B8003D7D1A /* LLAExtensionPackTestFloatingPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestFloatingPoint.swift; sourceTree = "<group>"; };
+		0242CCE521F6EF17003D7D1A /* LLAExtensionPackTestUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestUIImage.swift; sourceTree = "<group>"; };
 		028A6CB721EDC1CD00997CDE /* LLAExtensionPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLAExtensionPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		028A6CBA21EDC1CD00997CDE /* LLAExtensionPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAExtensionPack.h; sourceTree = "<group>"; };
 		028A6CBB21EDC1CD00997CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				7E0099FA21F2D49D007BF243 /* LLAExtensionPackTestUIControl.swift */,
 				7E0099FB21F2D49D007BF243 /* LLAExtensionPackTestUIDevice.swift */,
 				7E0099FC21F2D49D007BF243 /* LLAExtensionPackTestUIColor.swift */,
+				0242CCE521F6EF17003D7D1A /* LLAExtensionPackTestUIImage.swift */,
 				7E0099FD21F2D49D007BF243 /* LLAExtensionPackTestUIView.swift */,
 			);
 			path = UIKit;
@@ -387,6 +390,7 @@
 				02C8CD9421F598450078D731 /* LLAExtensionPackTestCLLocationManager.swift in Sources */,
 				7E009A0221F2D49D007BF243 /* LLAExtensionPackTestString.swift in Sources */,
 				0242CCE321F6D7B8003D7D1A /* LLAExtensionPackTestBynaryInteger.swift in Sources */,
+				0242CCE621F6EF17003D7D1A /* LLAExtensionPackTestUIImage.swift in Sources */,
 				02C8CDA221F5B5560078D731 /* LLAExtensionPackTestCGRect.swift in Sources */,
 				7E009A0621F2D49D007BF243 /* LLAExtensionPackTestUIColor.swift in Sources */,
 				02C8CD9B21F5AADC0078D731 /* LLAExtensionPackTestCLBeacon.swift in Sources */,
