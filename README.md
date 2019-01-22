@@ -25,6 +25,8 @@ end
 
 ### Extensions
 #### [Foundation](https://github.com/daisuke-t-jp/LLAExtensionPack/tree/master/LLAExtensionPack/Foundation "")
+- [BinaryInteger](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/Foundation/BinaryInteger%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/Foundation/LLAExtensionPackTestBinaryInteger.swift "")
+- [FloatingPoint](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/Foundation/FloatingPoint%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/Foundation/LLAExtensionPackTestFloatingPoint.swift "")
 - [Int](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/Foundation/Int%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/Foundation/LLAExtensionPackTestInt.swift "")
 - [String](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/Foundation/String%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/Foundation/LLAExtensionPackTestString.swift "")
 - [Date](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/Foundation/Date%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/Foundation/LLAExtensionPackTestDate.swift "")
@@ -43,6 +45,7 @@ end
 #### [UIKit](https://github.com/daisuke-t-jp/LLAExtensionPack/tree/master/LLAExtensionPack/UIKit "")
 - [UIDevice](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/UIKit/UIDevice%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/UIKit/LLAExtensionPackTestUIDevice.swift "")
 - [UIColor](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/UIKit/UIColor%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/UIKit/LLAExtensionPackTestUIColor.swift "")
+- [UIImage](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/UIKit/UIImage%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/UIKit/LLAExtensionPackTestUIImage.swift "")
 - [UIView](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/UIKit/UIView%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/UIKit/LLAExtensionPackTestUIView.swift "")
 - [UIControl](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPack/UIKit/UIControl%2BLLA.swift "") - [Test](https://github.com/daisuke-t-jp/LLAExtensionPack/blob/master/LLAExtensionPackTests/UIKit/LLAExtensionPackTestUIControl.swift "")
 
@@ -57,9 +60,8 @@ end
 ```swift
 import LLAExtensionPack
 
-
 /**
- * String
+ * Example "String"
  */
 // Compare
 "string".LLA.isEqual("String", caseInsensitive: true) // true
