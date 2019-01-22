@@ -76,4 +76,14 @@ class LLAExtensionPackTestUIView: XCTestCase {
 		}()
 
 	}
+
+
+	func testImage() {
+		let view = UIView(frame: CGRect(x: 10, y: 20, width: 30, height: 40))
+		view.backgroundColor = UIColor.red
+
+		let image = view.LLA.image()
+
+		XCTAssertNotNil(image)
+	}
 }
