@@ -19,7 +19,7 @@
 		021EA2C321F0689100AE086D /* UIView+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EA2C221F0689100AE086D /* UIView+LLA.swift */; };
 		022FBAB121EEAE0700C7BEAE /* LLAExtensionPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028A6CB721EDC1CD00997CDE /* LLAExtensionPack.framework */; };
 		022FBAB821EEBCC600C7BEAE /* LLANamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */; };
-		0242CCDC21F6BE61003D7D1A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDB21F6BE61003D7D1A /* UIImage.swift */; };
+		0242CCDC21F6BE61003D7D1A /* UIImage+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDB21F6BE61003D7D1A /* UIImage+LLA.swift */; };
 		0242CCDE21F6D20F003D7D1A /* BinaryInteger+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDD21F6D20F003D7D1A /* BinaryInteger+LLA.swift */; };
 		0242CCE021F6D6F3003D7D1A /* FloatingPoint+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCDF21F6D6F3003D7D1A /* FloatingPoint+LLA.swift */; };
 		0242CCE321F6D7B8003D7D1A /* LLAExtensionPackTestBinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBinaryInteger.swift */; };
@@ -74,7 +74,7 @@
 		022FBAAC21EEAE0700C7BEAE /* LLAExtensionPackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLAExtensionPackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		022FBAB021EEAE0700C7BEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		022FBAB721EEBCC600C7BEAE /* LLANamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLANamespace.swift; sourceTree = "<group>"; };
-		0242CCDB21F6BE61003D7D1A /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		0242CCDB21F6BE61003D7D1A /* UIImage+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+LLA.swift"; sourceTree = "<group>"; };
 		0242CCDD21F6D20F003D7D1A /* BinaryInteger+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BinaryInteger+LLA.swift"; sourceTree = "<group>"; };
 		0242CCDF21F6D6F3003D7D1A /* FloatingPoint+LLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+LLA.swift"; sourceTree = "<group>"; };
 		0242CCE121F6D7B8003D7D1A /* LLAExtensionPackTestBinaryInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAExtensionPackTestBinaryInteger.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			children = (
 				02992DDC21F1C76D00DA50FB /* UIDevice+LLA.swift */,
 				021EA2BC21F04ACE00AE086D /* UIColor+LLA.swift */,
-				0242CCDB21F6BE61003D7D1A /* UIImage.swift */,
+				0242CCDB21F6BE61003D7D1A /* UIImage+LLA.swift */,
 				021EA2C221F0689100AE086D /* UIView+LLA.swift */,
 				02992DD021F1A82A00DA50FB /* UIControl+LLA.swift */,
 			);
@@ -424,7 +424,7 @@
 				021EA2AC21F020F300AE086D /* URL+LLA.swift in Sources */,
 				021EA2C321F0689100AE086D /* UIView+LLA.swift in Sources */,
 				02C8CD9121F592B80078D731 /* CLLocationManager+LLA.swift in Sources */,
-				0242CCDC21F6BE61003D7D1A /* UIImage.swift in Sources */,
+				0242CCDC21F6BE61003D7D1A /* UIImage+LLA.swift in Sources */,
 				021EA2B121F020F300AE086D /* URLSession+LLA.swift in Sources */,
 				0242CCE021F6D6F3003D7D1A /* FloatingPoint+LLA.swift in Sources */,
 				021EA2AE21F020F300AE086D /* Locale+LLA.swift in Sources */,
