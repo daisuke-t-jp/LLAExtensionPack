@@ -12,7 +12,7 @@ import Foundation
 
 extension Date: LLANamespaceWrapper {}
 
-// MARK: Components
+// MARK: - Components
 public extension LLATypeWrapper where T == Date
 {
 	public func unixTime() -> TimeInterval
@@ -97,7 +97,7 @@ public extension LLATypeWrapper where T == Date
 
 
 
-// MARK: Inspect
+// MARK: - Inspect
 public extension LLATypeWrapper where T == Date
 {
 	public func isLeapYear() -> Bool
@@ -114,7 +114,7 @@ public extension LLATypeWrapper where T == Date
 	
 
 
-// MARK: Transform
+// MARK: - Transform
 public extension LLATypeWrapper where T == Date
 {
 	public func lastMonth() -> Date?

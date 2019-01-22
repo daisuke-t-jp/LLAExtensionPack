@@ -12,7 +12,8 @@ import UIKit
 
 extension UIColor: LLANamespaceWrapper {}
 
-// MARK: Init
+// MARK: - Init
+// MARK: WITHOUT-NAMESPACE
 public extension UIColor
 {
 	convenience init(hexRGB: UInt32)
@@ -55,7 +56,7 @@ public extension UIColor
 
 
 
-// MARK: Utility
+// MARK: - Utility
 public extension LLATypeWrapper where T == UIColor
 {
 	static public func toRGB(_ hexRGB: UInt32,
@@ -92,7 +93,7 @@ public extension LLATypeWrapper where T == UIColor
 
 
 
-// MARK: Property
+// MARK: - Property
 public extension LLATypeWrapper where T == UIColor
 {
 	public func red() -> CGFloat
@@ -126,7 +127,7 @@ public extension LLATypeWrapper where T == UIColor
 
 
 
-// MARK: Preset
+// MARK: - Preset
 public extension LLATypeWrapper where T == UIColor
 {
 	static public func presetMaterialRed() -> UIColor {
@@ -204,7 +205,7 @@ public extension LLATypeWrapper where T == UIColor
 
 
 
-// MARK: UIImage
+// MARK: - UIImage
 public extension LLATypeWrapper where T == UIColor
 {
 	public func UIImage() -> UIImage?

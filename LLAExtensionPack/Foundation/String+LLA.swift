@@ -12,7 +12,7 @@ import Foundation
 
 extension String: LLANamespaceWrapper {}
 
-// MARK: Compare
+// MARK: - Compare
 public extension LLATypeWrapper where T == String
 {
 	public func isEqual(_ str: String, caseInsensitive: Bool = false) -> Bool
@@ -28,7 +28,7 @@ public extension LLATypeWrapper where T == String
 
 
 
-// MARK: Find
+// MARK: - Find
 public extension LLATypeWrapper where T == String
 {
 	public func hasPrefix(_ str: String, caseInsensitive: Bool = false) -> Bool
@@ -74,7 +74,7 @@ public extension LLATypeWrapper where T == String
 
 
 
-// MARK: Substring
+// MARK: - Substring
 public extension LLATypeWrapper where T == String
 {
 	public func startIndex(_ offsetBy: String.IndexDistance) -> String.Index?
@@ -120,7 +120,8 @@ public extension LLATypeWrapper where T == String
 
 
 
-// MARK: Subscript
+// MARK: - Subscript
+// MARK: WITHOUT-NAMESPACE
 public extension String
 {
 	subscript (bounds: CountableClosedRange<Int>) -> String {
@@ -153,7 +154,7 @@ public extension String
 
 
 
-// MARK: Inspect
+// MARK: - Inspect
 public extension LLATypeWrapper where T == String
 {
 	public func isNumeric() -> Bool
@@ -182,7 +183,7 @@ public extension LLATypeWrapper where T == String
 
 
 
-// MARK: Replace
+// MARK: - Replace
 public extension LLATypeWrapper where T == String
 {
 	public func replace(_ target: String, replacement: String, caseInsensitive: Bool = false) -> String
@@ -198,7 +199,7 @@ public extension LLATypeWrapper where T == String
 
 
 
-// MARK: Remove
+// MARK: - Remove
 public extension LLATypeWrapper where T == String
 {
 	public func remove(_ target: String, caseInsensitive: Bool = false) -> String
@@ -209,7 +210,7 @@ public extension LLATypeWrapper where T == String
 
 
 	
-// MARK: Encode
+// MARK: - Encode
 public extension LLATypeWrapper where T == String
 {
 	public func urlEncoding() -> String
@@ -223,7 +224,7 @@ public extension LLATypeWrapper where T == String
 
 
 
-// MARK: Hash
+// MARK: - Hash
 public extension LLATypeWrapper where T == String
 {
 	public func hashMD5() -> String?
@@ -260,7 +261,7 @@ public extension LLATypeWrapper where T == String
 
 
 
-// MARK: Transform
+// MARK: - Transform (FullwidthHalfwidth)
 public extension LLATypeWrapper where T == String
 {
 	fileprivate func transformFullwidthHalfwidth(_ reverse: Bool) -> String

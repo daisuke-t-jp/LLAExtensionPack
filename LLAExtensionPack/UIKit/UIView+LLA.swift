@@ -12,7 +12,7 @@ import UIKit
 
 extension UIView: LLANamespaceWrapper {}
 
-// MARK: Enum, Const
+// MARK: - Enum, Const
 public extension LLATypeWrapper where T == UIView
 {
 	fileprivate static let layerNameCorner = "lla_layer_corner"
@@ -21,7 +21,7 @@ public extension LLATypeWrapper where T == UIView
 
 
 
-// MARK: Layer
+// MARK: - Layer
 public extension LLATypeWrapper where T == UIView
 {
 	public func setCircled(_ flag: Bool) -> Void
@@ -38,7 +38,7 @@ public extension LLATypeWrapper where T == UIView
 
 
 
-// MARK: Layer(Corner)
+// MARK: - Layer(Corner)
 public extension LLATypeWrapper where T == UIView
 {
 	public func layerCorner() -> CAShapeLayer?
@@ -94,7 +94,7 @@ public extension LLATypeWrapper where T == UIView
 
 
 
-// MARK: Layer(Border)
+// MARK: - Layer(Border)
 public extension LLATypeWrapper where T == UIView
 {
 	public func layerBorder() -> CAShapeLayer?
@@ -156,7 +156,7 @@ public extension LLATypeWrapper where T == UIView
 
 
 
-// MARK: Gestures
+// MARK: - Gestures
 public extension LLATypeWrapper where T == UIView
 {
 	public func setIsExclusiveTouchRecursive(_ flag: Bool)
@@ -187,7 +187,7 @@ public extension LLATypeWrapper where T == UIView
 
 
 
-// MARK: Subviews
+// MARK: - Subviews
 public extension LLATypeWrapper where T == UIView
 {
 	public func removeSubviewOf(tag: Int)
@@ -216,7 +216,7 @@ public extension LLATypeWrapper where T == UIView
 
 
 
-// MARK: Inspect
+// MARK: - Inspect
 public extension LLATypeWrapper where T == UIView
 {
 	public func isKindOfRecursive(_ clazz: AnyClass) -> UIView?

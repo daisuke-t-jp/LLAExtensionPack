@@ -12,7 +12,7 @@ import Foundation
 
 extension Locale: LLANamespaceWrapper {}
 
-// MARK: Enum, Const
+// MARK: - Enum, Const
 public extension LLATypeWrapper where T == Locale
 {
 	public enum LocaleIdentifier: String

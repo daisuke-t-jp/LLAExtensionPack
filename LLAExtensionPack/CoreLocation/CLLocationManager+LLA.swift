@@ -12,7 +12,7 @@ import CoreLocation
 
 extension CLLocationManager: LLANamespaceWrapper {}
 
-// MARK: Utility
+// MARK: - Utility
 public extension LLATypeWrapper where T == CLLocationManager
 {
 	static public let authorizationStatusStringMap: [CLAuthorizationStatus: String] = [
@@ -35,7 +35,7 @@ public extension LLATypeWrapper where T == CLLocationManager
 
 
 
-// MARK: Request
+// MARK: - Request
 public extension LLATypeWrapper where T == CLLocationManager
 {
 	public func requestWhenInUse() -> Void
@@ -54,7 +54,7 @@ public extension LLATypeWrapper where T == CLLocationManager
 
 
 
-// MARK: Auth status
+// MARK: - Auth status
 public extension LLATypeWrapper where T == CLLocationManager
 {
 	static public func isAuthorizationStatusWhenInUseOrAlways() -> Bool

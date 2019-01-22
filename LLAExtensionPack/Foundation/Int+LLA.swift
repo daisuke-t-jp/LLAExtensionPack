@@ -12,7 +12,7 @@ import Foundation
 
 extension Int: LLANamespaceWrapper {}
 
-// MARK: Format
+// MARK: - Format
 public extension LLATypeWrapper where T == Int
 {
 	private func formatString(_ style: NumberFormatter.Style,

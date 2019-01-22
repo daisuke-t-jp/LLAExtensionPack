@@ -10,7 +10,8 @@ import CoreGraphics
 
 
 
-// MARK: Property
+// MARK: - Property
+// MARK: WITHOUT-NAMESPACE
 public extension CGRect
 {
 	public func x() -> CGFloat
