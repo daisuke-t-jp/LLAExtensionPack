@@ -14,15 +14,15 @@ import XCTest
 
 class LLAExtensionPackTestURL: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+	override func setUp() {
+		// Put setup code here. This method is called before the invocation of each test method in the class.
+	}
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+	override func tearDown() {
+		// Put teardown code here. This method is called after the invocation of each test method in the class.
+	}
 
-    func test() {
+	func test() {
 
 		let url = URL(string: "https://www.example.com/api?")!
 		XCTAssertTrue(url.LLA.queryMap().keys.isEmpty)
