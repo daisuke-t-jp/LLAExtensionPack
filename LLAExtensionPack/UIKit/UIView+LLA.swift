@@ -142,14 +142,14 @@ public extension LLATypeWrapper where T == UIView
 	{
 		guard let layer = layerBorder() else
 		{
-			// corner layer none.
+			// border layer none.
 			SELF.layer.borderWidth = 0
 			SELF.layer.borderColor = UIColor.clear.cgColor
 			return
 		}
 
 		
-		// corner layer exist.
+		// border layer exist.
 		layer.removeFromSuperlayer()
 	}
 }
