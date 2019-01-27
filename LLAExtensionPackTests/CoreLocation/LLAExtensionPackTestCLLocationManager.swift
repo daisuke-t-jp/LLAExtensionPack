@@ -24,17 +24,17 @@ class LLAExtensionPackTestCLLocationManager: XCTestCase {
 	}
 
 	func test() {
-		XCTAssertEqual(CLLocationManager.LLA.authorizationStatus2String(.notDetermined), "notDetermined")
-		XCTAssertEqual(CLLocationManager.LLA.authorizationStatus2String(.restricted), "restricted")
-		XCTAssertEqual(CLLocationManager.LLA.authorizationStatus2String(.denied), "denied")
-		XCTAssertEqual(CLLocationManager.LLA.authorizationStatus2String(.authorizedAlways), "authorizedAlways")
-		XCTAssertEqual(CLLocationManager.LLA.authorizationStatus2String(.authorizedWhenInUse), "authorizedWhenInUse")
+		XCTAssertEqual(CLLocationManager.authorizationStatus2String(.notDetermined), "notDetermined")
+		XCTAssertEqual(CLLocationManager.authorizationStatus2String(.restricted), "restricted")
+		XCTAssertEqual(CLLocationManager.authorizationStatus2String(.denied), "denied")
+		XCTAssertEqual(CLLocationManager.authorizationStatus2String(.authorizedAlways), "authorizedAlways")
+		XCTAssertEqual(CLLocationManager.authorizationStatus2String(.authorizedWhenInUse), "authorizedWhenInUse")
 
-		XCTAssertFalse(CLLocationManager.LLA.isAuthorizationStatusWhenInUseOrAlways(.notDetermined))
-		XCTAssertFalse(CLLocationManager.LLA.isAuthorizationStatusWhenInUseOrAlways(.restricted))
-		XCTAssertFalse(CLLocationManager.LLA.isAuthorizationStatusWhenInUseOrAlways(.denied))
-		XCTAssertTrue(CLLocationManager.LLA.isAuthorizationStatusWhenInUseOrAlways(.authorizedAlways))
-		XCTAssertTrue(CLLocationManager.LLA.isAuthorizationStatusWhenInUseOrAlways(.authorizedWhenInUse))
+		XCTAssertFalse(CLLocationManager.isAuthorizationStatusWhenInUseOrAlways(.notDetermined))
+		XCTAssertFalse(CLLocationManager.isAuthorizationStatusWhenInUseOrAlways(.restricted))
+		XCTAssertFalse(CLLocationManager.isAuthorizationStatusWhenInUseOrAlways(.denied))
+		XCTAssertTrue(CLLocationManager.isAuthorizationStatusWhenInUseOrAlways(.authorizedAlways))
+		XCTAssertTrue(CLLocationManager.isAuthorizationStatusWhenInUseOrAlways(.authorizedWhenInUse))
 	}
 
 }

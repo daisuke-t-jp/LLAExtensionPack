@@ -10,10 +10,8 @@ import UIKit
 
 
 
-extension UIView: LLANamespaceWrapper {}
-
 // MARK: - Enum, Const
-public extension LLATypeWrapper where T == UIView
+public extension UIView
 {
 	fileprivate static let layerNameCorner = "lla_layer_corner"
 	fileprivate static let layerNameBorder = "lla_layer_border"
@@ -22,33 +20,33 @@ public extension LLATypeWrapper where T == UIView
 
 
 // MARK: - Layer
-public extension LLATypeWrapper where T == UIView
+public extension UIView
 {
 	public func setCircled(_ flag: Bool) -> Void
 	{
 		if flag
 		{
-			SELF.layer.cornerRadius = SELF.frame.width() * 0.5
+			self.layer.cornerRadius = self.frame.width() * 0.5
 			return
 		}
 
-		SELF.layer.cornerRadius = 0
+		self.layer.cornerRadius = 0
 	}
 }
 
 
 
 // MARK: - Layer(Corner)
-public extension LLATypeWrapper where T == UIView
+public extension UIView
 {
 	public func layerCorner() -> CAShapeLayer?
 	{
-		guard let layer = SELF.layer.mask as? CAShapeLayer else
+		guard let layer = self.layer.mask as? CAShapeLayer else
 		{
 			return nil
 		}
 
-		if layer.name == UIView.LLA.layerNameCorner
+		if layer.name == UIView.layerNameCorner
 		{
 			return layer
 		}
@@ -67,17 +65,17 @@ public extension LLATypeWrapper where T == UIView
 
 
 		let cornerRadii = CGSize(width: radius, height: radius)
-		let path = UIBezierPath.init(roundedRect: SELF.bounds,
+		let path = UIBezierPath.init(roundedRect: self.bounds,
 									 byRoundingCorners: corners,
 									 cornerRadii: cornerRadii)
 
 		let layer = CAShapeLayer.init()
 		layer.path = path.cgPath
-		layer.frame = SELF.bounds
-		layer.name = UIView.LLA.layerNameCorner
+		layer.frame = self.bounds
+		layer.name = UIView.layerNameCorner
 
-		SELF.layer.mask = layer
-		SELF.layer.masksToBounds = true
+		self.layer.mask = layer
+		self.layer.masksToBounds = true
 	}
 	
 	public func removeCorners() -> Void
@@ -95,11 +93,11 @@ public extension LLATypeWrapper where T == UIView
 
 
 // MARK: - Layer(Border)
-public extension LLATypeWrapper where T == UIView
+public extension UIView
 {
 	public func layerBorder() -> CAShapeLayer?
 	{
-		guard let res = SELF.layer.LLA.sublayerWithName(UIView.LLA.layerNameBorder) as? CAShapeLayer else
+		guard let res = self.layer.sublayerWithName(UIView.layerNameBorder) as? CAShapeLayer else
 		{
 			return nil
 		}
@@ -114,8 +112,8 @@ public extension LLATypeWrapper where T == UIView
 		guard let cornerLayer = layerCorner() else
 		{
 			// corner layer none.
-			SELF.layer.borderWidth = width
-			SELF.layer.borderColor = color.cgColor
+			self.layer.borderWidth = width
+			self.layer.borderColor = color.cgColor
 			return
 		}
 
@@ -132,10 +130,10 @@ public extension LLATypeWrapper where T == UIView
 		layer.fillColor = UIColor.clear.cgColor
 		layer.strokeColor = color.cgColor
 		layer.lineWidth = width
-		layer.frame = SELF.bounds
-		layer.name = UIView.LLA.layerNameBorder
+		layer.frame = self.bounds
+		layer.name = UIView.layerNameBorder
 		
-		SELF.layer.addSublayer(layer)
+		self.layer.addSublayer(layer)
 	}
 
 	public func removeBorder() -> Void
@@ -143,8 +141,8 @@ public extension LLATypeWrapper where T == UIView
 		guard let layer = layerBorder() else
 		{
 			// border layer none.
-			SELF.layer.borderWidth = 0
-			SELF.layer.borderColor = UIColor.clear.cgColor
+			self.layer.borderWidth = 0
+			self.layer.borderColor = UIColor.clear.cgColor
 			return
 		}
 
@@ -157,11 +155,11 @@ public extension LLATypeWrapper where T == UIView
 
 
 // MARK: - Gestures
-public extension LLATypeWrapper where T == UIView
+public extension UIView
 {
 	public func setIsExclusiveTouchRecursive(_ flag: Bool)
 	{
-		for subview in SELF.subviews
+		for subview in self.subviews
 		{
 			if !subview.isKind(of: UIButton.self)
 			{
@@ -172,15 +170,15 @@ public extension LLATypeWrapper where T == UIView
 			button.isExclusiveTouch = flag
 			
 			// function recursive call.
-			subview.LLA.setIsExclusiveTouchRecursive(flag)
+			subview.setIsExclusiveTouchRecursive(flag)
 		}
 	}
 
 	public func removeGestureRecognizers()
 	{
-		for elm in SELF.gestureRecognizers ?? []
+		for elm in self.gestureRecognizers ?? []
 		{
-			SELF.removeGestureRecognizer(elm)
+			removeGestureRecognizer(elm)
 		}
 	}
 }
@@ -188,11 +186,11 @@ public extension LLATypeWrapper where T == UIView
 
 
 // MARK: - Subviews
-public extension LLATypeWrapper where T == UIView
+public extension UIView
 {
 	public func removeSubviewOf(tag: Int)
 	{
-		for view in SELF.subviews
+		for view in self.subviews
 		{
 			if view.tag != tag
 			{
@@ -207,7 +205,7 @@ public extension LLATypeWrapper where T == UIView
 	
 	public func removeAllSubviews()
 	{
-		for view in SELF.subviews
+		for view in self.subviews
 		{
 			view.removeFromSuperview()
 		}
@@ -217,11 +215,11 @@ public extension LLATypeWrapper where T == UIView
 
 
 // MARK: - Inspect
-public extension LLATypeWrapper where T == UIView
+public extension UIView
 {
 	public func isKindOfRecursive(_ clazz: AnyClass) -> UIView?
 	{
-		for subview in SELF.subviews
+		for subview in self.subviews
 		{
 			if subview.isKind(of: clazz)
 			{
@@ -230,7 +228,7 @@ public extension LLATypeWrapper where T == UIView
 
 			
 			// function recursive call.
-			let view = subview.LLA.isKindOfRecursive(clazz)
+			let view = subview.isKindOfRecursive(clazz)
 			if view != nil
 			{
 				return view
@@ -242,7 +240,7 @@ public extension LLATypeWrapper where T == UIView
 
 	public func isMemberOfRecursive(_ clazz: AnyClass) -> UIView?
 	{
-		for subview in SELF.subviews
+		for subview in self.subviews
 		{
 			if subview.isMember(of: clazz)
 			{
@@ -251,7 +249,7 @@ public extension LLATypeWrapper where T == UIView
 			
 			
 			// function recursive call.
-			let view = subview.LLA.isMemberOfRecursive(clazz)
+			let view = subview.isMemberOfRecursive(clazz)
 			if view != nil
 			{
 				return view
@@ -263,15 +261,15 @@ public extension LLATypeWrapper where T == UIView
 	
 	public func findFirstResponder() -> UIView?
 	{
-		if SELF.isFirstResponder
+		if self.isFirstResponder
 		{
-			return SELF
+			return self
 		}
 
 		
-		for subview in SELF.subviews
+		for subview in self.subviews
 		{
-			let view: UIView? = subview.LLA.findFirstResponder()
+			let view: UIView? = subview.findFirstResponder()
 			if view != nil
 			{
 				return view
@@ -286,7 +284,7 @@ public extension LLATypeWrapper where T == UIView
 
 
 // MARK: - UIImage
-public extension LLATypeWrapper where T == UIView
+public extension UIView
 {
 	public func image() -> UIImage?
 	{
@@ -295,13 +293,13 @@ public extension LLATypeWrapper where T == UIView
 		}
 
 
-		UIGraphicsBeginImageContextWithOptions(SELF.bounds.size, false, 0)
+		UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0)
 		guard let context = UIGraphicsGetCurrentContext() else
 		{
 			return nil
 		}
 		
-		SELF.layer.render(in: context)
+		self.layer.render(in: context)
 		
 		guard let res = UIGraphicsGetImageFromCurrentImageContext() else
 		{

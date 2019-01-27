@@ -54,11 +54,11 @@ class LLAExtensionPackTestUIView: XCTestCase {
 			view3.tag = 3
 			view.addSubview(view3)
 			
-			view.LLA.removeSubviewOf(tag: 2)
+			view.removeSubviewOf(tag: 2)
 			XCTAssertEqual(view.subviews.count, 1)
 			XCTAssertEqual(view.subviews[0].tag, 3)
 			
-			view.LLA.removeSubviewOf(tag: 4)
+			view.removeSubviewOf(tag: 4)
 			XCTAssertEqual(view.subviews.count, 1)
 			XCTAssertEqual(view.subviews[0].tag, 3)
 		}()
@@ -71,7 +71,7 @@ class LLAExtensionPackTestUIView: XCTestCase {
 			view.addSubview(UIView())
 			XCTAssertEqual(view.subviews.count, 3)
 			
-			view.LLA.removeAllSubviews()
+			view.removeAllSubviews()
 			XCTAssertEqual(view.subviews.count, 0)
 		}()
 
@@ -82,7 +82,7 @@ class LLAExtensionPackTestUIView: XCTestCase {
 		let view = UIView(frame: CGRect(x: 10, y: 20, width: 30, height: 40))
 		view.backgroundColor = UIColor.red
 
-		let image = view.LLA.image()
+		let image = view.image()
 
 		XCTAssertNotNil(image)
 	}

@@ -10,9 +10,7 @@ import Foundation
 
 
 
-extension UUID: LLANamespaceWrapper {}
-
-public extension LLATypeWrapper where T == UUID
+public extension UUID
 {
 	static public func string() -> String
 	{
@@ -21,6 +19,6 @@ public extension LLATypeWrapper where T == UUID
 
 	public func string() -> String
 	{
-		return SELF.uuidString
+		return uuidString
 	}
 }

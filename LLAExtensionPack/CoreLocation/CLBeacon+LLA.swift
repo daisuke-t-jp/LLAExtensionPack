@@ -10,23 +10,21 @@ import CoreLocation
 
 
 
-extension CLBeacon: LLANamespaceWrapper {}
-
 // MARK: - Property
-public extension LLATypeWrapper where T == CLBeacon
+public extension CLBeacon
 {
 	public func proximityUUIDString() -> String
 	{
-		return SELF.proximityUUID.LLA.string()
+		return proximityUUID.string()
 	}
 
 	public func majorString() -> String
 	{
-		return SELF.major.stringValue
+		return major.stringValue
 	}
 
 	public func minorString() -> String
 	{
-		return SELF.minor.stringValue
+		return minor.stringValue
 	}
 }

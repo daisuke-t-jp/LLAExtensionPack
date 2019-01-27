@@ -10,10 +10,8 @@ import UIKit
 
 
 
-extension UIImage: LLANamespaceWrapper {}
-
 // MARK: - Effect
-public extension LLATypeWrapper where T == UIImage
+public extension UIImage
 {
 	private func border(_ width: CGFloat, color: UIColor, size: CGSize) -> UIImage?
 	{
@@ -23,12 +21,12 @@ public extension LLATypeWrapper where T == UIImage
 
 		let rect = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
 		let path = UIBezierPath.init(rect: rect)
-		let point = CGPoint.init(x: (size.width - SELF.size.width) * 0.5,
-								 y: (size.height - SELF.size.height) * 0.5)
+		let point = CGPoint.init(x: (size.width - self.size.width) * 0.5,
+								 y: (size.height - self.size.height) * 0.5)
 
 		UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
 
-		SELF.draw(at: point)
+		draw(at: point)
 		color.setStroke()
 		path.lineWidth = width * UIScreen.main.scale
 		path.stroke()
@@ -43,13 +41,13 @@ public extension LLATypeWrapper where T == UIImage
 	
 	public func borderInside(_ width: CGFloat, color: UIColor) -> UIImage?
 	{
-		return border(width, color: color, size: SELF.size)
+		return border(width, color: color, size: self.size)
 	}
 
 	public func borderOutside(_ width: CGFloat, color: UIColor) -> UIImage?
 	{
-		let size = CGSize.init(width: SELF.size.width + width * 2,
-							   height: SELF.size.height + width * 2)
+		let size = CGSize.init(width: self.size.width + width * 2,
+							   height: self.size.height + width * 2)
 
 		return border(width, color: color, size: size)
 	}
@@ -58,7 +56,7 @@ public extension LLATypeWrapper where T == UIImage
 
 
 // MARK: - Transform
-public extension LLATypeWrapper where T == UIImage
+public extension UIImage
 {
 	public func rotate(degree: Int, point: CGPoint? = nil) -> UIImage?
 	{
@@ -75,16 +73,16 @@ public extension LLATypeWrapper where T == UIImage
 		var point2 = point
 		if point2 == nil
 		{
-			point2 = CGPoint.init(x: SELF.size.width * 0.5, y: SELF.size.height * 0.5)
+			point2 = CGPoint.init(x: self.size.width * 0.5, y: self.size.height * 0.5)
 		}
 
-		UIGraphicsBeginImageContextWithOptions(CGSize.init(width: SELF.size.width, height: SELF.size.height), false, 0)
+		UIGraphicsBeginImageContextWithOptions(CGSize.init(width: self.size.width, height: self.size.height), false, 0)
 		guard let context = UIGraphicsGetCurrentContext() else
 		{
 			return nil
 		}
 
-		guard let cgImage = SELF.cgImage else
+		guard let cgImage = self.cgImage else
 		{
 			return nil
 		}
@@ -93,12 +91,12 @@ public extension LLATypeWrapper where T == UIImage
 		context.translateBy(x: point2!.x, y: point2!.y)
 		context.scaleBy(x: 1.0, y: -1.0)
 		context.rotate(by: -radian)
-		context.translateBy(x: -(point2!.x - SELF.size.width * 0.5),
-							y: (point2!.y - SELF.size.height * 0.5))
-		context.draw(cgImage, in: CGRect.init(x: -SELF.size.width * 0.5,
-											  y: -SELF.size.height * 0.5,
-											  width: SELF.size.width,
-											  height: SELF.size.height))
+		context.translateBy(x: -(point2!.x - self.size.width * 0.5),
+							y: (point2!.y - self.size.height * 0.5))
+		context.draw(cgImage, in: CGRect.init(x: -self.size.width * 0.5,
+											  y: -self.size.height * 0.5,
+											  width: self.size.width,
+											  height: self.size.height))
 
 		guard let res = UIGraphicsGetImageFromCurrentImageContext() else
 		{

@@ -23,14 +23,14 @@ class LLAExtensionPackTestInt: XCTestCase {
 	}
 
 	func test() {
-		XCTAssertEqual(1234.LLA.decimalFormatString(Locale.LLA.LocaleIdentifier.en_US), "1,234")
-		XCTAssertEqual(1234.LLA.decimalFormatString(Locale.LLA.LocaleIdentifier.ja_JP), "1,234")
+		XCTAssertEqual(1234.decimalFormatString(Locale.LocaleIdentifier.en_US), "1,234")
+		XCTAssertEqual(1234.decimalFormatString(Locale.LocaleIdentifier.ja_JP), "1,234")
 
-		XCTAssertEqual(1234.LLA.currencyFormatString(Locale.LLA.LocaleIdentifier.en_US), "$1,234.00")
-		XCTAssertEqual(1234.LLA.currencyFormatString(Locale.LLA.LocaleIdentifier.ja_JP), "¥1,234")
+		XCTAssertEqual(1234.currencyFormatString(Locale.LocaleIdentifier.en_US), "$1,234.00")
+		XCTAssertEqual(1234.currencyFormatString(Locale.LocaleIdentifier.ja_JP), "¥1,234")
 
-		XCTAssertEqual(123.LLA.kiloFormatString(Locale.LLA.LocaleIdentifier.en_US)! + "m", "123m")
-		XCTAssertEqual(1234.LLA.kiloFormatString(Locale.LLA.LocaleIdentifier.en_US)! + "km", "1.2km")
-		XCTAssertEqual(12345.LLA.kiloFormatString(Locale.LLA.LocaleIdentifier.en_US)! + "km", "12.3km")
+		XCTAssertEqual(123.kiloFormatString(Locale.LocaleIdentifier.en_US)! + "m", "123m")
+		XCTAssertEqual(1234.kiloFormatString(Locale.LocaleIdentifier.en_US)! + "km", "1.2km")
+		XCTAssertEqual(12345.kiloFormatString(Locale.LocaleIdentifier.en_US)! + "km", "12.3km")
 	}
 }

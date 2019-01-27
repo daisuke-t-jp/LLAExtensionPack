@@ -10,8 +10,7 @@ import Foundation
 
 
 
-extension URLSession: LLANamespaceWrapper {}
-public extension LLATypeWrapper where T == URLSession
+public extension URLSession
 {
 	public func dataTaskSync(_ req: URLRequest,
 							 handler: @escaping (Data?, URLResponse?, Error?) -> Void) -> Void

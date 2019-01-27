@@ -10,10 +10,10 @@ import UIKit
 
 
 
-public extension LLATypeWrapper where T == UIControl
+public extension UIControl
 {
 	public func removeAllTarget() -> Void
 	{
-		SELF.removeTarget(nil, action: nil, for: .allEvents)
+		self.removeTarget(nil, action: nil, for: .allEvents)
 	}
 }

@@ -10,12 +10,11 @@ import Foundation
 
 
 
-extension Bundle: LLANamespaceWrapper {}
-public extension LLATypeWrapper where T == Bundle
+public extension Bundle
 {
 	public func shortVersion() -> String?
 	{
-		guard let dict = SELF.infoDictionary else
+		guard let dict = infoDictionary else
 		{
 			return nil
 		}
@@ -25,7 +24,7 @@ public extension LLATypeWrapper where T == Bundle
 
 	public func version() -> String?
 	{
-		guard let dict = SELF.infoDictionary else
+		guard let dict = infoDictionary else
 		{
 			return nil
 		}
@@ -35,6 +34,6 @@ public extension LLATypeWrapper where T == Bundle
 	
 	public func identifier() -> String
 	{
-		return SELF.bundleIdentifier!
+		return bundleIdentifier!
 	}
 }

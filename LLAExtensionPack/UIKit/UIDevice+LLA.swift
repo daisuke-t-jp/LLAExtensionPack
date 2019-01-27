@@ -10,9 +10,7 @@ import UIKit
 
 
 
-extension UIDevice: LLANamespaceWrapper {}
-
-public extension LLATypeWrapper where T == UIDevice
+public extension UIDevice
 {
 	static private func systemVersionComponents() -> [String]?
 	{

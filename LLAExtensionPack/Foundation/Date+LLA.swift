@@ -10,20 +10,18 @@ import Foundation
 
 
 
-extension Date: LLANamespaceWrapper {}
-
 // MARK: - Components
-public extension LLATypeWrapper where T == Date
+public extension Date
 {
 	public func unixTime() -> TimeInterval
 	{
-		return SELF.timeIntervalSince1970
+		return timeIntervalSince1970
 	}
 	
 	public func year() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let comps = cal.dateComponents([.year], from: SELF)
+		let comps = cal.dateComponents([.year], from: self)
 		
 		return comps.year
 	}
@@ -31,7 +29,7 @@ public extension LLATypeWrapper where T == Date
 	public func month() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let comps = cal.dateComponents([.month], from: SELF)
+		let comps = cal.dateComponents([.month], from: self)
 		
 		return comps.month
 	}
@@ -39,7 +37,7 @@ public extension LLATypeWrapper where T == Date
 	public func weekday() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let comps = cal.dateComponents([.weekday], from: SELF)
+		let comps = cal.dateComponents([.weekday], from: self)
 		
 		return comps.weekday
 	}
@@ -47,7 +45,7 @@ public extension LLATypeWrapper where T == Date
 	public func day() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let comps = cal.dateComponents([.day], from: SELF)
+		let comps = cal.dateComponents([.day], from: self)
 		
 		return comps.day
 	}
@@ -55,7 +53,7 @@ public extension LLATypeWrapper where T == Date
 	public func hour() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let comps = cal.dateComponents([.hour], from: SELF)
+		let comps = cal.dateComponents([.hour], from: self)
 		
 		return comps.hour
 	}
@@ -63,7 +61,7 @@ public extension LLATypeWrapper where T == Date
 	public func minute() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let comps = cal.dateComponents([.minute], from: SELF)
+		let comps = cal.dateComponents([.minute], from: self)
 		
 		return comps.minute
 	}
@@ -71,7 +69,7 @@ public extension LLATypeWrapper where T == Date
 	public func second() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let comps = cal.dateComponents([.second], from: SELF)
+		let comps = cal.dateComponents([.second], from: self)
 		
 		return comps.second
 	}
@@ -89,7 +87,7 @@ public extension LLATypeWrapper where T == Date
 	public func nanosecond() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let comps = cal.dateComponents([.nanosecond], from: SELF)
+		let comps = cal.dateComponents([.nanosecond], from: self)
 		
 		return comps.nanosecond
 	}
@@ -98,7 +96,7 @@ public extension LLATypeWrapper where T == Date
 
 
 // MARK: - Inspect
-public extension LLATypeWrapper where T == Date
+public extension Date
 {
 	public func isLeapYear() -> Bool
 	{
@@ -115,40 +113,40 @@ public extension LLATypeWrapper where T == Date
 
 
 // MARK: - Transform
-public extension LLATypeWrapper where T == Date
+public extension Date
 {
 	public func lastMonth() -> Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
-		return cal.date(byAdding: .month, value: -1, to: cal.startOfDay(for: SELF))
+		return cal.date(byAdding: .month, value: -1, to: cal.startOfDay(for: self))
 	}
 
 	public func nextMonth() -> Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
-		return cal.date(byAdding: .month, value: 1, to: cal.startOfDay(for: SELF))
+		return cal.date(byAdding: .month, value: 1, to: cal.startOfDay(for: self))
 	}
 	
 	public func yesterday() -> Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
-		return cal.date(byAdding: .day, value: -1, to: cal.startOfDay(for: SELF))
+		return cal.date(byAdding: .day, value: -1, to: cal.startOfDay(for: self))
 	}
 	
 	public func tommorow() -> Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
-		return cal.date(byAdding: .day, value: 1, to: cal.startOfDay(for: SELF))
+		return cal.date(byAdding: .day, value: 1, to: cal.startOfDay(for: self))
 	}
 	
 	public func startOfDay() -> Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let res = cal.startOfDay(for: SELF)
+		let res = cal.startOfDay(for: self)
 
 		return res
 	}
@@ -157,8 +155,8 @@ public extension LLATypeWrapper where T == Date
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
-		let date = SELF.LLA.tommorow()
-		let dateStart = date!.LLA.startOfDay()
+		let date = tommorow()
+		let dateStart = date!.startOfDay()
 		let res = cal.date(byAdding: .second, value: -1, to: dateStart!)
 
 		return res
@@ -167,7 +165,7 @@ public extension LLATypeWrapper where T == Date
 	public func firstDayOfMonth() -> Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		let comps = cal.dateComponents([.year, .month], from: SELF)
+		let comps = cal.dateComponents([.year, .month], from: self)
 		
 		return cal.date(from: comps)
 	}
@@ -183,7 +181,7 @@ public extension LLATypeWrapper where T == Date
 	public func daysOfMonth() -> Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
-		guard let range = cal.range(of: .day, in: .month, for: SELF) else
+		guard let range = cal.range(of: .day, in: .month, for: self) else
 		{
 			return nil
 		}

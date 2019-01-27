@@ -10,12 +10,11 @@ import QuartzCore
 
 
 
-extension CALayer: LLANamespaceWrapper {}
-public extension LLATypeWrapper where T == CALayer
+public extension CALayer
 {
 	public func sublayerWithName(_ name: String) -> CALayer?
 	{
-		for elm in SELF.sublayers ?? []
+		for elm in sublayers ?? []
 		{
 			if elm.name == name
 			{

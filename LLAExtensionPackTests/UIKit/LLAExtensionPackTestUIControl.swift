@@ -38,7 +38,7 @@ class LLAExtensionPackTestUIControl: XCTestCase {
 		control.addTarget(obj2, action: #selector(obj2.dummyFunc), for: .touchUpInside)
 		XCTAssertEqual(control.allTargets.count, 2)
 		
-		control.LLA.removeAllTarget()
+		control.removeAllTarget()
 
 		XCTAssertEqual(control.allTargets.count, 0)
 	}

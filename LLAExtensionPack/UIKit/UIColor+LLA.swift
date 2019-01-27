@@ -10,10 +10,7 @@ import UIKit
 
 
 
-extension UIColor: LLANamespaceWrapper {}
-
 // MARK: - Init
-// MARK: WITHOUT-NAMESPACE
 public extension UIColor
 {
 	convenience init(hexRGB: UInt32)
@@ -27,7 +24,7 @@ public extension UIColor
 		var g: CGFloat = 0
 		var b: CGFloat = 0
 		var a: CGFloat = 0
-		UIColor.LLA.toRGBA(hexRGBA, r: &r, g: &g, b: &b, a: &a)
+		UIColor.toRGBA(hexRGBA, r: &r, g: &g, b: &b, a: &a)
 
 		self.init(red: r, green: g, blue: b, alpha: a)
 	}
@@ -39,7 +36,7 @@ public extension UIColor
 
 	convenience init(hexRGBA: String)
 	{
-		let str = hexRGBA.LLA.remove("#")
+		let str = hexRGBA.remove("#")
 
 		var r: CGFloat = 0
 		var g: CGFloat = 0
@@ -47,7 +44,7 @@ public extension UIColor
 		var a: CGFloat = 0
 		var tmp: UInt32 = 0
 		if Scanner(string: str).scanHexInt32(&tmp) {
-			UIColor.LLA.toRGBA(tmp, r: &r, g: &g, b: &b, a: &a)
+			UIColor.toRGBA(tmp, r: &r, g: &g, b: &b, a: &a)
 		}
 
 		self.init(red: r, green: g, blue: b, alpha: a)
@@ -57,7 +54,7 @@ public extension UIColor
 
 
 // MARK: - Utility
-public extension LLATypeWrapper where T == UIColor
+public extension UIColor
 {
 	static public func toRGB(_ hexRGB: UInt32,
 							 r: inout CGFloat,
@@ -74,10 +71,10 @@ public extension LLATypeWrapper where T == UIColor
 							  b: inout CGFloat,
 							  a: inout CGFloat) -> Void
 	{
-		r = UIColor.LLA.toFloat(UInt8((hexRGBA & 0xFF000000) >> 24))
-		g = UIColor.LLA.toFloat(UInt8((hexRGBA & 0x00FF0000) >> 16))
-		b = UIColor.LLA.toFloat(UInt8((hexRGBA & 0x0000FF00) >> 8))
-		a = UIColor.LLA.toFloat(UInt8(hexRGBA & 0x000000FF))
+		r = UIColor.toFloat(UInt8((hexRGBA & 0xFF000000) >> 24))
+		g = UIColor.toFloat(UInt8((hexRGBA & 0x00FF0000) >> 16))
+		b = UIColor.toFloat(UInt8((hexRGBA & 0x0000FF00) >> 8))
+		a = UIColor.toFloat(UInt8(hexRGBA & 0x000000FF))
 	}
 	
 	static public func toUInt8(_ f: CGFloat) -> UInt8
@@ -94,33 +91,33 @@ public extension LLATypeWrapper where T == UIColor
 
 
 // MARK: - Property
-public extension LLATypeWrapper where T == UIColor
+public extension UIColor
 {
 	public func red() -> CGFloat
 	{
 		var res: CGFloat = 0
-		SELF.getRed(&res, green: nil, blue: nil, alpha: nil)
+		getRed(&res, green: nil, blue: nil, alpha: nil)
 		return res
 	}
 
 	public func green() -> CGFloat
 	{
 		var res: CGFloat = 0
-		SELF.getRed(nil, green: &res, blue: nil, alpha: nil)
+		getRed(nil, green: &res, blue: nil, alpha: nil)
 		return res
 	}
 
 	public func blue() -> CGFloat
 	{
 		var res: CGFloat = 0
-		SELF.getRed(nil, green: nil, blue: &res, alpha: nil)
+		getRed(nil, green: nil, blue: &res, alpha: nil)
 		return res
 	}
 
 	public func alpha() -> CGFloat
 	{
 		var res: CGFloat = 0
-		SELF.getRed(nil, green: nil, blue: nil, alpha: &res)
+		getRed(nil, green: nil, blue: nil, alpha: &res)
 		return res
 	}
 }
@@ -128,7 +125,7 @@ public extension LLATypeWrapper where T == UIColor
 
 
 // MARK: - Preset
-public extension LLATypeWrapper where T == UIColor
+public extension UIColor
 {
 	static public func presetMaterialRed() -> UIColor {
 		return UIColor(hexRGB:0xF44336)
@@ -206,7 +203,7 @@ public extension LLATypeWrapper where T == UIColor
 
 
 // MARK: - UIImage
-public extension LLATypeWrapper where T == UIColor
+public extension UIColor
 {
 	public func image(_ size: CGSize) -> UIImage?
 	{
@@ -223,7 +220,7 @@ public extension LLATypeWrapper where T == UIColor
 			return nil
 		}
 		
-		context.setFillColor(SELF.cgColor)
+		context.setFillColor(self.cgColor)
 		context.fill(rect)
 
 		guard let res = UIGraphicsGetImageFromCurrentImageContext() else

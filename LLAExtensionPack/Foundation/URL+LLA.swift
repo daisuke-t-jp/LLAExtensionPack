@@ -10,14 +10,13 @@ import Foundation
 
 
 
-extension URL: LLANamespaceWrapper {}
-public extension LLATypeWrapper where T == URL
+public extension URL
 {
 	public func queryMap() -> [String : String]
 	{
 		var res: [String : String] = [String : String]()
 
-		guard let query = SELF.query else
+		guard let query = self.query else
 		{
 			return res
 		}

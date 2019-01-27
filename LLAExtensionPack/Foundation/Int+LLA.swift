@@ -10,38 +10,36 @@ import Foundation
 
 
 
-extension Int: LLANamespaceWrapper {}
-
 // MARK: - Format
-public extension LLATypeWrapper where T == Int
+public extension Int
 {
 	private func formatString(_ style: NumberFormatter.Style,
-							  locale: LLATypeWrapper<Locale>.LocaleIdentifier) -> String?
+							  locale: Locale.LocaleIdentifier) -> String?
 	{
 		let formatter = NumberFormatter()
 		formatter.numberStyle = style
 		formatter.locale = Locale(identifier: locale.rawValue)
-		return formatter.string(from: SELF as NSNumber)
+		return formatter.string(from: self as NSNumber)
 	}
 	
-	public func decimalFormatString(_ locale: LLATypeWrapper<Locale>.LocaleIdentifier) -> String?
+	public func decimalFormatString(_ locale: Locale.LocaleIdentifier) -> String?
 	{
 		return formatString(.decimal, locale: locale)
 	}
 
-	public func currencyFormatString(_ locale: LLATypeWrapper<Locale>.LocaleIdentifier) -> String?
+	public func currencyFormatString(_ locale: Locale.LocaleIdentifier) -> String?
 	{
 		return formatString(.currency, locale: locale)
 	}
 	
-	public func kiloFormatString(_ locale: LLATypeWrapper<Locale>.LocaleIdentifier) -> String?
+	public func kiloFormatString(_ locale: Locale.LocaleIdentifier) -> String?
 	{
-		if(SELF >= 1000){
+		if(self >= 1000){
 			// more than kilo.
-			let k = SELF / 1000
-			let v = (SELF - (k * 1000)) / 100
+			let k = self / 1000
+			let v = (self - (k * 1000)) / 100
 
-			guard let str = k.LLA.decimalFormatString(locale) else {
+			guard let str = k.decimalFormatString(locale) else {
 				return nil
 			}
 
@@ -54,6 +52,6 @@ public extension LLATypeWrapper where T == Int
 		}
 
 		// less than kilo.
-		return SELF.LLA.decimalFormatString(locale)
+		return self.decimalFormatString(locale)
 	}
 }

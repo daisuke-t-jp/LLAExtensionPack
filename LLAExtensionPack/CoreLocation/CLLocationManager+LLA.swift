@@ -10,10 +10,8 @@ import CoreLocation
 
 
 
-extension CLLocationManager: LLANamespaceWrapper {}
-
 // MARK: - Utility
-public extension LLATypeWrapper where T == CLLocationManager
+public extension CLLocationManager
 {
 	static public let authorizationStatusStringMap: [CLAuthorizationStatus: String] = [
 		.notDetermined: "notDetermined",
@@ -29,33 +27,33 @@ public extension LLATypeWrapper where T == CLLocationManager
 
 	public func authorizationStatusString() -> String?
 	{
-		return CLLocationManager.LLA.authorizationStatus2String(CLLocationManager.authorizationStatus())
+		return CLLocationManager.authorizationStatus2String(CLLocationManager.authorizationStatus())
 	}
 }
 
 
 
 // MARK: - Request
-public extension LLATypeWrapper where T == CLLocationManager
+public extension CLLocationManager
 {
 	public func requestWhenInUse() -> Void
 	{
-		SELF.requestWhenInUseAuthorization()
-		SELF.allowsBackgroundLocationUpdates = false
-		SELF.pausesLocationUpdatesAutomatically = false
+		requestWhenInUseAuthorization()
+		allowsBackgroundLocationUpdates = false
+		pausesLocationUpdatesAutomatically = false
 	}
 
 	public func requestAlways(_ allowBackgroundUpdate: Bool) -> Void
 	{
-		SELF.requestAlwaysAuthorization()
-		SELF.allowsBackgroundLocationUpdates = allowBackgroundUpdate
+		requestAlwaysAuthorization()
+		allowsBackgroundLocationUpdates = allowBackgroundUpdate
 	}
 }
 
 
 
 // MARK: - Auth status
-public extension LLATypeWrapper where T == CLLocationManager
+public extension CLLocationManager
 {
 	static public func isAuthorizationStatusWhenInUseOrAlways() -> Bool
 	{
