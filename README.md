@@ -6,7 +6,7 @@
 [![Cocoapods](https://img.shields.io/cocoapods/v/LLAExtensionPack.svg)](https://cocoapods.org/pods/LLAExtensionPack)
 [![Build Status](https://travis-ci.org/daisuke-t-jp/LLAExtensionPack.svg?branch=master)](https://travis-ci.org/daisuke-t-jp/LLAExtensionPack)
 
-Swift Extension Pack With *"LLA"* Namespace 📦
+Swift Extension Pack 📦
 
 # Install
 ### Carthage
@@ -63,38 +63,38 @@ import LLAExtensionPack
  * Example "String"
  */
 // Compare
-"string".LLA.isEqual("String", caseInsensitive: true) // true
+"string".isEqual("String", caseInsensitive: true) // true
 
 // Find
-"string".LLA.hasPrefix("Str", caseInsensitive: true) // true
-"string".LLA.hasSuffix("Ing", caseInsensitive: true) // true
+"string".hasPrefix("Str", caseInsensitive: true) // true
+"string".hasSuffix("Ing", caseInsensitive: true) // true
 
 // Substring
-"string"[str.LLA.startIndex(0)!...str.LLA.startIndex(2)!] // "str"
-"string".LLA.substring(NSMakeRange(1, 3)), "tri"
+"string"[str.startIndex(0)!...str.startIndex(2)!] // "str"
+"string".substring(NSMakeRange(1, 3)), "tri"
 
 // Subscript
 "string"[0...2] // "str"
 "string"[1...3] // "tri"
 
 // Inspect
-"1".LLA.isNumeric() // true
-"ABC".LLA.isNumeric() // false
+"1".isNumeric() // true
+"ABC".isNumeric() // false
 
 // Replace
-"string".LLA.replace("str", replacement: "STR") // "STRing"
-"string".LLA.replace("STR", replacement: "", caseInsensitive: true) // "ing"
+"string".replace("str", replacement: "STR") // "STRing"
+"string".replace("STR", replacement: "", caseInsensitive: true) // "ing"
 
 // Remove
-"string".LLA.remove("str") // "ing"
-"string".LLA.remove("STR", caseInsensitive: true) // "ing"
+"string".remove("str") // "ing"
+"string".remove("STR", caseInsensitive: true) // "ing"
 
 // Encode
-"abcABC1234/?-._~".LLA.urlEncoding() // "abcABC1234/?-._~"
-":#[]@!$&'()*+,;=".LLA.urlEncoding() // "%3A%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D"
+"abcABC1234/?-._~".urlEncoding() // "abcABC1234/?-._~"
+":#[]@!$&'()*+,;=".urlEncoding() // "%3A%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D"
 
 // Hash
-"MD5".LLA.hashMD5() // MD5 Hash
-"SHA1".LLA.hashSHA1() // SHA1 Hash
+"MD5".hashMD5() // MD5 Hash
+"SHA1".hashSHA1() // SHA1 Hash
 
 ```
