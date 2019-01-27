@@ -10,7 +10,6 @@ import Foundation
 
 
 
-// MARK: WITHOUT-NAMESPACE
 public extension BinaryInteger
 {
 	public var radianDouble: Double

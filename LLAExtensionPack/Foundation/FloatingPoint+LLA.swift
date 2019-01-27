@@ -10,7 +10,6 @@ import Foundation
 
 
 
-// MARK: WITHOUT-NAMESPACE
 public extension FloatingPoint
 {
 	public var string: String
