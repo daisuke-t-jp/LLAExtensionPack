@@ -12,12 +12,12 @@ import Foundation
 
 public extension UUID
 {
-	static public func string() -> String
+	static public var string: String
 	{
 		return UUID().uuidString
 	}
 
-	public func string() -> String
+	public var string: String
 	{
 		return uuidString
 	}

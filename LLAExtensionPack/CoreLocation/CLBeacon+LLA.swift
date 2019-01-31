@@ -13,17 +13,17 @@ import CoreLocation
 // MARK: - Property
 public extension CLBeacon
 {
-	public func proximityUUIDString() -> String
+	public var proximityUUIDString: String
 	{
-		return proximityUUID.string()
+		return proximityUUID.string
 	}
 
-	public func majorString() -> String
+	public var majorString: String
 	{
 		return major.stringValue
 	}
 
-	public func minorString() -> String
+	public var minorString: String
 	{
 		return minor.stringValue
 	}
