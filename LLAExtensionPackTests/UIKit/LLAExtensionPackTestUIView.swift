@@ -25,21 +25,21 @@ class LLAExtensionPackTestUIView: XCTestCase {
 	func testProperty() {
 		let view = UIView(frame: CGRect(x: 10, y: 20, width: 30, height: 40))
 		
-		XCTAssertEqual(view.frame.x(), 10)
-		XCTAssertEqual(view.frame.y(), 20)
-		XCTAssertEqual(view.frame.width(), 30)
-		XCTAssertEqual(view.frame.height(), 40)
+		XCTAssertEqual(view.x, 10)
+		XCTAssertEqual(view.y, 20)
+		XCTAssertEqual(view.width, 30)
+		XCTAssertEqual(view.height, 40)
 		
 		
-		view.frame.setX(100)
-		view.frame.setY(200)
-		view.frame.setWidth(300)
-		view.frame.setHeight(400)
+		view.setX(100)
+		view.setY(200)
+		view.setWidth(300)
+		view.setHeight(400)
 		
-		XCTAssertEqual(view.frame.x(), 100)
-		XCTAssertEqual(view.frame.y(), 200)
-		XCTAssertEqual(view.frame.width(), 300)
-		XCTAssertEqual(view.frame.height(), 400)
+		XCTAssertEqual(view.x, 100)
+		XCTAssertEqual(view.y, 200)
+		XCTAssertEqual(view.width, 300)
+		XCTAssertEqual(view.height, 400)
 	}
 	
 	func testSubview() {
@@ -82,7 +82,7 @@ class LLAExtensionPackTestUIView: XCTestCase {
 		let view = UIView(frame: CGRect(x: 10, y: 20, width: 30, height: 40))
 		view.backgroundColor = UIColor.red
 
-		let image = view.image()
+		let image = view.image
 
 		XCTAssertNotNil(image)
 	}

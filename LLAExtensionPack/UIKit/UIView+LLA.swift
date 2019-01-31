@@ -19,6 +19,52 @@ public extension UIView
 
 
 
+// MARK: - Property
+public extension UIView
+{
+	public var x: CGFloat
+	{
+		return self.frame.x
+	}
+	
+	public func setX(_ x: CGFloat)
+	{
+		self.frame.origin.x = x
+	}
+	
+	public var y: CGFloat
+	{
+		return self.frame.origin.y
+	}
+	
+	public func setY(_ y: CGFloat)
+	{
+		self.frame.origin.y = y
+	}
+
+	public var width: CGFloat
+	{
+		return self.frame.size.width
+	}
+
+	public func setWidth(_ width: CGFloat)
+	{
+		self.frame.size.width = width
+	}
+
+	public var height: CGFloat
+	{
+		return self.frame.size.height
+	}
+
+	public func setHeight(_ height: CGFloat)
+	{
+		self.frame.size.height = height
+	}
+}
+
+
+
 // MARK: - Layer
 public extension UIView
 {
@@ -26,7 +72,7 @@ public extension UIView
 	{
 		if flag
 		{
-			self.layer.cornerRadius = self.frame.width() * 0.5
+			self.layer.cornerRadius = self.frame.width * 0.5
 			return
 		}
 
@@ -286,7 +332,7 @@ public extension UIView
 // MARK: - UIImage
 public extension UIView
 {
-	public func image() -> UIImage?
+	public var image: UIImage?
 	{
 		defer {
 			UIGraphicsEndImageContext();
