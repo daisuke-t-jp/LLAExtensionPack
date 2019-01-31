@@ -13,7 +13,7 @@ import CoreGraphics
 // MARK: - Property
 public extension CGRect
 {
-	public func x() -> CGFloat
+	public var x: CGFloat
 	{
 		return origin.x
 	}
@@ -23,7 +23,7 @@ public extension CGRect
 		origin.x = x
 	}
 	
-	public func y() -> CGFloat
+	public var y: CGFloat
 	{
 		return origin.y
 	}
@@ -33,19 +33,9 @@ public extension CGRect
 		origin.y = y
 	}
 	
-	public func width() -> CGFloat
-	{
-		return size.width
-	}
-	
 	public mutating func setWidth(_ width: CGFloat)
 	{
 		size.width = width
-	}
-	
-	public func height() -> CGFloat
-	{
-		return size.height
 	}
 	
 	public mutating func setHeight(_ height: CGFloat)

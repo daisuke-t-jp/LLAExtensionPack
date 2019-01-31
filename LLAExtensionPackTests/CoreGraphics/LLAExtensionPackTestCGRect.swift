@@ -25,10 +25,10 @@ class LLAExtensionPackTestCGRect: XCTestCase {
 	func test() {
 		var rect = CGRect(x: 10, y: 20, width: 30, height: 40)
 
-		XCTAssertEqual(rect.x(), 10)
-		XCTAssertEqual(rect.y(), 20)
-		XCTAssertEqual(rect.width(), 30)
-		XCTAssertEqual(rect.height(), 40)
+		XCTAssertEqual(rect.x, 10)
+		XCTAssertEqual(rect.y, 20)
+		XCTAssertEqual(rect.width, 30)
+		XCTAssertEqual(rect.height, 40)
 		
 		
 		rect.setX(100)
@@ -36,9 +36,10 @@ class LLAExtensionPackTestCGRect: XCTestCase {
 		rect.setWidth(300)
 		rect.setHeight(400)
 		
-		XCTAssertEqual(rect.x(), 100)
-		XCTAssertEqual(rect.y(), 200)
-		XCTAssertEqual(rect.width(), 300)
-		XCTAssertEqual(rect.height(), 400)
+		
+		XCTAssertEqual(rect.x, 100)
+		XCTAssertEqual(rect.y, 200)
+		XCTAssertEqual(rect.width, 300)
+		XCTAssertEqual(rect.height, 400)
 	}
 }
