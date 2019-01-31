@@ -12,7 +12,7 @@ import Foundation
 
 public extension Bundle
 {
-	public func shortVersion() -> String?
+	public var shortVersion: String?
 	{
 		guard let dict = infoDictionary else
 		{
@@ -22,7 +22,7 @@ public extension Bundle
 		return dict["CFBundleShortVersionString"] as? String
 	}
 
-	public func version() -> String?
+	public var version: String?
 	{
 		guard let dict = infoDictionary else
 		{
@@ -32,7 +32,7 @@ public extension Bundle
 		return dict["CFBundleVersion"] as? String
 	}
 	
-	public func identifier() -> String
+	public var identifier: String
 	{
 		return bundleIdentifier!
 	}

@@ -25,9 +25,9 @@ class LLAExtensionPackTestBundle: XCTestCase {
 	func test() {
 		let bundle = Bundle(for: type(of: self))
 
-		XCTAssertNotNil(bundle.shortVersion())
-		XCTAssertNotNil(bundle.version())
-		XCTAssertNotNil(bundle.identifier())
+		XCTAssertNotNil(bundle.shortVersion)
+		XCTAssertNotNil(bundle.version)
+		XCTAssertNotNil(bundle.identifier)
 	}
 
 }
