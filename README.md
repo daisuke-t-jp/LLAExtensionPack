@@ -78,8 +78,8 @@ import LLAExtensionPack
 "string"[1...3] // "tri"
 
 // Inspect
-"1".isNumeric() // true
-"ABC".isNumeric() // false
+"1".isNumeric // true
+"ABC".isNumeric // false
 
 // Replace
 "string".replace("str", replacement: "STR") // "STRing"
@@ -90,11 +90,11 @@ import LLAExtensionPack
 "string".remove("STR", caseInsensitive: true) // "ing"
 
 // Encode
-"abcABC1234/?-._~".urlEncoding() // "abcABC1234/?-._~"
-":#[]@!$&'()*+,;=".urlEncoding() // "%3A%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D"
+"abcABC1234/?-._~".urlEncoding // "abcABC1234/?-._~"
+":#[]@!$&'()*+,;=".urlEncoding // "%3A%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D"
 
 // Hash
-"MD5".hashMD5() // MD5 Hash
-"SHA1".hashSHA1() // SHA1 Hash
+"MD5".hashMD5 // MD5 Hash
+"SHA1".hashSHA1 // SHA1 Hash
 
 ```
