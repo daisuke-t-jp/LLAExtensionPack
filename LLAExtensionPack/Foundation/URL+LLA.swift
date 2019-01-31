@@ -12,7 +12,7 @@ import Foundation
 
 public extension URL
 {
-	public func queryMap() -> [String : String]
+	public var queryMap: [String : String]
 	{
 		var res: [String : String] = [String : String]()
 
