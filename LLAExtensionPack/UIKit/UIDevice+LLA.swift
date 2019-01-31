@@ -12,7 +12,7 @@ import UIKit
 
 public extension UIDevice
 {
-	static private func systemVersionComponents() -> [String]?
+	static private var systemVersionComponents: [String]?
 	{
 		let ver = UIDevice.current.systemVersion
 		let array = ver.components(separatedBy: ".")
@@ -24,9 +24,9 @@ public extension UIDevice
 		return array
 	}
 
-	static public func systemVersionMajor() -> Int?
+	static public var systemVersionMajor: Int?
 	{
-		guard let array = systemVersionComponents() else
+		guard let array = systemVersionComponents else
 		{
 			return nil
 		}
@@ -34,9 +34,9 @@ public extension UIDevice
 		return Int(array[0])
 	}
 
-	static public func systemVersionMinor() -> Int?
+	static public var systemVersionMinor: Int?
 	{
-		guard let array = systemVersionComponents() else
+		guard let array = systemVersionComponents else
 		{
 			return nil
 		}

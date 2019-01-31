@@ -23,8 +23,8 @@ class LLAExtensionPackTestUIDevice: XCTestCase {
 	}
 
 	func test() {
-		let major = UIDevice.systemVersionMajor()
-		let minor = UIDevice.systemVersionMinor()
+		let major = UIDevice.systemVersionMajor
+		let minor = UIDevice.systemVersionMinor
 		XCTAssertNotNil(major)
 		XCTAssertNotNil(minor)
 		print("UIDevice test : systemVersion \(major!).\(minor!)")
