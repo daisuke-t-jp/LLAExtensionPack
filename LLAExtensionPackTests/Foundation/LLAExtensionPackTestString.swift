@@ -80,10 +80,10 @@ class LLAExtensionPackTestString: XCTestCase {
 	}
 
 	func testInspect() {
-		XCTAssertTrue("1".isNumeric())
-		XCTAssertTrue("123".isNumeric())
-		XCTAssertFalse("A".isNumeric())
-		XCTAssertFalse("1A3".isNumeric())
+		XCTAssertTrue("1".isNumeric)
+		XCTAssertTrue("123".isNumeric)
+		XCTAssertFalse("A".isNumeric)
+		XCTAssertFalse("1A3".isNumeric)
 	}
 	
 	func testReplace() {
@@ -103,26 +103,26 @@ class LLAExtensionPackTestString: XCTestCase {
 	}
 	
 	func testEncode() {
-		XCTAssertEqual("abcABC1234/?-._~".urlEncoding(), "abcABC1234/?-._~")
-		XCTAssertEqual(":#[]@!$&'()*+,;=".urlEncoding(), "%3A%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D")
+		XCTAssertEqual("abcABC1234/?-._~".urlEncoding, "abcABC1234/?-._~")
+		XCTAssertEqual(":#[]@!$&'()*+,;=".urlEncoding, "%3A%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D")
 	}
 
 	func testHash() {
-		XCTAssertEqual("MD5".hashMD5()!.count, 32)
-		XCTAssertEqual("SHA1".hashSHA1()!.count, 40)
+		XCTAssertEqual("MD5".hashMD5!.count, 32)
+		XCTAssertEqual("SHA1".hashSHA1!.count, 40)
 	}
 
 	func testTransform() {
-		XCTAssertEqual("ＳＴＲＩＮＧ".fullWidth(), "ＳＴＲＩＮＧ")
-		XCTAssertEqual("ＳＴＲＩＮＧ".halfWidth(), "STRING")
+		XCTAssertEqual("ＳＴＲＩＮＧ".fullWidth, "ＳＴＲＩＮＧ")
+		XCTAssertEqual("ＳＴＲＩＮＧ".halfWidth, "STRING")
 
-		XCTAssertEqual("STRING".fullWidth(), "ＳＴＲＩＮＧ")
-		XCTAssertEqual("STRING".halfWidth(), "STRING")
+		XCTAssertEqual("STRING".fullWidth, "ＳＴＲＩＮＧ")
+		XCTAssertEqual("STRING".halfWidth, "STRING")
 
-		XCTAssertEqual("ことえり".hiragana(), "ことえり")
-		XCTAssertEqual("ことえり".katakana(), "コトエリ")
+		XCTAssertEqual("ことえり".hiragana, "ことえり")
+		XCTAssertEqual("ことえり".katakana, "コトエリ")
 
-		XCTAssertEqual("コトエリ".hiragana(), "ことえり")
-		XCTAssertEqual("コトエリ".katakana(), "コトエリ")
+		XCTAssertEqual("コトエリ".hiragana, "ことえり")
+		XCTAssertEqual("コトエリ".katakana, "コトエリ")
 	}	
 }

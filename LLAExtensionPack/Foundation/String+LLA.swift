@@ -154,10 +154,10 @@ public extension String
 // MARK: - Inspect
 public extension String
 {
-	public func isNumeric() -> Bool
+	public var isNumeric: Bool
 	{
 		var res = false
-		
+
 		do
 		{
 			let regex = try NSRegularExpression(pattern: "\\d", options: [])
@@ -210,7 +210,7 @@ public extension String
 // MARK: - Encode
 public extension String
 {
-	public func urlEncoding() -> String
+	public var urlEncoding: String
 	{
 		let charset = CharacterSet.alphanumerics.union(.init(charactersIn: "/?-._~"))
 		let str = removingPercentEncoding ?? self
@@ -224,7 +224,7 @@ public extension String
 // MARK: - Hash
 public extension String
 {
-	public func hashMD5() -> String?
+	public var hashMD5: String?
 	{
 		guard let data = data(using: .utf8) else
 		{
@@ -239,7 +239,7 @@ public extension String
 		return res
 	}
 
-	public func hashSHA1() -> String?
+	public var hashSHA1: String?
 	{
 		guard let data = data(using: .utf8) else
 		{
@@ -269,12 +269,12 @@ public extension String
 		return str as String;
 	}
 
-	public func fullWidth() -> String
+	public var fullWidth: String
 	{
 		return transformFullwidthHalfwidth(true)
 	}
 
-	public func halfWidth() -> String
+	public var halfWidth: String
 	{
 		return transformFullwidthHalfwidth(false)
 	}
@@ -293,12 +293,12 @@ public extension String
 		return str as String;
 	}
 	
-	public func hiragana() -> String
+	public var hiragana: String
 	{
 		return transformHiraganaKatakana(true)
 	}
 	
-	public func katakana() -> String
+	public var katakana: String
 	{
 		return transformHiraganaKatakana(false)
 	}
