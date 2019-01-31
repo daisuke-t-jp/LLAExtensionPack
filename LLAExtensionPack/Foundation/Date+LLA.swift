@@ -13,12 +13,12 @@ import Foundation
 // MARK: - Components
 public extension Date
 {
-	public func unixTime() -> TimeInterval
+	public var unixTime: TimeInterval
 	{
 		return timeIntervalSince1970
 	}
 	
-	public func year() -> Int?
+	public var year: Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = cal.dateComponents([.year], from: self)
@@ -26,7 +26,7 @@ public extension Date
 		return comps.year
 	}
 	
-	public func month() -> Int?
+	public var month: Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = cal.dateComponents([.month], from: self)
@@ -34,7 +34,7 @@ public extension Date
 		return comps.month
 	}
 	
-	public func weekday() -> Int?
+	public var weekday: Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = cal.dateComponents([.weekday], from: self)
@@ -42,7 +42,7 @@ public extension Date
 		return comps.weekday
 	}
 	
-	public func day() -> Int?
+	public var day: Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = cal.dateComponents([.day], from: self)
@@ -50,7 +50,7 @@ public extension Date
 		return comps.day
 	}
 	
-	public func hour() -> Int?
+	public var hour: Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = cal.dateComponents([.hour], from: self)
@@ -58,7 +58,7 @@ public extension Date
 		return comps.hour
 	}
 	
-	public func minute() -> Int?
+	public var minute: Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = cal.dateComponents([.minute], from: self)
@@ -66,7 +66,7 @@ public extension Date
 		return comps.minute
 	}
 	
-	public func second() -> Int?
+	public var second: Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = cal.dateComponents([.second], from: self)
@@ -74,17 +74,17 @@ public extension Date
 		return comps.second
 	}
 	
-	public func millisecond() -> Int?
+	public var millisecond: Int?
 	{
-		return nanosecond()! / 1000000
+		return nanosecond! / 1000000
 	}
 
-	public func microsecond() -> Int?
+	public var microsecond: Int?
 	{
-		return nanosecond()! / 1000
+		return nanosecond! / 1000
 	}
 
-	public func nanosecond() -> Int?
+	public var nanosecond: Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = cal.dateComponents([.nanosecond], from: self)
@@ -98,9 +98,9 @@ public extension Date
 // MARK: - Inspect
 public extension Date
 {
-	public func isLeapYear() -> Bool
+	public var isLeapYear: Bool
 	{
-		guard let y = year() else
+		guard let y = year else
 		{
 			return false
 		}
@@ -115,35 +115,35 @@ public extension Date
 // MARK: - Transform
 public extension Date
 {
-	public func lastMonth() -> Date?
+	public var lastMonth: Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
 		return cal.date(byAdding: .month, value: -1, to: cal.startOfDay(for: self))
 	}
 
-	public func nextMonth() -> Date?
+	public var nextMonth: Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
 		return cal.date(byAdding: .month, value: 1, to: cal.startOfDay(for: self))
 	}
 	
-	public func yesterday() -> Date?
+	public var yesterday: Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
 		return cal.date(byAdding: .day, value: -1, to: cal.startOfDay(for: self))
 	}
 	
-	public func tommorow() -> Date?
+	public var tommorow: Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
 		return cal.date(byAdding: .day, value: 1, to: cal.startOfDay(for: self))
 	}
 	
-	public func startOfDay() -> Date?
+	public var startOfDay: Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let res = cal.startOfDay(for: self)
@@ -151,18 +151,18 @@ public extension Date
 		return res
 	}
 
-	public func endOfDay() -> Date?
+	public var endOfDay: Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		
-		let date = tommorow()
-		let dateStart = date!.startOfDay()
+		let date = tommorow
+		let dateStart = date!.startOfDay
 		let res = cal.date(byAdding: .second, value: -1, to: dateStart!)
 
 		return res
 	}
 	
-	public func firstDayOfMonth() -> Date?
+	public var firstDayOfMonth: Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = cal.dateComponents([.year, .month], from: self)
@@ -170,15 +170,15 @@ public extension Date
 		return cal.date(from: comps)
 	}
 	
-	public func endDayOfMonth() -> Date?
+	public var endDayOfMonth: Date?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		let comps = DateComponents(month: 1, day: -1)
 		
-		return cal.date(byAdding: comps, to: firstDayOfMonth()!)
+		return cal.date(byAdding: comps, to: firstDayOfMonth!)
 	}
 
-	public func daysOfMonth() -> Int?
+	public var daysOfMonth: Int?
 	{
 		let cal = Calendar(identifier: .gregorian)
 		guard let range = cal.range(of: .day, in: .month, for: self) else
