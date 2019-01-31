@@ -46,64 +46,64 @@ class LLAExtensionPackTestUIColor: XCTestCase {
 
 	func testProperty() {
 		let color = UIColor.init(red: 1.0, green: 0.75, blue: 0.5, alpha: 0.25)
-		XCTAssertEqual(color.red(), 1.0)
-		XCTAssertEqual(color.green(), 0.75)
-		XCTAssertEqual(color.blue(), 0.5)
-		XCTAssertEqual(color.alpha(), 0.25)
+		XCTAssertEqual(color.red, 1.0)
+		XCTAssertEqual(color.green, 0.75)
+		XCTAssertEqual(color.blue, 0.5)
+		XCTAssertEqual(color.alpha, 0.25)
 	}
 
 	func testInit() {
 		_ = { () -> () in
 			let color = UIColor(hexRGB: 0xFFEEDD)
-			XCTAssertEqual(UIColor.toUInt8(color.red()), 255)
-			XCTAssertEqual(UIColor.toUInt8(color.green()), 238)
-			XCTAssertEqual(UIColor.toUInt8(color.blue()), 221)
-			XCTAssertEqual(UIColor.toUInt8(color.alpha()), 255)
+			XCTAssertEqual(UIColor.toUInt8(color.red), 255)
+			XCTAssertEqual(UIColor.toUInt8(color.green), 238)
+			XCTAssertEqual(UIColor.toUInt8(color.blue), 221)
+			XCTAssertEqual(UIColor.toUInt8(color.alpha), 255)
 		}()
 
 		
 		_ = { () -> () in
 			let color = UIColor(hexRGBA: 0xFFEEDDCC)
-			XCTAssertEqual(UIColor.toUInt8(color.red()), 255)
-			XCTAssertEqual(UIColor.toUInt8(color.green()), 238)
-			XCTAssertEqual(UIColor.toUInt8(color.blue()), 221)
-			XCTAssertEqual(UIColor.toUInt8(color.alpha()), 204)
+			XCTAssertEqual(UIColor.toUInt8(color.red), 255)
+			XCTAssertEqual(UIColor.toUInt8(color.green), 238)
+			XCTAssertEqual(UIColor.toUInt8(color.blue), 221)
+			XCTAssertEqual(UIColor.toUInt8(color.alpha), 204)
 		}()
 
 		
 		_ = { () -> () in
 			let color = UIColor(hexRGB: "FFEEDD")
-			XCTAssertEqual(UIColor.toUInt8(color.red()), 255)
-			XCTAssertEqual(UIColor.toUInt8(color.green()), 238)
-			XCTAssertEqual(UIColor.toUInt8(color.blue()), 221)
-			XCTAssertEqual(UIColor.toUInt8(color.alpha()), 255)
+			XCTAssertEqual(UIColor.toUInt8(color.red), 255)
+			XCTAssertEqual(UIColor.toUInt8(color.green), 238)
+			XCTAssertEqual(UIColor.toUInt8(color.blue), 221)
+			XCTAssertEqual(UIColor.toUInt8(color.alpha), 255)
 		}()
 
 		
 		_ = { () -> () in
 			let color = UIColor(hexRGB: "#FFEEDD")
-			XCTAssertEqual(UIColor.toUInt8(color.red()), 255)
-			XCTAssertEqual(UIColor.toUInt8(color.green()), 238)
-			XCTAssertEqual(UIColor.toUInt8(color.blue()), 221)
-			XCTAssertEqual(UIColor.toUInt8(color.alpha()), 255)
+			XCTAssertEqual(UIColor.toUInt8(color.red), 255)
+			XCTAssertEqual(UIColor.toUInt8(color.green), 238)
+			XCTAssertEqual(UIColor.toUInt8(color.blue), 221)
+			XCTAssertEqual(UIColor.toUInt8(color.alpha), 255)
 		}()
 
 
 		_ = { () -> () in
 			let color = UIColor(hexRGBA: "FFEEDDCC")
-			XCTAssertEqual(UIColor.toUInt8(color.red()), 255)
-			XCTAssertEqual(UIColor.toUInt8(color.green()), 238)
-			XCTAssertEqual(UIColor.toUInt8(color.blue()), 221)
-			XCTAssertEqual(UIColor.toUInt8(color.alpha()), 204)
+			XCTAssertEqual(UIColor.toUInt8(color.red), 255)
+			XCTAssertEqual(UIColor.toUInt8(color.green), 238)
+			XCTAssertEqual(UIColor.toUInt8(color.blue), 221)
+			XCTAssertEqual(UIColor.toUInt8(color.alpha), 204)
 		}()
 
 
 		_ = { () -> () in
 			let color = UIColor(hexRGBA: "#FFEEDDCC")
-			XCTAssertEqual(UIColor.toUInt8(color.red()), 255)
-			XCTAssertEqual(UIColor.toUInt8(color.green()), 238)
-			XCTAssertEqual(UIColor.toUInt8(color.blue()), 221)
-			XCTAssertEqual(UIColor.toUInt8(color.alpha()), 204)
+			XCTAssertEqual(UIColor.toUInt8(color.red), 255)
+			XCTAssertEqual(UIColor.toUInt8(color.green), 238)
+			XCTAssertEqual(UIColor.toUInt8(color.blue), 221)
+			XCTAssertEqual(UIColor.toUInt8(color.alpha), 204)
 		}()
 
 	}
