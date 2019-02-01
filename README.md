@@ -94,7 +94,13 @@ import LLAExtensionPack
 ":#[]@!$&'()*+,;=".urlEncoding // "%3A%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D"
 
 // Hash
-"MD5".hashMD5 // MD5 Hash
-"SHA1".hashSHA1 // SHA1 Hash
+"string".md2 // "a06d078cf87b3349d4400afca892ed42"
+"string".md4 // "70a2421dd08cce128b3af8ad1dfa74ac"
+"string".md5 // "b45cffe084dd3d20d928bee85e7b0f21"
+"string".sha1 // "ecb252044b5ea0f679ee78ec1a12904739e2904d"
+"string".sha224 // "474b4afcaa4303cfc8f697162784293e812f12e2842551d726db8037"
+"string".sha256 // "473287f8298dba7163a897908958f7c0eae733e25d2e027992ea2edc9bed2fa8"
+"string".sha384 // "36396a7e4de3fa1c2156ad291350adf507d11a8f8be8b124a028c5db40785803ca35a7fc97a6748d85b253babab7953e"
+"string".sha512 // "2757cb3cafc39af451abb2697be79b4ab61d63d74d85b0418629de8c26811b529f3f3780d0150063ff55a2beee74c4ec102a2a2731a1f1f7f10d473ad18a6a87"
 
 ```

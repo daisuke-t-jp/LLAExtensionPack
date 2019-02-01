@@ -108,8 +108,14 @@ class LLAExtensionPackTestString: XCTestCase {
 	}
 
 	func testHash() {
-		XCTAssertEqual("MD5".hashMD5!.count, 32)
-		XCTAssertEqual("SHA1".hashSHA1!.count, 40)
+		XCTAssertEqual("string".md2, "a06d078cf87b3349d4400afca892ed42")
+		XCTAssertEqual("string".md4, "70a2421dd08cce128b3af8ad1dfa74ac")
+		XCTAssertEqual("string".md5, "b45cffe084dd3d20d928bee85e7b0f21")
+		XCTAssertEqual("string".sha1, "ecb252044b5ea0f679ee78ec1a12904739e2904d")
+		XCTAssertEqual("string".sha224, "474b4afcaa4303cfc8f697162784293e812f12e2842551d726db8037")
+		XCTAssertEqual("string".sha256, "473287f8298dba7163a897908958f7c0eae733e25d2e027992ea2edc9bed2fa8")
+		XCTAssertEqual("string".sha384, "36396a7e4de3fa1c2156ad291350adf507d11a8f8be8b124a028c5db40785803ca35a7fc97a6748d85b253babab7953e")
+		XCTAssertEqual("string".sha512, "2757cb3cafc39af451abb2697be79b4ab61d63d74d85b0418629de8c26811b529f3f3780d0150063ff55a2beee74c4ec102a2a2731a1f1f7f10d473ad18a6a87")
 	}
 
 	func testTransform() {

@@ -224,36 +224,95 @@ public extension String
 // MARK: - Hash
 public extension String
 {
-	public var hashMD5: String?
+	private enum HashType
+	{
+		case MD2
+		case MD4
+		case MD5
+		case SHA1
+		case SHA224
+		case SHA256
+		case SHA384
+		case SHA512
+	}
+
+	private func hashing(_ type: HashType) -> String?
 	{
 		guard let data = data(using: .utf8) else
 		{
 			return nil
 		}
 
-		let length = Int(CC_MD5_DIGEST_LENGTH)
-		var digest = [UInt8](repeating: 0, count: length)
-		_ = data.withUnsafeBytes { CC_MD5($0, CC_LONG(data.count), &digest) }
+		let lengthMap:[HashType: Int32] = [
+			.MD2 : CC_MD2_DIGEST_LENGTH,
+			.MD4 : CC_MD4_DIGEST_LENGTH,
+			.MD5 : CC_MD5_DIGEST_LENGTH,
+			.SHA1 : CC_SHA1_DIGEST_LENGTH,
+			.SHA224 : CC_SHA224_DIGEST_LENGTH,
+			.SHA256 : CC_SHA256_DIGEST_LENGTH,
+			.SHA384 : CC_SHA384_DIGEST_LENGTH,
+			.SHA512 : CC_SHA512_DIGEST_LENGTH,
+		]
+
+		let funcMap:[HashType: (UnsafeRawPointer?, CC_LONG, UnsafeMutablePointer<UInt8>?) -> UnsafeMutablePointer<UInt8>?] = [
+			.MD2 : CC_MD2,
+			.MD4 : CC_MD4,
+			.MD5 : CC_MD5,
+			.SHA1 : CC_SHA1,
+			.SHA224 : CC_SHA224,
+			.SHA256 : CC_SHA256,
+			.SHA384 : CC_SHA384,
+			.SHA512 : CC_SHA512,
+			]
+
+		let length = Int(lengthMap[type]!)
+		var digest = [UInt8](repeating: 0, count: Int(length))
+		_ = data.withUnsafeBytes { (funcMap[type]!)($0, CC_LONG(data.count), &digest) }
 		let res = digest.map { String(format: "%02x", $0) }.joined(separator: "")
-		
+
 		return res
 	}
 
-	public var hashSHA1: String?
+	public var md2: String?
 	{
-		guard let data = data(using: .utf8) else
-		{
-			return nil
-		}
-		
-		let length = Int(CC_SHA1_DIGEST_LENGTH)
-		var digest = [UInt8](repeating: 0, count: length)
-		_ = data.withUnsafeBytes { CC_SHA1($0, CC_LONG(data.count), &digest) }
-		let res = digest.map { String(format: "%02x", $0) }.joined(separator: "")
-		
-		return res
+		return hashing(.MD2)
+	}
+
+	public var md4: String?
+	{
+		return hashing(.MD4)
+	}
+
+	public var md5: String?
+	{
+		return hashing(.MD5)
+	}
+
+	public var sha1: String?
+	{
+		return hashing(.SHA1)
 	}
 	
+	public var sha224: String?
+	{
+		return hashing(.SHA224)
+	}
+
+	public var sha256: String?
+	{
+		return hashing(.SHA256)
+	}
+
+	public var sha384: String?
+	{
+		return hashing(.SHA384)
+	}
+
+	public var sha512: String?
+	{
+		return hashing(.SHA512)
+	}
+
 }
 
 
