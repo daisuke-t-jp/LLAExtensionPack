@@ -10,10 +10,9 @@ import UIKit
 
 
 
-public extension UIControl
-{
-	public func removeAllTarget() -> Void
-	{
+public extension UIControl {
+
+	public func removeAllTarget() -> Void {
 		self.removeTarget(nil, action: nil, for: .allEvents)
 	}
 }

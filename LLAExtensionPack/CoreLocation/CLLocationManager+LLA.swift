@@ -11,8 +11,8 @@ import CoreLocation
 
 
 // MARK: - Utility
-public extension CLLocationManager
-{
+public extension CLLocationManager {
+
 	static public let authorizationStatusStringMap: [CLAuthorizationStatus: String] = [
 		.notDetermined: "notDetermined",
 		.restricted: "restricted",
@@ -20,13 +20,11 @@ public extension CLLocationManager
 		.authorizedAlways: "authorizedAlways",
 		.authorizedWhenInUse: "authorizedWhenInUse"]
 
-	static public func authorizationStatus2String(_ status: CLAuthorizationStatus) -> String?
-	{
+	static public func authorizationStatus2String(_ status: CLAuthorizationStatus) -> String? {
 		return authorizationStatusStringMap[status]
 	}
 
-	public func authorizationStatusString() -> String?
-	{
+	public func authorizationStatusString() -> String? {
 		return CLLocationManager.authorizationStatus2String(CLLocationManager.authorizationStatus())
 	}
 }

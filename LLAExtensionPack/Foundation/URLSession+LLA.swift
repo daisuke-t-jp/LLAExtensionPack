@@ -10,11 +10,10 @@ import Foundation
 
 
 
-public extension URLSession
-{
+public extension URLSession {
+
 	public func dataTaskSync(_ req: URLRequest,
-							 handler: @escaping (Data?, URLResponse?, Error?) -> Void) -> Void
-	{
+							 handler: @escaping (Data?, URLResponse?, Error?) -> Void) -> Void {
 		// create semaphore.
 		var semaphore:DispatchSemaphore = DispatchSemaphore(value:0)
 		
@@ -26,8 +25,7 @@ public extension URLSession
 
 		
 		// start task.
-		let task:URLSessionDataTask = session.dataTask(with: req)
-		{
+		let task:URLSessionDataTask = session.dataTask(with: req) {
 			(data, response, error) in
 
 			defer {

@@ -10,14 +10,13 @@ import QuartzCore
 
 
 
-public extension CALayer
-{
-	public func sublayerWithName(_ name: String) -> CALayer?
-	{
-		for elm in sublayers ?? []
-		{
-			if elm.name == name
-			{
+public extension CALayer {
+
+	public func sublayerWithName(_ name: String) -> CALayer? {
+
+		for elm in sublayers ?? [] {
+
+			if elm.name == name {
 				return elm
 			}
 		}

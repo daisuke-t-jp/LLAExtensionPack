@@ -11,30 +11,26 @@ import Foundation
 
 
 // MARK: - Format
-public extension Int
-{
+public extension Int {
+
 	private func formatString(_ style: NumberFormatter.Style,
-							  locale: Locale.LocaleIdentifier) -> String?
-	{
+							  locale: Locale.LocaleIdentifier) -> String? {
 		let formatter = NumberFormatter()
 		formatter.numberStyle = style
 		formatter.locale = Locale(identifier: locale.rawValue)
 		return formatter.string(from: self as NSNumber)
 	}
 	
-	public func decimalFormatString(_ locale: Locale.LocaleIdentifier) -> String?
-	{
+	public func decimalFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
 		return formatString(.decimal, locale: locale)
 	}
 
-	public func currencyFormatString(_ locale: Locale.LocaleIdentifier) -> String?
-	{
+	public func currencyFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
 		return formatString(.currency, locale: locale)
 	}
 	
-	public func kiloFormatString(_ locale: Locale.LocaleIdentifier) -> String?
-	{
-		if(self >= 1000){
+	public func kiloFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
+		if(self >= 1000) {
 			// more than kilo.
 			let k = self / 1000
 			let v = (self - (k * 1000)) / 100

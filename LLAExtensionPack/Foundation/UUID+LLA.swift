@@ -10,15 +10,13 @@ import Foundation
 
 
 
-public extension UUID
-{
-	static public var string: String
-	{
+public extension UUID {
+
+	static public var string: String {
 		return UUID().uuidString
 	}
 
-	public var string: String
-	{
+	public var string: String {
 		return uuidString
 	}
 }

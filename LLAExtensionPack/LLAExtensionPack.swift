@@ -8,17 +8,14 @@
 
 import Foundation
 
-public class LLAExtensionPack
-{
-	public static func clamp<T: Comparable>(_ val: T, min: T, max: T) -> T
-	{
-		if val < min
-		{
+public class LLAExtensionPack {
+	
+	public static func clamp<T: Comparable>(_ val: T, min: T, max: T) -> T {
+		if val < min {
 			return min
 		}
 
-		if val > max
-		{
+		if val > max {
 			return max
 		}
 

@@ -11,15 +11,13 @@ import UIKit
 
 
 // MARK: - Init
-public extension UIColor
-{
-	convenience init(hexRGB: UInt32)
-	{
+public extension UIColor {
+
+	convenience init(hexRGB: UInt32) {
 		self.init(hexRGBA: (hexRGB << 8) | 0xFF)
 	}
 	
-	convenience init(hexRGBA: UInt32)
-	{
+	convenience init(hexRGBA: UInt32) {
 		var r: CGFloat = 0
 		var g: CGFloat = 0
 		var b: CGFloat = 0
@@ -29,13 +27,11 @@ public extension UIColor
 		self.init(red: r, green: g, blue: b, alpha: a)
 	}
 
-	convenience init(hexRGB: String)
-	{
+	convenience init(hexRGB: String) {
 		self.init(hexRGBA: hexRGB + "FF")
 	}
 
-	convenience init(hexRGBA: String)
-	{
+	convenience init(hexRGBA: String) {
 		let str = hexRGBA.remove("#")
 
 		var r: CGFloat = 0
@@ -54,13 +50,12 @@ public extension UIColor
 
 
 // MARK: - Utility
-public extension UIColor
-{
+public extension UIColor {
+
 	static public func toRGB(_ hexRGB: UInt32,
 							 r: inout CGFloat,
 							 g: inout CGFloat,
-							 b: inout CGFloat) -> Void
-	{
+							 b: inout CGFloat) -> Void {
 		var a: CGFloat = 0
 		toRGBA((hexRGB << 8) | 0xFF, r: &r, g: &g, b: &b, a: &a)
 	}
@@ -69,21 +64,18 @@ public extension UIColor
 							  r: inout CGFloat,
 							  g: inout CGFloat,
 							  b: inout CGFloat,
-							  a: inout CGFloat) -> Void
-	{
+							  a: inout CGFloat) -> Void {
 		r = UIColor.toFloat(UInt8((hexRGBA & 0xFF000000) >> 24))
 		g = UIColor.toFloat(UInt8((hexRGBA & 0x00FF0000) >> 16))
 		b = UIColor.toFloat(UInt8((hexRGBA & 0x0000FF00) >> 8))
 		a = UIColor.toFloat(UInt8(hexRGBA & 0x000000FF))
 	}
 	
-	static public func toUInt8(_ f: CGFloat) -> UInt8
-	{
+	static public func toUInt8(_ f: CGFloat) -> UInt8 {
 		return UInt8(clamping: UInt(f * 255.0))
 	}
 
-	static public func toFloat(_ u: UInt8) -> CGFloat
-	{
+	static public func toFloat(_ u: UInt8) -> CGFloat {
 		return LLAExtensionPack.clamp(CGFloat(u) / 255.0, min: 0.0, max: 255.0)
 	}
 }
@@ -91,31 +83,27 @@ public extension UIColor
 
 
 // MARK: - Property
-public extension UIColor
-{
-	public var red: CGFloat
-	{
+public extension UIColor {
+	
+	public var red: CGFloat {
 		var res: CGFloat = 0
 		getRed(&res, green: nil, blue: nil, alpha: nil)
 		return res
 	}
 
-	public var green: CGFloat
-	{
+	public var green: CGFloat {
 		var res: CGFloat = 0
 		getRed(nil, green: &res, blue: nil, alpha: nil)
 		return res
 	}
 
-	public var blue: CGFloat
-	{
+	public var blue: CGFloat {
 		var res: CGFloat = 0
 		getRed(nil, green: nil, blue: &res, alpha: nil)
 		return res
 	}
 
-	public var alpha: CGFloat
-	{
+	public var alpha: CGFloat {
 		var res: CGFloat = 0
 		getRed(nil, green: nil, blue: nil, alpha: &res)
 		return res
@@ -125,8 +113,8 @@ public extension UIColor
 
 
 // MARK: - Preset
-public extension UIColor
-{
+public extension UIColor {
+
 	static public var presetMaterialRed: UIColor {
 		return UIColor(hexRGB:0xF44336)
 	}
@@ -203,10 +191,10 @@ public extension UIColor
 
 
 // MARK: - UIImage
-public extension UIColor
-{
-	public func image(_ size: CGSize) -> UIImage?
-	{
+public extension UIColor {
+
+	public func image(_ size: CGSize) -> UIImage? {
+
 		defer {
 			UIGraphicsEndImageContext();
 		}
@@ -215,16 +203,14 @@ public extension UIColor
 		let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
 
 		UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
-		guard let context = UIGraphicsGetCurrentContext() else
-		{
+		guard let context = UIGraphicsGetCurrentContext() else {
 			return nil
 		}
 		
 		context.setFillColor(self.cgColor)
 		context.fill(rect)
 
-		guard let res = UIGraphicsGetImageFromCurrentImageContext() else
-		{
+		guard let res = UIGraphicsGetImageFromCurrentImageContext() else {
 			return nil
 		}
 

@@ -11,10 +11,9 @@ import UIKit
 
 
 // MARK: - Effect
-public extension UIImage
-{
-	private func border(_ width: CGFloat, color: UIColor, size: CGSize) -> UIImage?
-	{
+public extension UIImage {
+
+	private func border(_ width: CGFloat, color: UIColor, size: CGSize) -> UIImage? {
 		defer {
 			UIGraphicsEndImageContext();
 		}
@@ -31,21 +30,18 @@ public extension UIImage
 		path.lineWidth = width * UIScreen.main.scale
 		path.stroke()
 
-		guard let res = UIGraphicsGetImageFromCurrentImageContext() else
-		{
+		guard let res = UIGraphicsGetImageFromCurrentImageContext() else {
 			return nil
 		}
 
 		return res
 	}
 	
-	public func borderInside(_ width: CGFloat, color: UIColor) -> UIImage?
-	{
+	public func borderInside(_ width: CGFloat, color: UIColor) -> UIImage? {
 		return border(width, color: color, size: self.size)
 	}
 
-	public func borderOutside(_ width: CGFloat, color: UIColor) -> UIImage?
-	{
+	public func borderOutside(_ width: CGFloat, color: UIColor) -> UIImage? {
 		let size = CGSize.init(width: self.size.width + width * 2,
 							   height: self.size.height + width * 2)
 
@@ -56,34 +52,30 @@ public extension UIImage
 
 
 // MARK: - Transform
-public extension UIImage
-{
-	public func rotate(degree: Int, point: CGPoint? = nil) -> UIImage?
-	{
+public extension UIImage {
+
+	public func rotate(degree: Int, point: CGPoint? = nil) -> UIImage? {
 		return rotate(radian: degree.radianCGFloat, point: point)
 	}
 
-	public func rotate(radian: CGFloat, point: CGPoint? = nil) -> UIImage?
-	{
+	public func rotate(radian: CGFloat, point: CGPoint? = nil) -> UIImage? {
+
 		defer {
 			UIGraphicsEndImageContext();
 		}
 
 
 		var point2 = point
-		if point2 == nil
-		{
+		if point2 == nil {
 			point2 = CGPoint.init(x: self.size.width * 0.5, y: self.size.height * 0.5)
 		}
 
 		UIGraphicsBeginImageContextWithOptions(CGSize.init(width: self.size.width, height: self.size.height), false, 0)
-		guard let context = UIGraphicsGetCurrentContext() else
-		{
+		guard let context = UIGraphicsGetCurrentContext() else {
 			return nil
 		}
 
-		guard let cgImage = self.cgImage else
-		{
+		guard let cgImage = self.cgImage else {
 			return nil
 		}
 
@@ -98,8 +90,7 @@ public extension UIImage
 											  width: self.size.width,
 											  height: self.size.height))
 
-		guard let res = UIGraphicsGetImageFromCurrentImageContext() else
-		{
+		guard let res = UIGraphicsGetImageFromCurrentImageContext() else {
 			return nil
 		}
 

@@ -10,20 +10,17 @@ import Foundation
 
 
 
-public extension BinaryInteger
-{
-	public var radianDouble: Double
-	{
+public extension BinaryInteger {
+
+	public var radianDouble: Double {
 		return Double(self) * .pi / 180
 	}
 
-	public var radianFloat: Float
-	{
+	public var radianFloat: Float {
 		return Float(self) * .pi / 180
 	}
 
-	public var radianCGFloat: CGFloat
-	{
+	public var radianCGFloat: CGFloat {
 		return CGFloat(self) * .pi / 180
 	}
 }

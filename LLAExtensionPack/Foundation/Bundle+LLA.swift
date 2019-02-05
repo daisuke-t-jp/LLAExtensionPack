@@ -10,30 +10,27 @@ import Foundation
 
 
 
-public extension Bundle
-{
-	public var shortVersion: String?
-	{
-		guard let dict = infoDictionary else
-		{
+public extension Bundle {
+
+	public var shortVersion: String? {
+
+		guard let dict = infoDictionary else {
 			return nil
 		}
 		
 		return dict["CFBundleShortVersionString"] as? String
 	}
 
-	public var version: String?
-	{
-		guard let dict = infoDictionary else
-		{
+	public var version: String? {
+
+		guard let dict = infoDictionary else {
 			return nil
 		}
 		
 		return dict["CFBundleVersion"] as? String
 	}
 	
-	public var identifier: String
-	{
+	public var identifier: String {
 		return bundleIdentifier!
 	}
 }
