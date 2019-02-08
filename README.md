@@ -8,13 +8,13 @@
 
 Swift Extension Pack 📦
 
+
 # Install
 ### Carthage
 `github "daisuke-t-jp/LLAExtensionPack"`
 
 ### CocoaPods
 ```
-platform :ios, '10.0'
 use_frameworks!
 
 target 'target' do
