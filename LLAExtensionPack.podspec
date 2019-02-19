@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files  = "LLAExtensionPack/*.{h,swift}", "LLAExtensionPack/CoreAnimation/*.swift", "LLAExtensionPack/CoreGraphics/*.swift", "LLAExtensionPack/CoreLocation/*.swift", "LLAExtensionPack/Foundation/*.swift", "LLAExtensionPack/UIKit/*.swift"
+  spec.source_files  = "LLAExtensionPack/*.{swift}", "LLAExtensionPack/CoreAnimation/*.swift", "LLAExtensionPack/CoreGraphics/*.swift", "LLAExtensionPack/CoreLocation/*.swift", "LLAExtensionPack/Foundation/*.swift", "LLAExtensionPack/UIKit/*.swift"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
