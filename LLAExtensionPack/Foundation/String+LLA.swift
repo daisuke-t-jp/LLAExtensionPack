@@ -151,12 +151,11 @@ public extension String {
 			let regex = try NSRegularExpression(pattern: "\\d", options: [])
 			let range = NSRange(location: 0, length: count)
 			
-			let num = regex.numberOfMatches(in:self, options: [], range: range)
+			let num = regex.numberOfMatches(in: self, options: [], range: range)
 			if count == num {
 				res = true
 			}
-		}
-		catch {
+		} catch {
 			res = false
 		}
 		
@@ -226,26 +225,26 @@ public extension String {
 			return nil
 		}
 
-		let lengthMap:[HashType: Int32] = [
-			.MD2 : CC_MD2_DIGEST_LENGTH,
-			.MD4 : CC_MD4_DIGEST_LENGTH,
-			.MD5 : CC_MD5_DIGEST_LENGTH,
-			.SHA1 : CC_SHA1_DIGEST_LENGTH,
-			.SHA224 : CC_SHA224_DIGEST_LENGTH,
-			.SHA256 : CC_SHA256_DIGEST_LENGTH,
-			.SHA384 : CC_SHA384_DIGEST_LENGTH,
-			.SHA512 : CC_SHA512_DIGEST_LENGTH,
+		let lengthMap: [HashType: Int32] = [
+			.MD2: CC_MD2_DIGEST_LENGTH,
+			.MD4: CC_MD4_DIGEST_LENGTH,
+			.MD5: CC_MD5_DIGEST_LENGTH,
+			.SHA1: CC_SHA1_DIGEST_LENGTH,
+			.SHA224: CC_SHA224_DIGEST_LENGTH,
+			.SHA256: CC_SHA256_DIGEST_LENGTH,
+			.SHA384: CC_SHA384_DIGEST_LENGTH,
+			.SHA512: CC_SHA512_DIGEST_LENGTH,
 		]
 
-		let funcMap:[HashType: (UnsafeRawPointer?, CC_LONG, UnsafeMutablePointer<UInt8>?) -> UnsafeMutablePointer<UInt8>?] = [
-			.MD2 : CC_MD2,
-			.MD4 : CC_MD4,
-			.MD5 : CC_MD5,
-			.SHA1 : CC_SHA1,
-			.SHA224 : CC_SHA224,
-			.SHA256 : CC_SHA256,
-			.SHA384 : CC_SHA384,
-			.SHA512 : CC_SHA512,
+		let funcMap: [HashType: (UnsafeRawPointer?, CC_LONG, UnsafeMutablePointer<UInt8>?) -> UnsafeMutablePointer<UInt8>?] = [
+			.MD2: CC_MD2,
+			.MD4: CC_MD4,
+			.MD5: CC_MD5,
+			.SHA1: CC_SHA1,
+			.SHA224: CC_SHA224,
+			.SHA256: CC_SHA256,
+			.SHA384: CC_SHA384,
+			.SHA512: CC_SHA512,
 			]
 
 		let length = Int(lengthMap[type]!)
@@ -297,9 +296,9 @@ public extension String {
 	
 	private func transformFullwidthHalfwidth(_ reverse: Bool) -> String {
 		let str = NSMutableString(string: self) as CFMutableString
-		CFStringTransform(str, nil, kCFStringTransformFullwidthHalfwidth, reverse);
+		CFStringTransform(str, nil, kCFStringTransformFullwidthHalfwidth, reverse)
 
-		return str as String;
+		return str as String
 	}
 
 	public var fullWidth: String {
@@ -317,9 +316,9 @@ public extension String {
 public extension String {
 	private func transformHiraganaKatakana(_ reverse: Bool) -> String {
 		let str = NSMutableString(string: self) as CFMutableString
-		CFStringTransform(str, nil, kCFStringTransformHiraganaKatakana, reverse);
+		CFStringTransform(str, nil, kCFStringTransformHiraganaKatakana, reverse)
 		
-		return str as String;
+		return str as String
 	}
 	
 	public var hiragana: String {

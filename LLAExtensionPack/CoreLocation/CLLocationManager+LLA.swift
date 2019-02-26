@@ -32,17 +32,14 @@ public extension CLLocationManager {
 
 
 // MARK: - Request
-public extension CLLocationManager
-{
-	public func requestWhenInUse() -> Void
-	{
+public extension CLLocationManager {
+	public func requestWhenInUse() {
 		requestWhenInUseAuthorization()
 		allowsBackgroundLocationUpdates = false
 		pausesLocationUpdatesAutomatically = false
 	}
 
-	public func requestAlways(_ allowBackgroundUpdate: Bool) -> Void
-	{
+	public func requestAlways(_ allowBackgroundUpdate: Bool) {
 		requestAlwaysAuthorization()
 		allowsBackgroundLocationUpdates = allowBackgroundUpdate
 	}
@@ -51,21 +48,15 @@ public extension CLLocationManager
 
 
 // MARK: - Auth status
-public extension CLLocationManager
-{
-	static public func isAuthorizationStatusWhenInUseOrAlways() -> Bool
-	{
+public extension CLLocationManager {
+	static public func isAuthorizationStatusWhenInUseOrAlways() -> Bool {
 		return isAuthorizationStatusWhenInUseOrAlways(CLLocationManager.authorizationStatus())
 	}
 
-	static public func isAuthorizationStatusWhenInUseOrAlways(_ status: CLAuthorizationStatus) -> Bool
-	{
-		if status == .authorizedWhenInUse
-		{
+	static public func isAuthorizationStatusWhenInUseOrAlways(_ status: CLAuthorizationStatus) -> Bool {
+		if status == .authorizedWhenInUse {
 			return true
-		}
-		else if status == .authorizedAlways
-		{
+		} else if status == .authorizedAlways {
 			return true
 		}
 		

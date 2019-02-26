@@ -30,7 +30,7 @@ public extension Int {
 	}
 	
 	public func kiloFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
-		if(self >= 1000) {
+		if self >= 1000 {
 			// more than kilo.
 			let k = self / 1000
 			let v = (self - (k * 1000)) / 100
@@ -39,7 +39,7 @@ public extension Int {
 				return nil
 			}
 
-			if(v == 0) {
+			if v == 0 {
 				// only kilo.
 				return str
 			}

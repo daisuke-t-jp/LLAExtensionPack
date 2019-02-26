@@ -15,7 +15,7 @@ public extension UIImage {
 
 	private func border(_ width: CGFloat, color: UIColor, size: CGSize) -> UIImage? {
 		defer {
-			UIGraphicsEndImageContext();
+			UIGraphicsEndImageContext()
 		}
 
 		let rect = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
@@ -61,7 +61,7 @@ public extension UIImage {
 	public func rotate(radian: CGFloat, point: CGPoint? = nil) -> UIImage? {
 
 		defer {
-			UIGraphicsEndImageContext();
+			UIGraphicsEndImageContext()
 		}
 
 

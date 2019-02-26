@@ -58,7 +58,7 @@ public extension UIView {
 // MARK: - Layer
 public extension UIView {
 	
-	public func setCircled(_ flag: Bool) -> Void {
+	public func setCircled(_ flag: Bool) {
 		if flag {
 			self.layer.cornerRadius = self.frame.width * 0.5
 			return
@@ -86,7 +86,7 @@ public extension UIView {
 		return nil
 	}
 
-	public func setCorners(_ corners: UIRectCorner, radius: CGFloat) -> Void {
+	public func setCorners(_ corners: UIRectCorner, radius: CGFloat) {
 		removeCorners()
 
 		if corners.isEmpty {
@@ -108,7 +108,7 @@ public extension UIView {
 		self.layer.masksToBounds = true
 	}
 	
-	public func removeCorners() -> Void {
+	public func removeCorners() {
 
 		guard let layer = layerCorner() else {
 			return
@@ -133,7 +133,7 @@ public extension UIView {
 		return res
 	}
 
-	public func setBorder(_ width: CGFloat, color: UIColor) -> Void {
+	public func setBorder(_ width: CGFloat, color: UIColor) {
 		removeBorder()
 
 		guard let cornerLayer = layerCorner() else {
@@ -161,7 +161,7 @@ public extension UIView {
 		self.layer.addSublayer(layer)
 	}
 
-	public func removeBorder() -> Void {
+	public func removeBorder() {
 
 		guard let layer = layerBorder() else {
 			// border layer none.
@@ -184,11 +184,14 @@ public extension UIView {
 	public func setIsExclusiveTouchRecursive(_ flag: Bool) {
 
 		for subview in self.subviews {
-			if !subview.isKind(of: UIButton.self) {
+			guard subview.isKind(of: UIButton.self) else {
 				continue
 			}
 			
-			let button: UIButton = subview as! UIButton
+			guard let button: UIButton = subview as? UIButton else {
+				continue
+			}
+
 			button.isExclusiveTouch = flag
 			
 			// function recursive call.
@@ -296,7 +299,7 @@ public extension UIView {
 
 	public var image: UIImage? {
 		defer {
-			UIGraphicsEndImageContext();
+			UIGraphicsEndImageContext()
 		}
 
 

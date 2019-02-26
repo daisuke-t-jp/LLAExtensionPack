@@ -14,8 +14,8 @@ import Foundation
 public extension Locale {
 
 	public enum LocaleIdentifier: String {
-		case en_US = "en_US"
-		case ja_JP = "ja_JP"
+		case enUS = "en_US"
+		case jaJP = "ja_JP"
 	}
 }
 

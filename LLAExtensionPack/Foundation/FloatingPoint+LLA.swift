@@ -13,7 +13,7 @@ import Foundation
 public extension FloatingPoint {
 
 	public var string: String {
-		return String(format: "%f", self as! CVarArg)
+		return String(format: "%f", self as? CVarArg ?? 0)
 	}
 	
 	public var radian: Self {

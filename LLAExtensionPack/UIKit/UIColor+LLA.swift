@@ -55,7 +55,7 @@ public extension UIColor {
 	static public func toRGB(_ hexRGB: UInt32,
 							 r: inout CGFloat,
 							 g: inout CGFloat,
-							 b: inout CGFloat) -> Void {
+							 b: inout CGFloat) {
 		var a: CGFloat = 0
 		toRGBA((hexRGB << 8) | 0xFF, r: &r, g: &g, b: &b, a: &a)
 	}
@@ -64,7 +64,7 @@ public extension UIColor {
 							  r: inout CGFloat,
 							  g: inout CGFloat,
 							  b: inout CGFloat,
-							  a: inout CGFloat) -> Void {
+							  a: inout CGFloat) {
 		r = UIColor.toFloat(UInt8((hexRGBA & 0xFF000000) >> 24))
 		g = UIColor.toFloat(UInt8((hexRGBA & 0x00FF0000) >> 16))
 		b = UIColor.toFloat(UInt8((hexRGBA & 0x0000FF00) >> 8))
@@ -116,75 +116,75 @@ public extension UIColor {
 public extension UIColor {
 
 	static public var presetMaterialRed: UIColor {
-		return UIColor(hexRGB:0xF44336)
+		return UIColor(hexRGB: 0xF44336)
 	}
 	
 	static public var presetMaterialPink: UIColor {
-		return UIColor(hexRGB:0xE91E63)
+		return UIColor(hexRGB: 0xE91E63)
 	}
 	
 	static public var presetMaterialPurple: UIColor {
-		return UIColor(hexRGB:0x9C27B0)
+		return UIColor(hexRGB: 0x9C27B0)
 	}
 	
 	static public var presetMaterialDeepPurple: UIColor {
-		return UIColor(hexRGB:0x673AB7)
+		return UIColor(hexRGB: 0x673AB7)
 	}
 	
 	static public var presetMaterialIndigo: UIColor {
-		return UIColor(hexRGB:0x3F51B5)
+		return UIColor(hexRGB: 0x3F51B5)
 	}
 	
 	static public var presetMaterialBlue: UIColor {
-		return UIColor(hexRGB:0x2196F3)
+		return UIColor(hexRGB: 0x2196F3)
 	}
 	
 	static public var presetMaterialLightBlue: UIColor {
-		return UIColor(hexRGB:0x03A9F4)
+		return UIColor(hexRGB: 0x03A9F4)
 	}
 	
 	static public var presetMaterialCyan: UIColor {
-		return UIColor(hexRGB:0x00BCD4)
+		return UIColor(hexRGB: 0x00BCD4)
 	}
 	
 	static public var presetMaterialTeal: UIColor {
-		return UIColor(hexRGB:0x009688)
+		return UIColor(hexRGB: 0x009688)
 	}
 	
 	static public var presetMaterialGreen: UIColor {
-		return UIColor(hexRGB:0x4CAF50)
+		return UIColor(hexRGB: 0x4CAF50)
 	}
 	
 	static public var presetMaterialLightGreen: UIColor {
-		return UIColor(hexRGB:0x8BC34A)
+		return UIColor(hexRGB: 0x8BC34A)
 	}
 	
 	static public var presetMaterialYellow: UIColor {
-		return UIColor(hexRGB:0xFFEB3B)
+		return UIColor(hexRGB: 0xFFEB3B)
 	}
 	
 	static public var presetMaterialAmber: UIColor {
-		return UIColor(hexRGB:0xFFC107)
+		return UIColor(hexRGB: 0xFFC107)
 	}
 	
 	static public var presetMaterialOrange: UIColor {
-		return UIColor(hexRGB:0xFF9800)
+		return UIColor(hexRGB: 0xFF9800)
 	}
 	
 	static public var presetMaterialDeepOrange: UIColor {
-		return UIColor(hexRGB:0xFF5722)
+		return UIColor(hexRGB: 0xFF5722)
 	}
 	
 	static public var presetMaterialBrown: UIColor {
-		return UIColor(hexRGB:0x795548)
+		return UIColor(hexRGB: 0x795548)
 	}
 	
 	static public var presetMaterialGrey: UIColor {
-		return UIColor(hexRGB:0x9E9E9E)
+		return UIColor(hexRGB: 0x9E9E9E)
 	}
 	
 	static public var presetMaterialBlueGrey: UIColor {
-		return UIColor(hexRGB:0x607D8B)
+		return UIColor(hexRGB: 0x607D8B)
 	}
 }
 
@@ -196,7 +196,7 @@ public extension UIColor {
 	public func image(_ size: CGSize) -> UIImage? {
 
 		defer {
-			UIGraphicsEndImageContext();
+			UIGraphicsEndImageContext()
 		}
 
 
