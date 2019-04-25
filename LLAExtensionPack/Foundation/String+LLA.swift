@@ -249,7 +249,9 @@ public extension String {
 
     let length = Int(lengthMap[type]!)
     var digest = [UInt8](repeating: 0, count: Int(length))
-    _ = data.withUnsafeBytes { (funcMap[type]!)($0, CC_LONG(data.count), &digest) }
+      _ = data.withUnsafeBytes {
+      (funcMap[type]!)($0.baseAddress, CC_LONG(data.count), &digest)
+    }
     let res = digest.map { String(format: "%02x", $0) }.joined(separator: "")
 
     return res
