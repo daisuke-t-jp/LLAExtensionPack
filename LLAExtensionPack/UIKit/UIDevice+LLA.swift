@@ -23,7 +23,7 @@ public extension UIDevice {
     return array
   }
 
-  static public var systemVersionMajor: Int? {
+  static var systemVersionMajor: Int? {
 
     guard let array = systemVersionComponents else {
       return nil
@@ -32,7 +32,7 @@ public extension UIDevice {
     return Int(array[0])
   }
 
-  static public var systemVersionMinor: Int? {
+  static var systemVersionMinor: Int? {
 
     guard let array = systemVersionComponents else {
       return nil

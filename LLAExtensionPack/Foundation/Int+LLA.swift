@@ -21,15 +21,15 @@ public extension Int {
     return formatter.string(from: self as NSNumber)
   }
   
-  public func decimalFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
+  func decimalFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
     return formatString(.decimal, locale: locale)
   }
 
-  public func currencyFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
+  func currencyFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
     return formatString(.currency, locale: locale)
   }
   
-  public func kiloFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
+  func kiloFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
     if self >= 1000 {
       // more than kilo.
       let k = self / 1000

@@ -37,11 +37,11 @@ public extension UIImage {
     return res
   }
   
-  public func borderInside(_ width: CGFloat, color: UIColor) -> UIImage? {
+  func borderInside(_ width: CGFloat, color: UIColor) -> UIImage? {
     return border(width, color: color, size: self.size)
   }
 
-  public func borderOutside(_ width: CGFloat, color: UIColor) -> UIImage? {
+  func borderOutside(_ width: CGFloat, color: UIColor) -> UIImage? {
     let size = CGSize.init(width: self.size.width + width * 2,
                  height: self.size.height + width * 2)
 
@@ -54,11 +54,11 @@ public extension UIImage {
 // MARK: - Transform
 public extension UIImage {
 
-  public func rotate(degree: Int, point: CGPoint? = nil) -> UIImage? {
+  func rotate(degree: Int, point: CGPoint? = nil) -> UIImage? {
     return rotate(radian: degree.radianCGFloat, point: point)
   }
 
-  public func rotate(radian: CGFloat, point: CGPoint? = nil) -> UIImage? {
+  func rotate(radian: CGFloat, point: CGPoint? = nil) -> UIImage? {
 
     defer {
       UIGraphicsEndImageContext()

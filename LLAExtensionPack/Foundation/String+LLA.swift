@@ -13,7 +13,7 @@ import Foundation
 // MARK: - Compare
 public extension String {
 
-  public func isEqual(_ str: String, caseInsensitive: Bool = false) -> Bool {
+  func isEqual(_ str: String, caseInsensitive: Bool = false) -> Bool {
 
     if caseInsensitive {
       return caseInsensitiveCompare(str) == .orderedSame
@@ -29,7 +29,7 @@ public extension String {
 // MARK: - Find
 public extension String {
 
-  public func hasPrefix(_ str: String, caseInsensitive: Bool = false) -> Bool {
+  func hasPrefix(_ str: String, caseInsensitive: Bool = false) -> Bool {
 
     if caseInsensitive {
       return uppercased().hasPrefix(str.uppercased())
@@ -38,7 +38,7 @@ public extension String {
     return hasPrefix(str)
   }
   
-  public func hasSuffix(_ str: String, caseInsensitive: Bool = false) -> Bool {
+  func hasSuffix(_ str: String, caseInsensitive: Bool = false) -> Bool {
 
     if caseInsensitive {
       return uppercased().hasSuffix(str.uppercased())
@@ -47,7 +47,7 @@ public extension String {
     return hasSuffix(str)
   }
   
-  public func contains(_ str: String, caseInsensitive: Bool = false) -> Bool {
+  func contains(_ str: String, caseInsensitive: Bool = false) -> Bool {
 
     if caseInsensitive {
       return uppercased().range(of: str.uppercased()) != nil
@@ -56,7 +56,7 @@ public extension String {
     return range(of: str) != nil
   }
   
-  public func range(_ str: String, caseInsensitive: Bool = false) -> Range<String.Index>? {
+  func range(_ str: String, caseInsensitive: Bool = false) -> Range<String.Index>? {
 
     if caseInsensitive {
       return uppercased().range(of: str.uppercased())
@@ -71,35 +71,35 @@ public extension String {
 // MARK: - Substring
 public extension String {
 
-  public func startIndex(_ offsetBy: String.IndexDistance) -> String.Index? {
+  func startIndex(_ offsetBy: String.IndexDistance) -> String.Index? {
     return index(startIndex, offsetBy: offsetBy, limitedBy: endIndex)
   }
   
-  public func endIndex(_ offsetBy: String.IndexDistance) -> String.Index? {
+  func endIndex(_ offsetBy: String.IndexDistance) -> String.Index? {
     return index(endIndex, offsetBy: offsetBy, limitedBy: startIndex)
   }
 
-  public func substring(_ range: NSRange) -> String? {
+  func substring(_ range: NSRange) -> String? {
     let lhs = index(startIndex, offsetBy: range.location)
     let rhs = index(startIndex, offsetBy: range.location + range.length - 1)
     
     return String(self[lhs...rhs])
   }
 
-  public func substring(_ start: Int, end: Int) -> String? {
+  func substring(_ start: Int, end: Int) -> String? {
     let lhs = index(startIndex, offsetBy: start)
     let rhs = index(startIndex, offsetBy: end)
 
     return String(self[lhs...rhs])
   }
 
-  public func substringFromIndex(_ index: Int) -> String? {
+  func substringFromIndex(_ index: Int) -> String? {
     let lhs = self.index(startIndex, offsetBy: index)
     
     return String(self[lhs...])
   }
 
-  public func substringToIndex(_ index: Int) -> String? {
+  func substringToIndex(_ index: Int) -> String? {
     let rhs = self.index(startIndex, offsetBy: index)
     
     return String(self[..<rhs])
@@ -143,7 +143,7 @@ public extension String {
 // MARK: - Inspect
 public extension String {
 
-  public var isNumeric: Bool {
+  var isNumeric: Bool {
 
     var res = false
 
@@ -168,7 +168,7 @@ public extension String {
 // MARK: - Replace
 public extension String {
 
-  public func replace(_ target: String, replacement: String, caseInsensitive: Bool = false) -> String {
+  func replace(_ target: String, replacement: String, caseInsensitive: Bool = false) -> String {
 
     if caseInsensitive {
       return replacingOccurrences(of: target, with: replacement, options: .caseInsensitive)
@@ -184,7 +184,7 @@ public extension String {
 // MARK: - Remove
 public extension String {
 
-  public func remove(_ target: String, caseInsensitive: Bool = false) -> String {
+  func remove(_ target: String, caseInsensitive: Bool = false) -> String {
     return replace(target, replacement: "", caseInsensitive: caseInsensitive)
   }
 
@@ -195,7 +195,7 @@ public extension String {
 // MARK: - Encode
 public extension String {
 
-  public var urlEncoding: String {
+  var urlEncoding: String {
     let charset = CharacterSet.alphanumerics.union(.init(charactersIn: "/?-._~"))
     let str = removingPercentEncoding ?? self
     
@@ -255,35 +255,35 @@ public extension String {
     return res
   }
 
-  public var md2: String? {
+  var md2: String? {
     return hashing(.MD2)
   }
 
-  public var md4: String? {
+  var md4: String? {
     return hashing(.MD4)
   }
 
-  public var md5: String? {
+  var md5: String? {
     return hashing(.MD5)
   }
 
-  public var sha1: String? {
+  var sha1: String? {
     return hashing(.SHA1)
   }
   
-  public var sha224: String? {
+  var sha224: String? {
     return hashing(.SHA224)
   }
 
-  public var sha256: String? {
+  var sha256: String? {
     return hashing(.SHA256)
   }
 
-  public var sha384: String? {
+  var sha384: String? {
     return hashing(.SHA384)
   }
 
-  public var sha512: String? {
+  var sha512: String? {
     return hashing(.SHA512)
   }
 
@@ -301,11 +301,11 @@ public extension String {
     return str as String
   }
 
-  public var fullWidth: String {
+  var fullWidth: String {
     return transformFullwidthHalfwidth(true)
   }
 
-  public var halfWidth: String {
+  var halfWidth: String {
     return transformFullwidthHalfwidth(false)
   }
 }
@@ -321,11 +321,11 @@ public extension String {
     return str as String
   }
   
-  public var hiragana: String {
+  var hiragana: String {
     return transformHiraganaKatakana(true)
   }
   
-  public var katakana: String {
+  var katakana: String {
     return transformHiraganaKatakana(false)
   }
 }

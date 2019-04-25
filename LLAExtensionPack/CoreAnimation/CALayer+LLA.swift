@@ -12,7 +12,7 @@ import QuartzCore
 
 public extension CALayer {
 
-  public func sublayerWithName(_ name: String) -> CALayer? {
+  func sublayerWithName(_ name: String) -> CALayer? {
     for elm in sublayers ?? [] where elm.name == name { return elm }
     return nil
   }

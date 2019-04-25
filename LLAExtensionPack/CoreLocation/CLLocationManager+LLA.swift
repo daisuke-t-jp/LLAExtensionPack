@@ -13,18 +13,18 @@ import CoreLocation
 // MARK: - Utility
 public extension CLLocationManager {
 
-  static public let authorizationStatusStringMap: [CLAuthorizationStatus: String] = [
+  static let authorizationStatusStringMap: [CLAuthorizationStatus: String] = [
     .notDetermined: "notDetermined",
     .restricted: "restricted",
     .denied: "denied",
     .authorizedAlways: "authorizedAlways",
     .authorizedWhenInUse: "authorizedWhenInUse"]
 
-  static public func authorizationStatus2String(_ status: CLAuthorizationStatus) -> String? {
+  static func authorizationStatus2String(_ status: CLAuthorizationStatus) -> String? {
     return authorizationStatusStringMap[status]
   }
 
-  public func authorizationStatusString() -> String? {
+  func authorizationStatusString() -> String? {
     return CLLocationManager.authorizationStatus2String(CLLocationManager.authorizationStatus())
   }
 }
@@ -33,13 +33,13 @@ public extension CLLocationManager {
 
 // MARK: - Request
 public extension CLLocationManager {
-  public func requestWhenInUse() {
+  func requestWhenInUse() {
     requestWhenInUseAuthorization()
     allowsBackgroundLocationUpdates = false
     pausesLocationUpdatesAutomatically = false
   }
 
-  public func requestAlways(_ allowBackgroundUpdate: Bool) {
+  func requestAlways(_ allowBackgroundUpdate: Bool) {
     requestAlwaysAuthorization()
     allowsBackgroundLocationUpdates = allowBackgroundUpdate
   }
@@ -49,11 +49,11 @@ public extension CLLocationManager {
 
 // MARK: - Auth status
 public extension CLLocationManager {
-  static public func isAuthorizationStatusWhenInUseOrAlways() -> Bool {
+  static func isAuthorizationStatusWhenInUseOrAlways() -> Bool {
     return isAuthorizationStatusWhenInUseOrAlways(CLLocationManager.authorizationStatus())
   }
 
-  static public func isAuthorizationStatusWhenInUseOrAlways(_ status: CLAuthorizationStatus) -> Bool {
+  static func isAuthorizationStatusWhenInUseOrAlways(_ status: CLAuthorizationStatus) -> Bool {
     if status == .authorizedWhenInUse {
       return true
     } else if status == .authorizedAlways {

@@ -12,7 +12,7 @@ import Foundation
 
 public extension URLSession {
 
-  public func dataTaskSync(_ req: URLRequest,
+  func dataTaskSync(_ req: URLRequest,
                handler: @escaping (Data?, URLResponse?, Error?) -> Void) {
     // create semaphore.
     var semaphore: DispatchSemaphore = DispatchSemaphore(value: 0)

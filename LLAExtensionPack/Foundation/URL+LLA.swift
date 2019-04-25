@@ -12,7 +12,7 @@ import Foundation
 
 public extension URL {
 
-  public var queryMap: [String: String] {
+  var queryMap: [String: String] {
     var res: [String: String] = [String: String]()
 
     guard let query = self.query else {

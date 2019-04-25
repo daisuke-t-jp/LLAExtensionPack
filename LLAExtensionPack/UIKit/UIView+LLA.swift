@@ -20,35 +20,35 @@ public extension UIView {
 
 // MARK: - Property
 public extension UIView {
-  public var x: CGFloat {
+  var x: CGFloat {
     return self.frame.x
   }
   
-  public func setX(_ x: CGFloat) {
+  func setX(_ x: CGFloat) {
     self.frame.origin.x = x
   }
   
-  public var y: CGFloat {
+  var y: CGFloat {
     return self.frame.origin.y
   }
   
-  public func setY(_ y: CGFloat) {
+  func setY(_ y: CGFloat) {
     self.frame.origin.y = y
   }
 
-  public var width: CGFloat {
+  var width: CGFloat {
     return self.frame.size.width
   }
 
-  public func setWidth(_ width: CGFloat) {
+  func setWidth(_ width: CGFloat) {
     self.frame.size.width = width
   }
 
-  public var height: CGFloat {
+  var height: CGFloat {
     return self.frame.size.height
   }
 
-  public func setHeight(_ height: CGFloat) {
+  func setHeight(_ height: CGFloat) {
     self.frame.size.height = height
   }
 }
@@ -58,7 +58,7 @@ public extension UIView {
 // MARK: - Layer
 public extension UIView {
   
-  public func setCircled(_ flag: Bool) {
+  func setCircled(_ flag: Bool) {
     if flag {
       self.layer.cornerRadius = self.frame.width * 0.5
       return
@@ -73,7 +73,7 @@ public extension UIView {
 // MARK: - Layer(Corner)
 public extension UIView {
 
-  public func layerCorner() -> CAShapeLayer? {
+  func layerCorner() -> CAShapeLayer? {
 
     guard let layer = self.layer.mask as? CAShapeLayer else {
       return nil
@@ -86,7 +86,7 @@ public extension UIView {
     return nil
   }
 
-  public func setCorners(_ corners: UIRectCorner, radius: CGFloat) {
+  func setCorners(_ corners: UIRectCorner, radius: CGFloat) {
     removeCorners()
 
     if corners.isEmpty {
@@ -108,7 +108,7 @@ public extension UIView {
     self.layer.masksToBounds = true
   }
   
-  public func removeCorners() {
+  func removeCorners() {
 
     guard let layer = layerCorner() else {
       return
@@ -124,7 +124,7 @@ public extension UIView {
 // MARK: - Layer(Border)
 public extension UIView {
 
-  public func layerBorder() -> CAShapeLayer? {
+  func layerBorder() -> CAShapeLayer? {
 
     guard let res = self.layer.sublayerWithName(UIView.layerNameBorder) as? CAShapeLayer else {
       return nil
@@ -133,7 +133,7 @@ public extension UIView {
     return res
   }
 
-  public func setBorder(_ width: CGFloat, color: UIColor) {
+  func setBorder(_ width: CGFloat, color: UIColor) {
     removeBorder()
 
     guard let cornerLayer = layerCorner() else {
@@ -161,7 +161,7 @@ public extension UIView {
     self.layer.addSublayer(layer)
   }
 
-  public func removeBorder() {
+  func removeBorder() {
 
     guard let layer = layerBorder() else {
       // border layer none.
@@ -181,7 +181,7 @@ public extension UIView {
 // MARK: - Gestures
 public extension UIView {
 
-  public func setIsExclusiveTouchRecursive(_ flag: Bool) {
+  func setIsExclusiveTouchRecursive(_ flag: Bool) {
 
     for subview in self.subviews {
       guard subview.isKind(of: UIButton.self) else {
@@ -199,7 +199,7 @@ public extension UIView {
     }
   }
 
-  public func removeGestureRecognizers() {
+  func removeGestureRecognizers() {
 
     for elm in self.gestureRecognizers ?? [] {
       removeGestureRecognizer(elm)
@@ -212,7 +212,7 @@ public extension UIView {
 // MARK: - Subviews
 public extension UIView {
 
-  public func removeSubviewOf(tag: Int) {
+  func removeSubviewOf(tag: Int) {
 
     for view in self.subviews {
 
@@ -226,7 +226,7 @@ public extension UIView {
     }
   }
   
-  public func removeAllSubviews() {
+  func removeAllSubviews() {
     for view in self.subviews {
       view.removeFromSuperview()
     }
@@ -238,7 +238,7 @@ public extension UIView {
 // MARK: - Inspect
 public extension UIView {
 
-  public func isKindOfRecursive(_ clazz: AnyClass) -> UIView? {
+  func isKindOfRecursive(_ clazz: AnyClass) -> UIView? {
 
     for subview in self.subviews {
       if subview.isKind(of: clazz) {
@@ -256,7 +256,7 @@ public extension UIView {
     return nil
   }
 
-  public func isMemberOfRecursive(_ clazz: AnyClass) -> UIView? {
+  func isMemberOfRecursive(_ clazz: AnyClass) -> UIView? {
 
     for subview in self.subviews {
       if subview.isMember(of: clazz) {
@@ -274,7 +274,7 @@ public extension UIView {
     return nil
   }
   
-  public func findFirstResponder() -> UIView? {
+  func findFirstResponder() -> UIView? {
     if self.isFirstResponder {
       return self
     }
@@ -297,7 +297,7 @@ public extension UIView {
 // MARK: - UIImage
 public extension UIView {
 
-  public var image: UIImage? {
+  var image: UIImage? {
     defer {
       UIGraphicsEndImageContext()
     }
