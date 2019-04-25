@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "LLAExtensionPack"
-  spec.version      = "1.0.8"
+  spec.version      = "1.0.9"
   spec.summary      = "Swift Extension Pack📦"
 
   spec.description  = <<-DESC
