@@ -14,24 +14,24 @@ import XCTest
 
 class LLAExtensionPackTestURL: XCTestCase {
 
-	override func setUp() {
-		// Put setup code here. This method is called before the invocation of each test method in the class.
-	}
+  override func setUp() {
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+  }
 
-	override func tearDown() {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-	}
+  override func tearDown() {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+  }
 
-	func test() {
+  func test() {
 
-		let url = URL(string: "https://www.example.com/api?")!
-		XCTAssertTrue(url.queryMap.keys.isEmpty)
+    let url = URL(string: "https://www.example.com/api?")!
+    XCTAssertTrue(url.queryMap.keys.isEmpty)
 
-		let url2 = URL(string: "https://www.example.com/api?color=white&time=morning&gender=female")!
-		XCTAssertEqual(url2.queryMap["color"], "white")
-		XCTAssertEqual(url2.queryMap["time"], "morning")
-		XCTAssertEqual(url2.queryMap["gender"], "female")
-		
-	}
+    let url2 = URL(string: "https://www.example.com/api?color=white&time=morning&gender=female")!
+    XCTAssertEqual(url2.queryMap["color"], "white")
+    XCTAssertEqual(url2.queryMap["time"], "morning")
+    XCTAssertEqual(url2.queryMap["gender"], "female")
+    
+  }
 
 }

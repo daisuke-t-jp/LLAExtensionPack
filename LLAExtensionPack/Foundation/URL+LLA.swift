@@ -12,34 +12,34 @@ import Foundation
 
 public extension URL {
 
-	public var queryMap: [String: String] {
-		var res: [String: String] = [String: String]()
+  public var queryMap: [String: String] {
+    var res: [String: String] = [String: String]()
 
-		guard let query = self.query else {
-			return res
-		}
+    guard let query = self.query else {
+      return res
+    }
 
-		let array = query.components(separatedBy: "&")
-	
-		for elm in array {
+    let array = query.components(separatedBy: "&")
+  
+    for elm in array {
 
-			let array2 = elm.components(separatedBy: "=")
-			guard array2.count >= 2 else {
-				continue
-			}
-			
-			guard let key = array2[0].removingPercentEncoding else {
-				continue
-			}
+      let array2 = elm.components(separatedBy: "=")
+      guard array2.count >= 2 else {
+        continue
+      }
+      
+      guard let key = array2[0].removingPercentEncoding else {
+        continue
+      }
 
-			guard let val = array2[1].removingPercentEncoding else {
-				continue
-			}
+      guard let val = array2[1].removingPercentEncoding else {
+        continue
+      }
 
-			res[key] = val
-		}
+      res[key] = val
+    }
 
-		return res
-	}
-	
+    return res
+  }
+  
 }

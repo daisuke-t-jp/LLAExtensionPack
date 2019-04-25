@@ -12,25 +12,25 @@ import Foundation
 
 public extension Bundle {
 
-	public var shortVersion: String? {
+  public var shortVersion: String? {
 
-		guard let dict = infoDictionary else {
-			return nil
-		}
-		
-		return dict["CFBundleShortVersionString"] as? String
-	}
+    guard let dict = infoDictionary else {
+      return nil
+    }
+    
+    return dict["CFBundleShortVersionString"] as? String
+  }
 
-	public var version: String? {
+  public var version: String? {
 
-		guard let dict = infoDictionary else {
-			return nil
-		}
-		
-		return dict["CFBundleVersion"] as? String
-	}
-	
-	public var identifier: String {
-		return bundleIdentifier!
-	}
+    guard let dict = infoDictionary else {
+      return nil
+    }
+    
+    return dict["CFBundleVersion"] as? String
+  }
+  
+  public var identifier: String {
+    return bundleIdentifier!
+  }
 }

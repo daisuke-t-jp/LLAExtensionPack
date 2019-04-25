@@ -13,10 +13,10 @@ import Foundation
 // MARK: - Enum, Const
 public extension Locale {
 
-	public enum LocaleIdentifier: String {
-		case enUS = "en_US"
-		case jaJP = "ja_JP"
-	}
+  public enum LocaleIdentifier: String {
+    case enUS = "en_US"
+    case jaJP = "ja_JP"
+  }
 }
 
 

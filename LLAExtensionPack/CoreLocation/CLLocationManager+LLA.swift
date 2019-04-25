@@ -13,53 +13,53 @@ import CoreLocation
 // MARK: - Utility
 public extension CLLocationManager {
 
-	static public let authorizationStatusStringMap: [CLAuthorizationStatus: String] = [
-		.notDetermined: "notDetermined",
-		.restricted: "restricted",
-		.denied: "denied",
-		.authorizedAlways: "authorizedAlways",
-		.authorizedWhenInUse: "authorizedWhenInUse"]
+  static public let authorizationStatusStringMap: [CLAuthorizationStatus: String] = [
+    .notDetermined: "notDetermined",
+    .restricted: "restricted",
+    .denied: "denied",
+    .authorizedAlways: "authorizedAlways",
+    .authorizedWhenInUse: "authorizedWhenInUse"]
 
-	static public func authorizationStatus2String(_ status: CLAuthorizationStatus) -> String? {
-		return authorizationStatusStringMap[status]
-	}
+  static public func authorizationStatus2String(_ status: CLAuthorizationStatus) -> String? {
+    return authorizationStatusStringMap[status]
+  }
 
-	public func authorizationStatusString() -> String? {
-		return CLLocationManager.authorizationStatus2String(CLLocationManager.authorizationStatus())
-	}
+  public func authorizationStatusString() -> String? {
+    return CLLocationManager.authorizationStatus2String(CLLocationManager.authorizationStatus())
+  }
 }
 
 
 
 // MARK: - Request
 public extension CLLocationManager {
-	public func requestWhenInUse() {
-		requestWhenInUseAuthorization()
-		allowsBackgroundLocationUpdates = false
-		pausesLocationUpdatesAutomatically = false
-	}
+  public func requestWhenInUse() {
+    requestWhenInUseAuthorization()
+    allowsBackgroundLocationUpdates = false
+    pausesLocationUpdatesAutomatically = false
+  }
 
-	public func requestAlways(_ allowBackgroundUpdate: Bool) {
-		requestAlwaysAuthorization()
-		allowsBackgroundLocationUpdates = allowBackgroundUpdate
-	}
+  public func requestAlways(_ allowBackgroundUpdate: Bool) {
+    requestAlwaysAuthorization()
+    allowsBackgroundLocationUpdates = allowBackgroundUpdate
+  }
 }
 
 
 
 // MARK: - Auth status
 public extension CLLocationManager {
-	static public func isAuthorizationStatusWhenInUseOrAlways() -> Bool {
-		return isAuthorizationStatusWhenInUseOrAlways(CLLocationManager.authorizationStatus())
-	}
+  static public func isAuthorizationStatusWhenInUseOrAlways() -> Bool {
+    return isAuthorizationStatusWhenInUseOrAlways(CLLocationManager.authorizationStatus())
+  }
 
-	static public func isAuthorizationStatusWhenInUseOrAlways(_ status: CLAuthorizationStatus) -> Bool {
-		if status == .authorizedWhenInUse {
-			return true
-		} else if status == .authorizedAlways {
-			return true
-		}
-		
-		return false
-	}
+  static public func isAuthorizationStatusWhenInUseOrAlways(_ status: CLAuthorizationStatus) -> Bool {
+    if status == .authorizedWhenInUse {
+      return true
+    } else if status == .authorizedAlways {
+      return true
+    }
+    
+    return false
+  }
 }

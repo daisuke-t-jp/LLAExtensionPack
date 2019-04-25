@@ -13,14 +13,14 @@ import Foundation
 // MARK: - Compare
 public extension String {
 
-	public func isEqual(_ str: String, caseInsensitive: Bool = false) -> Bool {
+  public func isEqual(_ str: String, caseInsensitive: Bool = false) -> Bool {
 
-		if caseInsensitive {
-			return caseInsensitiveCompare(str) == .orderedSame
-		}
-		
-		return self == str
-	}
+    if caseInsensitive {
+      return caseInsensitiveCompare(str) == .orderedSame
+    }
+    
+    return self == str
+  }
 
 }
 
@@ -29,41 +29,41 @@ public extension String {
 // MARK: - Find
 public extension String {
 
-	public func hasPrefix(_ str: String, caseInsensitive: Bool = false) -> Bool {
+  public func hasPrefix(_ str: String, caseInsensitive: Bool = false) -> Bool {
 
-		if caseInsensitive {
-			return uppercased().hasPrefix(str.uppercased())
-		}
-		
-		return hasPrefix(str)
-	}
-	
-	public func hasSuffix(_ str: String, caseInsensitive: Bool = false) -> Bool {
+    if caseInsensitive {
+      return uppercased().hasPrefix(str.uppercased())
+    }
+    
+    return hasPrefix(str)
+  }
+  
+  public func hasSuffix(_ str: String, caseInsensitive: Bool = false) -> Bool {
 
-		if caseInsensitive {
-			return uppercased().hasSuffix(str.uppercased())
-		}
-		
-		return hasSuffix(str)
-	}
-	
-	public func contains(_ str: String, caseInsensitive: Bool = false) -> Bool {
+    if caseInsensitive {
+      return uppercased().hasSuffix(str.uppercased())
+    }
+    
+    return hasSuffix(str)
+  }
+  
+  public func contains(_ str: String, caseInsensitive: Bool = false) -> Bool {
 
-		if caseInsensitive {
-			return uppercased().range(of: str.uppercased()) != nil
-		}
-		
-		return range(of: str) != nil
-	}
-	
-	public func range(_ str: String, caseInsensitive: Bool = false) -> Range<String.Index>? {
+    if caseInsensitive {
+      return uppercased().range(of: str.uppercased()) != nil
+    }
+    
+    return range(of: str) != nil
+  }
+  
+  public func range(_ str: String, caseInsensitive: Bool = false) -> Range<String.Index>? {
 
-		if caseInsensitive {
-			return uppercased().range(of: str.uppercased())
-		}
-		
-		return range(of: str)
-	}
+    if caseInsensitive {
+      return uppercased().range(of: str.uppercased())
+    }
+    
+    return range(of: str)
+  }
 }
 
 
@@ -71,71 +71,71 @@ public extension String {
 // MARK: - Substring
 public extension String {
 
-	public func startIndex(_ offsetBy: String.IndexDistance) -> String.Index? {
-		return index(startIndex, offsetBy: offsetBy, limitedBy: endIndex)
-	}
-	
-	public func endIndex(_ offsetBy: String.IndexDistance) -> String.Index? {
-		return index(endIndex, offsetBy: offsetBy, limitedBy: startIndex)
-	}
+  public func startIndex(_ offsetBy: String.IndexDistance) -> String.Index? {
+    return index(startIndex, offsetBy: offsetBy, limitedBy: endIndex)
+  }
+  
+  public func endIndex(_ offsetBy: String.IndexDistance) -> String.Index? {
+    return index(endIndex, offsetBy: offsetBy, limitedBy: startIndex)
+  }
 
-	public func substring(_ range: NSRange) -> String? {
-		let lhs = index(startIndex, offsetBy: range.location)
-		let rhs = index(startIndex, offsetBy: range.location + range.length - 1)
-		
-		return String(self[lhs...rhs])
-	}
+  public func substring(_ range: NSRange) -> String? {
+    let lhs = index(startIndex, offsetBy: range.location)
+    let rhs = index(startIndex, offsetBy: range.location + range.length - 1)
+    
+    return String(self[lhs...rhs])
+  }
 
-	public func substring(_ start: Int, end: Int) -> String? {
-		let lhs = index(startIndex, offsetBy: start)
-		let rhs = index(startIndex, offsetBy: end)
+  public func substring(_ start: Int, end: Int) -> String? {
+    let lhs = index(startIndex, offsetBy: start)
+    let rhs = index(startIndex, offsetBy: end)
 
-		return String(self[lhs...rhs])
-	}
+    return String(self[lhs...rhs])
+  }
 
-	public func substringFromIndex(_ index: Int) -> String? {
-		let lhs = self.index(startIndex, offsetBy: index)
-		
-		return String(self[lhs...])
-	}
+  public func substringFromIndex(_ index: Int) -> String? {
+    let lhs = self.index(startIndex, offsetBy: index)
+    
+    return String(self[lhs...])
+  }
 
-	public func substringToIndex(_ index: Int) -> String? {
-		let rhs = self.index(startIndex, offsetBy: index)
-		
-		return String(self[..<rhs])
-	}
+  public func substringToIndex(_ index: Int) -> String? {
+    let rhs = self.index(startIndex, offsetBy: index)
+    
+    return String(self[..<rhs])
+  }
 }
 
 
 
 // MARK: - Subscript
 public extension String {
-	subscript (bounds: CountableClosedRange<Int>) -> String {
-		let lhs = index(startIndex, offsetBy: bounds.lowerBound)
-		let rhs = index(startIndex, offsetBy: bounds.upperBound)
-		return String(self[lhs...rhs])
-	}
-	
-	subscript (bounds: CountableRange<Int>) -> String {
-		let lhs = index(startIndex, offsetBy: bounds.lowerBound)
-		let rhs = index(startIndex, offsetBy: bounds.upperBound)
-		return String(self[lhs..<rhs])
-	}
-	
-	subscript (bounds: PartialRangeUpTo<Int>) -> String {
-		let rhs = index(startIndex, offsetBy: bounds.upperBound)
-		return String(self[startIndex..<rhs])
-	}
-	
-	subscript (bounds: PartialRangeThrough<Int>) -> String {
-		let rhs = index(startIndex, offsetBy: bounds.upperBound)
-		return String(self[startIndex...rhs])
-	}
-	
-	subscript (bounds: CountablePartialRangeFrom<Int>) -> String {
-		let lhs = index(startIndex, offsetBy: bounds.lowerBound)
-		return String(self[lhs..<endIndex])
-	}
+  subscript (bounds: CountableClosedRange<Int>) -> String {
+    let lhs = index(startIndex, offsetBy: bounds.lowerBound)
+    let rhs = index(startIndex, offsetBy: bounds.upperBound)
+    return String(self[lhs...rhs])
+  }
+  
+  subscript (bounds: CountableRange<Int>) -> String {
+    let lhs = index(startIndex, offsetBy: bounds.lowerBound)
+    let rhs = index(startIndex, offsetBy: bounds.upperBound)
+    return String(self[lhs..<rhs])
+  }
+  
+  subscript (bounds: PartialRangeUpTo<Int>) -> String {
+    let rhs = index(startIndex, offsetBy: bounds.upperBound)
+    return String(self[startIndex..<rhs])
+  }
+  
+  subscript (bounds: PartialRangeThrough<Int>) -> String {
+    let rhs = index(startIndex, offsetBy: bounds.upperBound)
+    return String(self[startIndex...rhs])
+  }
+  
+  subscript (bounds: CountablePartialRangeFrom<Int>) -> String {
+    let lhs = index(startIndex, offsetBy: bounds.lowerBound)
+    return String(self[lhs..<endIndex])
+  }
 }
 
 
@@ -143,24 +143,24 @@ public extension String {
 // MARK: - Inspect
 public extension String {
 
-	public var isNumeric: Bool {
+  public var isNumeric: Bool {
 
-		var res = false
+    var res = false
 
-		do {
-			let regex = try NSRegularExpression(pattern: "\\d", options: [])
-			let range = NSRange(location: 0, length: count)
-			
-			let num = regex.numberOfMatches(in: self, options: [], range: range)
-			if count == num {
-				res = true
-			}
-		} catch {
-			res = false
-		}
-		
-		return res
-	}
+    do {
+      let regex = try NSRegularExpression(pattern: "\\d", options: [])
+      let range = NSRange(location: 0, length: count)
+      
+      let num = regex.numberOfMatches(in: self, options: [], range: range)
+      if count == num {
+        res = true
+      }
+    } catch {
+      res = false
+    }
+    
+    return res
+  }
 }
 
 
@@ -168,14 +168,14 @@ public extension String {
 // MARK: - Replace
 public extension String {
 
-	public func replace(_ target: String, replacement: String, caseInsensitive: Bool = false) -> String {
+  public func replace(_ target: String, replacement: String, caseInsensitive: Bool = false) -> String {
 
-		if caseInsensitive {
-			return replacingOccurrences(of: target, with: replacement, options: .caseInsensitive)
-		}
-		
-		return replacingOccurrences(of: target, with: replacement)
-	}
+    if caseInsensitive {
+      return replacingOccurrences(of: target, with: replacement, options: .caseInsensitive)
+    }
+    
+    return replacingOccurrences(of: target, with: replacement)
+  }
 
 }
 
@@ -184,23 +184,23 @@ public extension String {
 // MARK: - Remove
 public extension String {
 
-	public func remove(_ target: String, caseInsensitive: Bool = false) -> String {
-		return replace(target, replacement: "", caseInsensitive: caseInsensitive)
-	}
+  public func remove(_ target: String, caseInsensitive: Bool = false) -> String {
+    return replace(target, replacement: "", caseInsensitive: caseInsensitive)
+  }
 
 }
 
 
-	
+  
 // MARK: - Encode
 public extension String {
 
-	public var urlEncoding: String {
-		let charset = CharacterSet.alphanumerics.union(.init(charactersIn: "/?-._~"))
-		let str = removingPercentEncoding ?? self
-		
-		return str.addingPercentEncoding(withAllowedCharacters: charset) ?? str
-	}
+  public var urlEncoding: String {
+    let charset = CharacterSet.alphanumerics.union(.init(charactersIn: "/?-._~"))
+    let str = removingPercentEncoding ?? self
+    
+    return str.addingPercentEncoding(withAllowedCharacters: charset) ?? str
+  }
 }
 
 
@@ -208,84 +208,84 @@ public extension String {
 // MARK: - Hash
 public extension String {
 
-	private enum HashType {
-		case MD2
-		case MD4
-		case MD5
-		case SHA1
-		case SHA224
-		case SHA256
-		case SHA384
-		case SHA512
-	}
+  private enum HashType {
+    case MD2
+    case MD4
+    case MD5
+    case SHA1
+    case SHA224
+    case SHA256
+    case SHA384
+    case SHA512
+  }
 
-	private func hashing(_ type: HashType) -> String? {
+  private func hashing(_ type: HashType) -> String? {
 
-		guard let data = data(using: .utf8) else {
-			return nil
-		}
+    guard let data = data(using: .utf8) else {
+      return nil
+    }
 
-		let lengthMap: [HashType: Int32] = [
-			.MD2: CC_MD2_DIGEST_LENGTH,
-			.MD4: CC_MD4_DIGEST_LENGTH,
-			.MD5: CC_MD5_DIGEST_LENGTH,
-			.SHA1: CC_SHA1_DIGEST_LENGTH,
-			.SHA224: CC_SHA224_DIGEST_LENGTH,
-			.SHA256: CC_SHA256_DIGEST_LENGTH,
-			.SHA384: CC_SHA384_DIGEST_LENGTH,
-			.SHA512: CC_SHA512_DIGEST_LENGTH,
-		]
+    let lengthMap: [HashType: Int32] = [
+      .MD2: CC_MD2_DIGEST_LENGTH,
+      .MD4: CC_MD4_DIGEST_LENGTH,
+      .MD5: CC_MD5_DIGEST_LENGTH,
+      .SHA1: CC_SHA1_DIGEST_LENGTH,
+      .SHA224: CC_SHA224_DIGEST_LENGTH,
+      .SHA256: CC_SHA256_DIGEST_LENGTH,
+      .SHA384: CC_SHA384_DIGEST_LENGTH,
+      .SHA512: CC_SHA512_DIGEST_LENGTH,
+    ]
 
-		let funcMap: [HashType: (UnsafeRawPointer?, CC_LONG, UnsafeMutablePointer<UInt8>?) -> UnsafeMutablePointer<UInt8>?] = [
-			.MD2: CC_MD2,
-			.MD4: CC_MD4,
-			.MD5: CC_MD5,
-			.SHA1: CC_SHA1,
-			.SHA224: CC_SHA224,
-			.SHA256: CC_SHA256,
-			.SHA384: CC_SHA384,
-			.SHA512: CC_SHA512,
-			]
+    let funcMap: [HashType: (UnsafeRawPointer?, CC_LONG, UnsafeMutablePointer<UInt8>?) -> UnsafeMutablePointer<UInt8>?] = [
+      .MD2: CC_MD2,
+      .MD4: CC_MD4,
+      .MD5: CC_MD5,
+      .SHA1: CC_SHA1,
+      .SHA224: CC_SHA224,
+      .SHA256: CC_SHA256,
+      .SHA384: CC_SHA384,
+      .SHA512: CC_SHA512,
+      ]
 
-		let length = Int(lengthMap[type]!)
-		var digest = [UInt8](repeating: 0, count: Int(length))
-		_ = data.withUnsafeBytes { (funcMap[type]!)($0, CC_LONG(data.count), &digest) }
-		let res = digest.map { String(format: "%02x", $0) }.joined(separator: "")
+    let length = Int(lengthMap[type]!)
+    var digest = [UInt8](repeating: 0, count: Int(length))
+    _ = data.withUnsafeBytes { (funcMap[type]!)($0, CC_LONG(data.count), &digest) }
+    let res = digest.map { String(format: "%02x", $0) }.joined(separator: "")
 
-		return res
-	}
+    return res
+  }
 
-	public var md2: String? {
-		return hashing(.MD2)
-	}
+  public var md2: String? {
+    return hashing(.MD2)
+  }
 
-	public var md4: String? {
-		return hashing(.MD4)
-	}
+  public var md4: String? {
+    return hashing(.MD4)
+  }
 
-	public var md5: String? {
-		return hashing(.MD5)
-	}
+  public var md5: String? {
+    return hashing(.MD5)
+  }
 
-	public var sha1: String? {
-		return hashing(.SHA1)
-	}
-	
-	public var sha224: String? {
-		return hashing(.SHA224)
-	}
+  public var sha1: String? {
+    return hashing(.SHA1)
+  }
+  
+  public var sha224: String? {
+    return hashing(.SHA224)
+  }
 
-	public var sha256: String? {
-		return hashing(.SHA256)
-	}
+  public var sha256: String? {
+    return hashing(.SHA256)
+  }
 
-	public var sha384: String? {
-		return hashing(.SHA384)
-	}
+  public var sha384: String? {
+    return hashing(.SHA384)
+  }
 
-	public var sha512: String? {
-		return hashing(.SHA512)
-	}
+  public var sha512: String? {
+    return hashing(.SHA512)
+  }
 
 }
 
@@ -293,39 +293,39 @@ public extension String {
 
 // MARK: - Transform (FullwidthHalfwidth)
 public extension String {
-	
-	private func transformFullwidthHalfwidth(_ reverse: Bool) -> String {
-		let str = NSMutableString(string: self) as CFMutableString
-		CFStringTransform(str, nil, kCFStringTransformFullwidthHalfwidth, reverse)
+  
+  private func transformFullwidthHalfwidth(_ reverse: Bool) -> String {
+    let str = NSMutableString(string: self) as CFMutableString
+    CFStringTransform(str, nil, kCFStringTransformFullwidthHalfwidth, reverse)
 
-		return str as String
-	}
+    return str as String
+  }
 
-	public var fullWidth: String {
-		return transformFullwidthHalfwidth(true)
-	}
+  public var fullWidth: String {
+    return transformFullwidthHalfwidth(true)
+  }
 
-	public var halfWidth: String {
-		return transformFullwidthHalfwidth(false)
-	}
+  public var halfWidth: String {
+    return transformFullwidthHalfwidth(false)
+  }
 }
 
 
 
 // MARK: - Transform (HiraganaKatakana)
 public extension String {
-	private func transformHiraganaKatakana(_ reverse: Bool) -> String {
-		let str = NSMutableString(string: self) as CFMutableString
-		CFStringTransform(str, nil, kCFStringTransformHiraganaKatakana, reverse)
-		
-		return str as String
-	}
-	
-	public var hiragana: String {
-		return transformHiraganaKatakana(true)
-	}
-	
-	public var katakana: String {
-		return transformHiraganaKatakana(false)
-	}
+  private func transformHiraganaKatakana(_ reverse: Bool) -> String {
+    let str = NSMutableString(string: self) as CFMutableString
+    CFStringTransform(str, nil, kCFStringTransformHiraganaKatakana, reverse)
+    
+    return str as String
+  }
+  
+  public var hiragana: String {
+    return transformHiraganaKatakana(true)
+  }
+  
+  public var katakana: String {
+    return transformHiraganaKatakana(false)
+  }
 }

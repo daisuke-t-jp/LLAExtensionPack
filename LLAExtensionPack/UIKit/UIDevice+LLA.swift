@@ -12,32 +12,32 @@ import UIKit
 
 public extension UIDevice {
 
-	static private var systemVersionComponents: [String]? {
+  static private var systemVersionComponents: [String]? {
 
-		let ver = UIDevice.current.systemVersion
-		let array = ver.components(separatedBy: ".")
-		guard array.count >= 2 else {
-			return nil
-		}
-		
-		return array
-	}
+    let ver = UIDevice.current.systemVersion
+    let array = ver.components(separatedBy: ".")
+    guard array.count >= 2 else {
+      return nil
+    }
+    
+    return array
+  }
 
-	static public var systemVersionMajor: Int? {
+  static public var systemVersionMajor: Int? {
 
-		guard let array = systemVersionComponents else {
-			return nil
-		}
+    guard let array = systemVersionComponents else {
+      return nil
+    }
 
-		return Int(array[0])
-	}
+    return Int(array[0])
+  }
 
-	static public var systemVersionMinor: Int? {
+  static public var systemVersionMinor: Int? {
 
-		guard let array = systemVersionComponents else {
-			return nil
-		}
-		
-		return Int(array[1])
-	}
+    guard let array = systemVersionComponents else {
+      return nil
+    }
+    
+    return Int(array[1])
+  }
 }

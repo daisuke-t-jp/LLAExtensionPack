@@ -12,7 +12,7 @@ import UIKit
 
 public extension UIControl {
 
-	public func removeAllTarget() {
-		self.removeTarget(nil, action: nil, for: .allEvents)
-	}
+  public func removeAllTarget() {
+    self.removeTarget(nil, action: nil, for: .allEvents)
+  }
 }

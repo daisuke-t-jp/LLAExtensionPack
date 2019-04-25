@@ -12,15 +12,15 @@ import Foundation
 
 public extension FloatingPoint {
 
-	public var string: String {
-		return String(format: "%f", self as? CVarArg ?? 0)
-	}
-	
-	public var radian: Self {
-		return self * .pi / 180
-	}
-	
-	public var degree: Self {
-		return self * 180 / .pi
-	}
+  public var string: String {
+    return String(format: "%f", self as? CVarArg ?? 0)
+  }
+  
+  public var radian: Self {
+    return self * .pi / 180
+  }
+  
+  public var degree: Self {
+    return self * 180 / .pi
+  }
 }
