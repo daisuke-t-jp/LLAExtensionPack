@@ -35,8 +35,6 @@
 		02C8CD9B21F5AADC0078D731 /* LLAExtensionPackTestCLBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9A21F5AADC0078D731 /* LLAExtensionPackTestCLBeacon.swift */; };
 		02C8CD9F21F5B2E90078D731 /* CGRect+LLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CD9E21F5B2E90078D731 /* CGRect+LLA.swift */; };
 		02C8CDA221F5B5560078D731 /* LLAExtensionPackTestCGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8CDA121F5B5560078D731 /* LLAExtensionPackTestCGRect.swift */; };
-		02E6AB5121F54C1100B2E3C0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 02E6AB4F21F54C1100B2E3C0 /* README.md */; };
-		02E6AB5221F54C1100B2E3C0 /* LLAExtensionPack.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 02E6AB5021F54C1100B2E3C0 /* LLAExtensionPack.podspec */; };
 		7E0099FE21F2D49D007BF243 /* LLAExtensionPackTestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F321F2D49D007BF243 /* LLAExtensionPackTestURL.swift */; };
 		7E0099FF21F2D49D007BF243 /* LLAExtensionPackTestInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F421F2D49D007BF243 /* LLAExtensionPackTestInt.swift */; };
 		7E009A0021F2D49D007BF243 /* LLAExtensionPackTestUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0099F521F2D49D007BF243 /* LLAExtensionPackTestUUID.swift */; };
@@ -372,8 +370,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E6AB5121F54C1100B2E3C0 /* README.md in Resources */,
-				02E6AB5221F54C1100B2E3C0 /* LLAExtensionPack.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
