@@ -62,7 +62,7 @@ class LLAExtensionPackTestUIView: XCTestCase {
       XCTAssertEqual(view.subviews.count, 1)
       XCTAssertEqual(view.subviews[0].tag, 3)
     }()
-
+    
     
     _ = { () -> () in
       let view = UIView(frame: CGRect(x: 10, y: 20, width: 30, height: 40))
@@ -74,16 +74,16 @@ class LLAExtensionPackTestUIView: XCTestCase {
       view.removeAllSubviews()
       XCTAssertEqual(view.subviews.count, 0)
     }()
-
+    
   }
-
-
+  
+  
   func testImage() {
     let view = UIView(frame: CGRect(x: 10, y: 20, width: 30, height: 40))
     view.backgroundColor = UIColor.red
-
+    
     let image = view.image
-
+    
     XCTAssertNotNil(image)
   }
 }

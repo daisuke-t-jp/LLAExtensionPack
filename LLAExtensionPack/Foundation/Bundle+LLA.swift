@@ -11,18 +11,18 @@ import Foundation
 
 
 public extension Bundle {
-
+  
   var shortVersion: String? {
-
+    
     guard let dict = infoDictionary else {
       return nil
     }
     
     return dict["CFBundleShortVersionString"] as? String
   }
-
+  
   var version: String? {
-
+    
     guard let dict = infoDictionary else {
       return nil
     }

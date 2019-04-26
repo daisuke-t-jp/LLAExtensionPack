@@ -11,15 +11,15 @@ import Foundation
 
 
 public extension BinaryInteger {
-
+  
   var radianDouble: Double {
     return Double(self) * .pi / 180
   }
-
+  
   var radianFloat: Float {
     return Float(self) * .pi / 180
   }
-
+  
   var radianCGFloat: CGFloat {
     return CGFloat(self) * .pi / 180
   }

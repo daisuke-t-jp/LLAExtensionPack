@@ -25,11 +25,11 @@ class LLAExtensionPackTestUIImage: XCTestCase {
   func testEffect() {
     _ = { () -> () in
       let image = UIColor.red.image(CGSize.init(width: 80, height: 80))
-
+      
       let image2 = image!.borderInside(10, color: UIColor.blue)
       XCTAssertNotNil(image2)
     }()
-
+    
     _ = { () -> () in
       let image = UIColor.red.image(CGSize.init(width: 80, height: 80))
       
@@ -37,7 +37,7 @@ class LLAExtensionPackTestUIImage: XCTestCase {
       XCTAssertNotNil(image2)
     }()
   }
-
+  
   func testTransform() {
     _ = { () -> () in
       let image = UIColor.red.image(CGSize.init(width: 128, height: 96))
@@ -45,14 +45,14 @@ class LLAExtensionPackTestUIImage: XCTestCase {
       let image2 = image!.rotate(degree: 45)
       XCTAssertNotNil(image2)
     }()
-
+    
     _ = { () -> () in
       let image = UIColor.red.image(CGSize.init(width: 128, height: 96))
       
       let image2 = image!.rotate(degree: 45, point: CGPoint.init(x: 0, y: 0))
       XCTAssertNotNil(image2)
     }()
-
+    
     _ = { () -> () in
       let image = UIColor.red.image(CGSize.init(width: 128, height: 96))
       
@@ -66,6 +66,6 @@ class LLAExtensionPackTestUIImage: XCTestCase {
       let image2 = image!.rotate(radian: 45.radianCGFloat, point: CGPoint.init(x: 0, y: 0))
       XCTAssertNotNil(image2)
     }()
-
+    
   }
 }

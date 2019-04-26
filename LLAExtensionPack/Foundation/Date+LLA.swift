@@ -5,14 +5,14 @@
 //  Created by Daisuke T on 2018/12/07.
 //  Copyright © 2018 Daisuke T. All rights reserved.
 //
-    
+
 import Foundation
 
 
 
 // MARK: - Components
 public extension Date {
-
+  
   var unixTime: TimeInterval {
     return timeIntervalSince1970
   }
@@ -69,11 +69,11 @@ public extension Date {
   var millisecond: Int? {
     return nanosecond! / 1000000
   }
-
+  
   var microsecond: Int? {
     return nanosecond! / 1000
   }
-
+  
   var nanosecond: Int? {
     let cal = Calendar(identifier: .gregorian)
     let comps = cal.dateComponents([.nanosecond], from: self)
@@ -86,7 +86,7 @@ public extension Date {
 
 // MARK: - Inspect
 public extension Date {
-
+  
   var isLeapYear: Bool {
     guard let y = year else {
       return false
@@ -96,7 +96,7 @@ public extension Date {
     return res
   }
 }
-  
+
 
 
 // MARK: - Transform
@@ -107,7 +107,7 @@ public extension Date {
     
     return cal.date(byAdding: .month, value: -1, to: cal.startOfDay(for: self))
   }
-
+  
   var nextMonth: Date? {
     let cal = Calendar(identifier: .gregorian)
     
@@ -129,17 +129,17 @@ public extension Date {
   var startOfDay: Date? {
     let cal = Calendar(identifier: .gregorian)
     let res = cal.startOfDay(for: self)
-
+    
     return res
   }
-
+  
   var endOfDay: Date? {
     let cal = Calendar(identifier: .gregorian)
     
     let date = tommorow
     let dateStart = date!.startOfDay
     let res = cal.date(byAdding: .second, value: -1, to: dateStart!)
-
+    
     return res
   }
   
@@ -156,7 +156,7 @@ public extension Date {
     
     return cal.date(byAdding: comps, to: firstDayOfMonth!)
   }
-
+  
   var daysOfMonth: Int? {
     let cal = Calendar(identifier: .gregorian)
     guard let range = cal.range(of: .day, in: .month, for: self) else {

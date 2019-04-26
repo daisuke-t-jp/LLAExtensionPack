@@ -12,9 +12,9 @@ import Foundation
 
 // MARK: - Format
 public extension Int {
-
+  
   private func formatString(_ style: NumberFormatter.Style,
-                locale: Locale.LocaleIdentifier) -> String? {
+                            locale: Locale.LocaleIdentifier) -> String? {
     let formatter = NumberFormatter()
     formatter.numberStyle = style
     formatter.locale = Locale(identifier: locale.rawValue)
@@ -24,7 +24,7 @@ public extension Int {
   func decimalFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
     return formatString(.decimal, locale: locale)
   }
-
+  
   func currencyFormatString(_ locale: Locale.LocaleIdentifier) -> String? {
     return formatString(.currency, locale: locale)
   }
@@ -34,19 +34,19 @@ public extension Int {
       // more than kilo.
       let k = self / 1000
       let v = (self - (k * 1000)) / 100
-
+      
       guard let str = k.decimalFormatString(locale) else {
         return nil
       }
-
+      
       if v == 0 {
         // only kilo.
         return str
       }
-
+      
       return "\(str).\(v)"
     }
-
+    
     // less than kilo.
     return self.decimalFormatString(locale)
   }

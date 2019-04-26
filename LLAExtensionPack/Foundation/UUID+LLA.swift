@@ -11,11 +11,11 @@ import Foundation
 
 
 public extension UUID {
-
+  
   static var string: String {
     return UUID().uuidString
   }
-
+  
   var string: String {
     return uuidString
   }

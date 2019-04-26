@@ -11,9 +11,9 @@ import Foundation
 
 
 public extension URLSession {
-
+  
   func dataTaskSync(_ req: URLRequest,
-               handler: @escaping (Data?, URLResponse?, Error?) -> Void) {
+                    handler: @escaping (Data?, URLResponse?, Error?) -> Void) {
     // create semaphore.
     var semaphore: DispatchSemaphore = DispatchSemaphore(value: 0)
     
@@ -22,22 +22,22 @@ public extension URLSession {
     
     // prepare session.
     let session: URLSession = URLSession.init(configuration: config)
-
+    
     
     // start task.
     let task: URLSessionDataTask = session.dataTask(with: req) { (data, response, error) in
-
+      
       defer {
         semaphore.signal()
       }
-
+      
       handler(data, response, error)
     }
     
     task.resume()
     
     _ = semaphore.wait(timeout: DispatchTime.distantFuture)
-
+    
   }
 }
 

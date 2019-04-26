@@ -11,7 +11,7 @@ import Foundation
 
 
 public extension FloatingPoint {
-
+  
   var string: String {
     return String(format: "%f", self as? CVarArg ?? 0)
   }

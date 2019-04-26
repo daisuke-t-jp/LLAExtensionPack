@@ -11,7 +11,7 @@ import UIKit
 
 
 public extension UIControl {
-
+  
   func removeAllTarget() {
     self.removeTarget(nil, action: nil, for: .allEvents)
   }

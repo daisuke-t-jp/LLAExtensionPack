@@ -12,7 +12,7 @@ import CoreGraphics
 
 // MARK: - Property
 public extension CGRect {
-
+  
   var x: CGFloat {
     return origin.x
   }
